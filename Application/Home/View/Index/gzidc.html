@@ -1,0 +1,135 @@
+<include file="Public/header" title="pgyidc" />
+<style>
+    .show-more{border:1px solid #fff;color:#fff;display: inline-block;}
+    
+    .small-banner{background-color:#dedfe4;}
+    .ul-smbancon{height: 60px;line-height: 60px;}
+    .ul-smbancon li{display: inline-block;font-size: 16px;margin:0 50px 0 50px;}
+    .currenton{color: #60aff6}
+    .bborder{border-bottom: 2px solid #dedfe4;}
+    .main-h3,.main-p{color: #4b556a;}
+    .main-p{font-size: 14px;line-height: 24px;}
+    .main-ul{width: 100%;}
+    .main-ul li{width: 13%;display: inline-block;}
+    .main-ulscene{width: 380px;height: 110px;margin:0 auto;}
+    .main-ulscene li{display: inline-block;width: 150px;height: 110px;background-color: #f5f6f7;text-align: center;cursor: pointer;}
+    .active{border: 1px solid #ddd;background-color: #fff;box-shadow: 0 0 10px 0 #dedfe4;}
+    .main-conscene{width: 870px;height: 350px;margin:20px auto;box-shadow: 0 0 10px 0 #dedfe4;overflow: hidden;}
+    .main-ulscene img{margin-top: 20px;}
+    .scene-span{display: block;padding: 10px 0;}
+    .conscene-game,.conscene-web{width: 100%;height: 100%;}
+    .commend-item {height: 270px;min-height: 270px;margin: 12px 5px;width: 347px;background-color: #f5f7fb;position: relative;display: inline-block;vertical-align: top;text-align: left;}
+    .commend-item-intro {padding: 0 35px 50px;font-size: 12px;color: #657493;}
+    .commend-item-title {text-align: left;padding: 20px 0;font-size: 14px;color: #000;line-height: 20px;}
+    .commend-item-intro .info-line {margin: 5px 0;position: relative;}
+    .commend-item-intro .introlabel, .commend-item-intro .text {width: auto;float: left;}
+    .commend-item-intro .introlabel {text-align: right;}
+    .commend-item-btn-wrap {height: 50px;line-height: 50px;width: 100%;position: absolute;bottom: 0;}
+    .commend-item-btn-wrap .commend-item-btn {height: 100%;width: 50%;float: left;text-align: center;-webkit-transition: all .3s;transition: all .3s;}
+    .commend-item-btn-wrap .commend-item-btn:hover {background-color: #e2e6ec;color: #657493;}
+    .initial{width: 100%;border-top: 1px dotted #ddd;height: 150px;line-height:150px;margin-top: 30px;}
+    .initial-title{color: #60aff6;font-size: 16px;display: inline-block;margin-right: 20px;}
+    .initial-item{display: inline-block;padding:18px 24px;border: 1px solid #ddd;margin-left: 10px;}
+    .initial-item span:first-child{display: block;line-height: 1em;font-size: 16px;color: #60aff6;}
+    .initial-item span:last-child{display: block;line-height: 1em;margin-top: 5px;color: #888;}
+    .initial .btn{display: inline-block;margin-left:80px;background: red;font-weight:bold;font-size:16px;color: #fff;}
+</style>
+<div class="banner">
+    <div class="banner-contain w1200 pr">
+        <div class="bc-left"><span class="circle1"></span><span class="circle2"></span><img src="__ASSETS__/images/area.png"></div>
+        <div class="bc-right tl pa" style="left:200px;top:20px;">
+            <h2 class="m0 wow fadeInUp">广州机房</h2>
+            <p class="mt20 wow fadeInUp">华南地区第一家带防BGP，国家甲级机房，超级数据港。专门技术人员7X24小时维护;标准机房环境，提供365天全天候运营服务。</p>
+            <div class="show-more m0 mt30 wow fadeInUp askbtn">立即咨询</div>
+            <a href="{:U('Index/serverbuy')}"><div class="show-more m0 mt30 wow fadeInUp">立即购买</div></a>
+        </div>
+    </div>
+</div>
+
+<div class="small-banner">
+    <div class="smban-contain w1200" style="height:60px;">
+        <ul class="ul-smbancon">
+            <li><a href="{:U('Index/sqidc')}">宿迁机房</a></li>
+            <li><a href="{:U('Index/jdidc')}">京东机房</a></li>
+            <li><a href="{:U('Index/wzidc')}">温州机房</a></li>
+            <li><a class="currenton" href="{:U('Index/gzidc')}">广州机房</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="main-contain">
+    <div class="w1200 pt25 pb25 bborder">
+        <h3 class="main-h3 pt20 pb20">机房介绍</h3>
+        <p class="main-p tl pt20 pb20">600G电信出口，160G联通出口，10G江苏移动出口，BGP协议三线接入，可以和其他运营商互联互通，轻松实现单IP多线路，所有运营商用户快速访问，低延时，这是传统双线双IP不能实现的，另扬州电信有10G互联链路。60G基础防御的全业务阻断国外流量，单点防护可以达到500G，让你的服务器稳如泰山！</p>
+        <ul class="main-ul">
+            <li><img src="__ASSETS__/images/cpys1.png"></li>
+            <li><img src="__ASSETS__/images/cpys2.png"></li>
+            <li><img src="__ASSETS__/images/cpys3.png"></li>
+            <li><img src="__ASSETS__/images/cpys4.png"></li>
+            <li><img src="__ASSETS__/images/cpys5.png"></li>
+            <li><img src="__ASSETS__/images/cpys6.png"></li>
+            <li><img src="__ASSETS__/images/cpys7.png"></li>
+        </ul>
+    </div>
+    <div class="w1200 pt25 pb25 bborder">
+        <h3 class="main-h3 pt20 pb20">应用场景</h3>
+        <ul class="main-ulscene">
+            <li class="fl active"><img src="__ASSETS__/images/web.png"><span class="scene-span">大型网站</span></li>
+            <li class="fr"><img src="__ASSETS__/images/game.png"><span class="scene-span">游戏</span></li>
+        </ul>
+        <div class="main-conscene">
+            <div class="conscene-web p50">
+                <p class="tl" style="font-size: 16px;">适用对象：社区SNS/论坛/ERP/OACRM</p>
+                <p class="tl" style="color: #888;line-height: 2em;">社区网站业务相对个人网站，有更多的用户访问，为保证性能，此时就需要对带宽、内存、CPU进行优化，以便提供更大的空间，提升访问速度。
+                        <span style="color: #60aff6">适合流量适中的网站应用，或简单开发环境、代码存储库等。</span></p>
+                <div class="tl initial">
+                    <span class="initial-title">推荐配置:</span>
+                    <span class="initial-item"><span>L5630*2</span><span>cpu</span></span>
+                    <span class="initial-item"><span>16G</span><span>内存</span></span>
+                    <span class="initial-item"><span>100M</span><span>带宽</span></span>
+                    <span class="initial-item"><span>120G固态</span><span>存储</span></span>
+                    <a href="{:U('Index/serverbuy')}"><button class="btn btn-default">立即购买</button></a>
+                </div>
+            </div>
+            <div class="conscene-game p50" style="display:none;">
+                <p class="tl" style="font-size: 16px;">适用对象：网络游戏等其他高端服务</p>
+                <p class="tl" style="color: #888;line-height: 2em;">适合对计算性能要求较高的应用场景，如企业运营活动、批量处理、分布式分析、游戏app等。
+                        <span style="color: #60aff6">网络游戏在近年来发展迅速，除了传统网络终端之外，网页游戏、手机游戏等发展迅速，也让整个游戏市场愈发壮大。</span></p>
+                <div class="tl initial">
+                    <span class="initial-title">推荐配置:</span>
+                    <span class="initial-item"><span>L5630*2</span><span>cpu</span></span>
+                    <span class="initial-item"><span>16G</span><span>内存</span></span>
+                    <span class="initial-item"><span>100M</span><span>带宽</span></span>
+                    <span class="initial-item"><span>120G固态</span><span>存储</span></span>
+                    <a href="{:U('Index/serverbuy')}"><button class="btn btn-default">立即购买</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="w1200 pt25 pb25 bborder">
+        <h3 class="main-h3 pt20 pb20">推荐产品</h3>
+
+    </div> -->
+    <div class="w1200 pt25 pb25">
+        <h3 class="main-h3 pt20 pb20">机房展示</h3>
+        <div style="width:100%;"><img style="width:100%;" src="__ASSETS__/images/bangongshi1.jpg"></div>
+    </div>
+</div>
+<script>
+    $(function(){
+        $('.main-ulscene li:eq(0)').click(function(){
+            $('.active').removeClass('active');
+            $(this).addClass('active');
+            $('.conscene-game').fadeOut();
+            $('.conscene-web').fadeIn();
+        });
+        $('.main-ulscene li:eq(1)').click(function(){
+            $('.active').removeClass('active');
+            $(this).addClass('active');
+            $('.conscene-game').fadeIn();
+            $('.conscene-web').fadeOut();
+        });
+    })
+    
+</script>
+<include file="Public/footer" title="footer" />

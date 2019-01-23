@@ -1,0 +1,78 @@
+<include file="Public/header" title="蒲公英控制台" />
+<style>
+    .ml15{margin-left:15px;}
+    th{color: #FFF;font-weight: normal;}
+    td{color: #4b556a;}
+    .tr{text-align: right;}
+    .table-condensed>thead>tr>th,.table-condensed>tbody>tr>td{vertical-align: middle;padding: 10px;text-align: center;}
+    .page-body{width: 100%;background: #fff;padding: 20px;box-shadow: 0 0 5px 0 #dedfe4;border-radius: 4px;}
+</style>
+<div class="right-product right-full" style="background: #eef0f6;">
+    <div class="center-back right-back">
+        <div class="container-fluid">
+            <div class="info-center">
+                <div class="page-header">
+                    <div class="pull-left">
+                        <h4>物理机管理 ＞ 攻击记录</h4>      
+                    </div>
+                </div>
+                <if condition="$model neq ''">
+                <div class="page-body">
+                    <form name="mform" action="{:U('attackrecord')}" method="post">
+                    <div class="search-header">
+                        <input type="text" name="keyword" value="<?=$keyword?>" class="form-control" placeholder="请输入要查询的IP" style="width: 200px;display: inline-block;">
+                        <button id="find" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i> 搜索</button>
+                    </div>
+                    </form>
+                        <table class="table table-condensed" style="margin-top: 20px;">
+                            <thead>
+                                <tr style="background: #09c;color: #fff;">
+                                    <th>IP</th>
+                                    <th>攻击类型</th>
+                                    <th>攻击端口</th>
+                                    <th>最高BPS流量</th>
+                                    <th>PPS流量</th>
+                                    <th>平均包大小</th>                              
+                                    <th>状态</th>
+                                    <th>开始时间</th>
+                                    <th>结束时间</th>
+                                    <th>备注</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <foreach name="model" item="info">
+                                <tr>
+                                    <td><?=$info['ip']?></td>
+                                    <td><?=$info['type'];?></td>
+                                    <td><?=$info['dport']?></td>
+                                    <td><?=round($info['bps']/1000,2);?>G</td>
+                                    <td><?=$info['pps']?>万</td>
+                                    <td><?=$info['bps'] > 0 ? ceil($info['bps']*1024*1024 / ($info['pps']*10000) / 8):0;?>Bytes</td>
+                                    <td><?=$info['status'];?></td>
+                                    <td><?=$info['start'];?></td>
+                                    <td><?=$info['end'];?></td>
+                                    <td><?=$info['note'];?></td>
+                                </tr>
+                                </foreach>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                  <td colspan="10">
+                                    <div class="pull-right pages">
+                                        {$page}
+                                    </div>
+                                  </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                <else />
+                <div class="page-body">
+                    <p>查询无攻击记录信息</p>
+                </div>
+                </if>
+            </div>
+        </div>
+    </div>
+</div> 
+<include file="Public/footer" title="" />

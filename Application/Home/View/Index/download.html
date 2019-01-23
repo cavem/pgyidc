@@ -1,0 +1,114 @@
+<include file="Public/header" title="pgyidc" />
+<style>
+.show-more{border:1px solid #fff;color:#fff;display: inline-block;}
+
+.accordion {width: 100%;max-width: 200px;background: #FFF;float: left;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;}
+ol,ul{margin:0;}
+.accordion .link {cursor: pointer;display: block;padding: 15px 15px 15px 42px;color: #4D4D4D;font-size: 14px;font-weight: 700;border-bottom: 1px solid #CCC;
+    position: relative;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+.accordion li:last-child .link {border-bottom: 0;}
+.accordion li i {position: absolute;top: 16px;left: 12px;font-size: 18px;color: #595959;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+.accordion li i.fa-chevron-down {right: 12px;left: auto;font-size: 16px;}
+.accordion li.open .link {color: #60aff6;}
+.accordion li.open i {color: #60aff6;}
+.accordion li.open i.fa-chevron-down {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+/**
+ * Submenu
+ -----------------------------*/
+ .submenu {display: none;background: #444359;font-size: 14px;}
+ .submenu a {display: block;text-decoration: none;color: #d9d9d9;padding: 12px;padding-left: 42px;-webkit-transition: all 0.25s ease;-o-transition: all 0.25s ease;transition: all 0.25s ease;}
+ .currenton{background: #60aff6;color: #FFF;}
+ .submenu a:hover {background: #60aff6;color: #FFF;}
+ .accordion-contain{width:930px;height:500px;background:#fff;margin-left:250px;border:1px solid #ddd;padding: 25px 0 25px 100px;}
+ @media screen and (max-width: 1200px) {
+    .accordion-contain{width:720px;}
+ }
+.accordioncontain-item{width:24%;height: 200px;padding: 25px;margin-left:9px;text-align:center;float: left;}
+.accordioncontain-item .title{color: #424242;font-size: 16px;margin-top: 5px;}
+.title a{color: #838282;font-size: 13px;}
+.title a:hover{color: #60aff6;}
+</style>
+
+<div class="banner">
+    <div class="banner-contain w1200 pr">
+        <div class="bc-left"><span class="circle1"></span><span class="circle2"></span><img src="__ASSETS__/images/document.png"></div>
+        <div class="bc-right tl pa" style="left:200px;top:20px;">
+            <h2 class="m0 wow fadeInUp">下载中心</h2>
+            <p class="mt20 wow fadeInUp"></p>
+        </div>
+    </div>
+</div>
+<div class="document" style="background:#f2f2f2;padding:15px 0;text-align:left;">
+    <div class="w1200">
+        <ul id="accordion" class="accordion">
+            <li class="">
+                <div class="link"><i class="fa fa-file-word-o"></i>帮助文档<i class="fa fa-chevron-down"></i></div>
+                <ul class="submenu" style="display: none;">
+                    <li><a href="#">帮助文档1</a></li>
+                    <li><a href="#">帮助文档2</a></li>
+                    <li><a href="#">帮助文档3</a></li>
+                    <li><a href="#">帮助文档4</a></li>
+                </ul>
+            </li>
+            <li class="open">
+                <div class="link"><i class="fa fa-download"></i>下载中心<i class="fa fa-chevron-down"></i></div>
+                <ul class="submenu" style="display: block;">
+                    <li><a href="__ASSETS__/files/PGY网络服务器代理合同范本.doc">PGY网络服务器代理合同范本 <span class="fa fa-cloud-download"></span></a></li>
+                    <li><a href="__ASSETS__/files/PGY网络服务器托管合同范本.doc">PGY网络服务器托管合同范本 <span class="fa fa-cloud-download"></span></a></li>
+                    <li><a href="__ASSETS__/files/PGY网络服务器租用合同范本.doc">PGY网络服务器租用合同范本 <span class="fa fa-cloud-download"></span></a></li>
+                    <!-- <li><a href="#">文档3 <span class="fa fa-cloud-download"></span></a></li> -->
+                </ul>
+            </li>
+            <li class="">
+                <div class="link"><i class="fa fa-paypal"></i>支付方式<i class="fa fa-chevron-down"></i></div>
+                <ul class="submenu" style="display: none;">
+                    <li><a href="{:U('Index/paytype')}">支付方式 </a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="accordion-contain">
+            <div class="accordioncontain-item">
+                <a href="">
+                    <i class="fa fa-file-text-o" style="font-size:100px;color:#60aff6;"></i>
+                    <p class="title">PGY网络服务器代理合同范本</p>
+                    <p class="title"><a href="__ASSETS__/files/PGY网络服务器代理合同范本.doc"><i class="fa fa-cloud-download"></i> 下载</a></p>
+                </a>
+            </div>
+            <div class="accordioncontain-item">
+                <a href="">
+                    <i class="fa fa-file-text-o" style="font-size:100px;color:#60aff6;"></i>
+                    <p class="title">PGY网络服务器托管合同范本</p>
+                    <p class="title"><a href="__ASSETS__/files/PGY网络服务器托管合同范本.doc"><i class="fa fa-cloud-download"></i> 下载</a></p>
+                </a>
+            </div>
+            <div class="accordioncontain-item">
+                <a href="">
+                    <i class="fa fa-file-text-o" style="font-size:100px;color:#60aff6;"></i>
+                    <p class="title">PGY网络服务器租用合同范本</p>
+                    <p class="title"><a href="__ASSETS__/files/PGY网络服务器租用合同范本.doc"><i class="fa fa-cloud-download"></i> 下载</a></p>
+                </a>
+            </div>
+            <!-- <div class="accordioncontain-item">
+                <a href="">
+                    <i class="fa fa-file-text-o" style="font-size:100px;color:#60aff6;"></i>
+                    <p class="title">文档3</p>
+                    <p class="title"><a href=""><i class="fa fa-cloud-download"></i> 下载</a></p>
+                </a>
+            </div> -->
+        </div>
+    </div>
+</div>
+<include file="Public/footer" title="footer" />

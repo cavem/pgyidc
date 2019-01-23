@@ -1,0 +1,162 @@
+<include file="Public/header" title="蒲公英自动化" />
+<style>
+th{color: #FFF;font-weight: normal;}
+td{color: #4b556a;}
+.table-condensed>thead>tr>th,.table-condensed>tbody>tr>td{vertical-align: middle;padding: 10px;}
+.page-body{width: 100%;background: #fff;padding: 20px;box-shadow: 0 0 5px 0 #dedfe4;border-radius: 4px;}
+.form-control{display: inline-block;height: 34px;border-radius: 0;}
+.onthis{background-color: #09c !important;color: #fff;}
+.otherul li{float: left;text-align: center;position: relative;margin-left: -1px;min-width: 91px;height: 34px;background: #fff;border: 1px solid #e7e7e7;cursor: pointer;line-height: 34px;font-size: 13px;padding: 0 12px;}
+.otherul li:hover{background: #09c;color: #fff;}
+</style>
+<?php $type=array("-3"=>"超流量停机","-2"=>"超流量运行","-1"=>"欠费停机","0"=>"安装中","1"=>"锁定","2"=>"正常");?>
+<div class="right-product right-full" style="background: #eef0f6;">
+    <div class="center-back right-back">
+        <div class="container-fluid">
+            <div class="info-center">
+                <div class="page-header">
+                    <div class="pull-left">
+                        <h4>云主机线路1</h4>      
+                    </div>
+                </div>
+                <div class="page-body">
+                    <a href="{:U('Home/Index/cloudbuy')}" target="blank"><button type="button" class="btn btn-info" style="float:left;">购买云主机</button></a>
+                    <a href="{:U('Cloud/cloudmanage')}"><button type="button" class="btn btn-default" style="float: left;margin-left: 10px;">进入前台管理</button></a>
+                    <form action="{:U('Cloud/admincdmg')}" method="post" style="float: right;">
+                        <div>
+                            <input type="text" name="keyword" value="{$keyword}" class="form-control" placeholder="用户ID/ip地址/云主机编号" style="width: 200px;position: relative;top: 1px;">               
+                            <input type="submit" name="" class="btn btn-default" style="width:70px" value="搜索">
+                        </div>
+                    </form>
+                    
+                    <table class="table table-condensed" style="margin-top: 50px;">
+                        <thead>
+                            <tr style="background: #09c;color: #fff;">
+                                <th>编号</th>
+                                <th>所属用户</th>
+                                <th>子服务项目</th>
+                                <th>IP地址</th>
+                                <th>当前价格</th>
+                                <th>总服务周期</th>
+                                <th>状态</th>
+                                <th>管理标注</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <foreach name="model" item="v">
+                            <tr>
+                                <td class="id">{$v.id}</td>
+                                <td><a href="{:U('Officweb/memberlist',array('userid'=>$v['userid']))}" target="blank">#{$v.userid}</a></td>
+                                <td>VPS{$v.cloudno}</td>
+                                <td>{$v.ip}</td>
+                                <td>{$v.disprice}</td>
+                                <td>{$v.buytime|date="Y/m/d",###} - {$v.duetime|date="Y/m/d",###}</td>
+                                <td>{$v.state}</td>
+                                <td>{$v.remarks}</td>
+                                <td style="text-align: right;">
+                                    <button onclick="proeditopen({$v.cloudno});" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-pencil"></i> 编辑</button>
+                                    <a href="{:U('Cloud/manageup',array('vid'=>$v['cloudno']))}"><button class="btn btn-primary btn-sm"><i class="glyphicon glyphicon-th-list"></i> 管理</button></a>
+                                </td>
+                            </tr>
+                            </foreach>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                              <td colspan="8">
+                                <div class="pull-right">
+                                    {$page}
+                                </div>
+                              </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+<include file="Public/footer" title="" />
+<script>
+    //编辑用户产品服务
+    function proeditopen(vid){
+        //layer.closeAll(); 
+        layer.open({
+            type: 2,
+            title: "编辑用户产品服务",
+            shade: 0.6,
+            shadeClose: true,
+            maxmin: true, //开启最大化最小化按钮
+            area: ["600px", "400px"],
+            content: "/Admin/Cloud/proedit?vid="+vid,
+            //btn: ['保存', '管理子服务配置','消费流水账','删除','关闭'], //只是为了演示
+        });
+    }
+</script>
+<!-- <script>
+    $(function(){ 
+        $("[data-toggle='tooltip']").tooltip();
+        //单选
+        $('.check_span').click(function(){
+            $(this).toggleClass('check_span--checked');
+        });
+        //全选
+        $('.checkall .check_span').click(function(){
+            var spannum=0;var checkedspan=0;
+            $(this).toggleClass('check_span--checked');
+            $('.check_span').each(function(index,obj){
+                spannum++;
+            });
+            $('.check_span--checked').each(function(index,obj){
+                checkedspan++;
+            });
+            if(checkedspan<spannum){
+                $('.check_span').addClass('check_span--checked');
+            }else{
+                $('.check_span').removeClass('check_span--checked');
+            }
+        });
+
+        /**
+         *开机0
+         *关机1
+         *重启2
+         *续费3
+         */
+        var clickpost=function(order){
+            var jsonarr=[];
+            $('.checkonly .check_span--checked').each(function(index,obj){
+                var id=$(this).closest('tr').find('.id').text();
+                jsonarr.push({"id":id});
+            });
+            $.post("cloudmanage",{order:order,key:jsonarr},function(data,status){
+                layer.msg(data, {
+                    time: 2000, //20s后自动关闭
+                    //btn: ['确定','关闭']
+                });
+            });
+        }
+        var clickcheck=function(order){
+            if($('.check_span').hasClass('check_span--checked')){
+                clickpost(order);
+            }else{
+                layer.msg('请先选择机器！', {
+                    time: 2000, //20s后自动关闭
+                    //btn: ['确定','关闭']
+                });
+            }
+        }
+        $('.btn-on').click(function(){
+            clickcheck(0);            
+        });
+        $('.btn-off').click(function(){
+            clickcheck(1);
+        });
+        $('.btn-restart').click(function(){
+            clickcheck(2);
+        });
+        $('.btn-renew').click(function(){
+            clickcheck(3);
+        });
+    });
+</script> -->

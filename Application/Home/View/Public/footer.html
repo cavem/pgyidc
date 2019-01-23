@@ -1,0 +1,314 @@
+<!--左右悬浮-->
+<style>
+    .float{
+        position: fixed;
+        width: 64px;
+        height: 158px;
+        box-shadow: 0 6px 12px 0 rgba(0,0,0,.15);
+        background-color: #60aff6;
+        text-align: center;
+        top:0;
+        bottom: 0;
+        margin: auto;
+    }
+    .float img{
+        width: 48px;
+        margin: 8px 0 4px;
+    }
+    .float span{
+        cursor: default;
+        display: inline-block;
+        width: 18px;
+        font-size: 18px;
+        color: #fff;
+        line-height: 21px;
+    }
+    .float-panel{
+        box-sizing: border-box;
+        position: fixed;
+        padding: 20px;
+        background: #fff;
+        box-shadow: 0 6px 12px 0 rgba(0,0,0,.15);
+        z-index: 4;
+    }
+    /*right*/
+    .right-float{
+        right: 20px;
+    }
+    .float-panel-right{
+        right: 100px;
+        width: 320px;
+        height: 224px;
+        top: 0;
+        bottom: 66px;
+        margin: auto;
+    }
+    .float-panel-right .panel-content{
+        min-height: 24px;
+        padding-left: 0;
+    }
+    
+    .float-panel-right .panel-content li{
+        list-style: none;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+    .float-panel-right .panel-content li:hover{
+        background: #ece9e9;
+    }
+    .float-panel-right .panel-content .content-icon{
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .float-panel-right .panel-content .content-icon img{
+        width: 100%;
+    }
+    .float-panel-right .panel-content .content-main{
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 12px;
+        text-align: left;
+    }
+    .float-panel-right .panel-content .content-main .content-title{
+        line-height: 24px;
+    }
+    .float-panel-right .panel-content .content-main .content-desc{
+        color: #9b9ea0;
+        font-size: 12px;
+        line-height: 24px;
+    }
+    .float-panel-right .panel-content .content-main a{
+        text-decoration: none;
+        color: #5f6367;
+        font-size: 14px;
+    }
+    /*left*/
+    .left-float{
+        left: 20px;
+    }
+    .float-panel-left{
+        left: 100px;
+        width: 470px;
+        height: 224px;
+        top: 0;
+        bottom: 66px;
+        margin: auto;
+    }
+    
+    .float-panel-left ul li{
+        text-align: left;
+        padding: 5px 5px;
+    }
+    .float-panel-left ul li span{
+        border: 1px solid #c1c2c3;
+        margin-left: 10px;
+        font-size: 15px;
+        padding: 2px;
+        cursor: pointer;
+        border: 1px solid #60aff6;
+        color: #60aff6;
+        border-radius: 5px;
+    }
+    .float-panel-left ul li span:hover{
+        background: #60aff6;
+        color: #fff;
+    }
+    .float-panel-left ul li img{
+        width: 15px;
+        margin-top: -5px;
+    }
+    /*middle*/
+    .float-panel-middle{
+        position: fixed;
+        background: #eee;
+        padding: 20px;
+        box-shadow: 0 6px 12px 0 rgba(0,0,0,.15);
+        left: 0; top: 0; right: 0; bottom: 0;
+        width: 470px;
+        height: 240px;
+        margin: auto;
+        opacity: 0.9;
+        z-index: 16;
+    }
+    
+    .float-panel-middle ul li{
+        text-align: left;
+        padding: 5px 5px;
+    }
+    .float-panel-middle ul li span{
+        border: 1px solid #c1c2c3;
+        margin-left: 10px;
+        font-size: 15px;
+        padding: 2px;
+        cursor: pointer;
+        border: 1px solid #60aff6;
+        color: #60aff6;
+        border-radius: 5px;
+    }
+    .float-panel-middle ul li span:hover{
+        background: #60aff6;
+        color: #fff;
+    }
+    .float-panel-middle ul li img{
+        width: 15px;
+        margin-top: -5px;
+    }
+    /*弹窗*/
+    .closetan{position: absolute;top: -15px;right: 0;font-size: 25px;}
+    .closetan:hover{color: red;}
+</style>
+<div class="footer_above" style="width:100%;height:160px;background-image:url('/Application/Home/View/Public/images/footer-bg.jpg');">
+    <p style="height:90px;line-height:100px;font-size:24px;color:#fff;">加入我们，立即开启您的互联网飞速之旅！</p>
+    <a href="{:U('Admin/register')}" style="color:#60aff6;font-size:17px;" class="btn btn-default default-transition">免费注册</a>
+</div>
+<div class="footer_big">
+	<div class="footer_content w1200">
+        <div class="footer_left">
+            <p>产品导航</p>
+            <ul>
+                <li><a href="{:U('Index/cloud')}">VPS云主机</a></li>
+                <li><a href="{:U('Index/vhost')}">虚拟主机</a></li>
+                <li><a href="{:U('Index/newserver')}">服务器租用</a></li>
+                <li><a href="{:U('Index/newserver')}">服务器托管</a></li>
+            </ul>
+        </div>
+        <div class="footer_left footer_service">
+            <p>服务支持</p>
+            <ul>
+                <li class="qq">售后ＱＱ：800002004</li>
+                <li class="phone">售后电话：0527-84224055转800</li>
+                <li class="wechat">微信服务号: 扫描下方二维码</li>
+                <li style="width:100px;height:100px;"><img src="__ASSETS__/images/ewm.jpg" width="100%"></li>
+            </ul>
+        </div>
+        <div class="footer_left">
+        	<p>服务承诺</p>
+            <ul>
+            	<li><a href="">用户政策</a></li>
+                <li><a href="">服务条款</a></li>
+                <li><a href="">隐私保护</a></li>
+                <li><a href="">DMCA政策</a></li>
+            </ul>
+        </div>
+        <div class="footer_left">
+            <p>公司资质</p>
+            <ul>
+                <li>增值电信业务经营许可证</li>
+                <li>电信与信息服务业务经营许可证</li>
+                <li>电信业务审批[2008]字第888号</li>
+                <li>ISO9001国际标准质量体系认证</li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+        <p class="footer_bottom mt20" style="margin:0;padding:10px;border-top:1px solid #aaa;">
+            <span style="color:#bbb;font-size:12px">Copyright ©2014 宿迁蒲公英网络 All Rights Reserved</br> ICP证：苏B2-20070043-1</span></br>
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32130202080002" target="blank" style="color:#fff;font-size:13px"> <img src="__ASSETS__/images/20160331152326_4663.png">  备案号：苏公网安备 32130202080002号</a>
+        </p>
+    </div>
+
+    <div id="rfloat" style="position:fixed;top:0;bottom:0;margin:auto;right:20px;width:84px;height:224px;z-index:999;">
+        <div class="float right-float">
+            <img class="button-background" src="__ASSETS__/images/service.png" alt="">
+            <span>售后服务</span>
+        </div>
+        <div class="float-panel float-panel-right" style="display:none;">
+            <ul class="panel-content">
+                <li>
+                    <div class="content-icon">
+                        <img src="__ASSETS__/images/telephone.png" alt="">
+                    </div>
+                    <div class="content-main">
+                        <a href="javascript:void(0);">
+                            <div>
+                                <div class="content-title">
+                                    售后服务电话
+                                </div>
+                                <div class="content-desc">
+                                    <span style="color: #ff9900;">0527-84224055转800</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li data-spm-anchor-id="5176.8142029.762944.i3.e93976f4s5uTHh">
+                    <div class="content-icon">
+                        <img src="__ASSETS__/images/qq.png" alt="">
+                    </div>
+                    <div class="content-main">
+                        <a target="_blank" href="http://crm2.qq.com/page/portalpage/wpa.php?uin=800002004&aty=0&a=0&curl=&ty=1">
+                            <div>
+                                <div class="content-title">
+                                    售后QQ
+                                </div>
+                                <div class="content-desc">
+                                    24小时在线解答
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="lfloat" style="position:fixed;top:0;bottom:0;margin:auto;left:20px;width:84px;height:224px;z-index:999;">
+        <div class="float left-float">
+            <img class="button-background" src="__ASSETS__/images/service-2.png" alt="">
+            <span>售前咨询</span>
+        </div>
+        <div class="float-panel float-panel-left" style="display:none;">
+            <h4 style="text-align:left;margin-left:10px;line-height:25px;border-bottom:2px solid #60aff6">售前咨询</h2>
+            <ul>
+                <li>
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=3002725400&site=qq&menu=yes" target="blank"><span><img src="__ASSETS__/images/qq.png" alt="">  销售依一</span></a>
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=2851391907&site=qq&menu=yes" target="blank"><span><img src="__ASSETS__/images/qq.png" alt="">  销售硕硕</span></a>
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=2851391890&site=qq&menu=yes" target="blank"><span><img src="__ASSETS__/images/qq.png" alt="">  销售宁宁</span></a>
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=3002738725&site=qq&menu=yes" target="blank"><span><img src="__ASSETS__/images/qq.png" alt="">  销售吉祥</span></a>
+                </li>
+                <li>
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=2851391894&site=qq&menu=yes" target="blank"><span><img src="__ASSETS__/images/qq.png" alt="">  销售阿东</span></a>
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=2851391885&site=qq&menu=yes" target="blank"><span><img src="__ASSETS__/images/qq.png" alt="">  销售慧慧</span></a>
+                </li>
+            </ul>
+            <h4 style="text-align:left;margin-left:10px;line-height:25px;border-bottom:2px solid #60aff6;margin-top:20px;">投诉建议</h4>
+            <ul>
+                <li>
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=3002951580&site=qq&menu=yes" target="blank"><span><img src="__ASSETS__/images/qq.png" alt="">  投诉受理</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="float-panel-middle" style="display:none;">
+        <div style="position: relative;">
+            <div class="closetan"><i class="fa fa-times"></i></div>
+            <h4 style="text-align:left;margin-left:10px;line-height:25px;border-bottom:2px solid #60aff6">售前咨询</h2>
+            <ul>
+                <li>
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=3002725400&site=qq&menu=yes" target="blank"><span><img src="__ASSETS__/images/qq.png" alt="">  销售依一</span></a>
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=2851391907&site=qq&menu=yes" target="blank"><span><img src="__ASSETS__/images/qq.png" alt="">  销售硕硕</span></a>
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=2851391890&site=qq&menu=yes" target="blank"><span><img src="__ASSETS__/images/qq.png" alt="">  销售宁宁</span></a>
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=3002738725&site=qq&menu=yes" target="blank"><span><img src="__ASSETS__/images/qq.png" alt="">  销售吉祥</span></a>
+                </li>
+                <li>
+                        <a href="http://wpa.qq.com/msgrd?v=3&uin=2851391894&site=qq&menu=yes" target="blank"><span><img src="__ASSETS__/images/qq.png" alt="">  销售阿东</span></a>
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=2851391885&site=qq&menu=yes" target="blank"><span><img src="__ASSETS__/images/qq.png" alt="">  销售慧慧</span></a>
+                </li>
+            </ul>
+            <h4 style="text-align:left;margin-left:10px;line-height:25px;border-bottom:2px solid #60aff6;margin-top:20px;">投诉建议</h4>
+            <ul>
+                <li>
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=3002951580&site=qq&menu=yes" target="blank"><span><img src="__ASSETS__/images/qq.png" alt="">  投诉受理</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="home" style="display:none;"><a href="javascript:void(0);"><img src="__ASSETS__/images/home.png"></a></div>
+</div>
+<if condition="$current eq 'about'">
+<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&amp;ak=C13c98650aa84efc4279c4fd5ac4bac6"></script>
+<script type="text/javascript" src="https://api.map.baidu.com/getscript?v=2.0&amp;ak=C13c98650aa84efc4279c4fd5ac4bac6&amp;services=&amp;t=20180323171755"></script>
+<script type="text/javascript" src="__ASSETS__/js/pgymap.js"></script>
+</if>
+</body>
+</html>

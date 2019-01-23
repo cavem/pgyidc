@@ -1,0 +1,1294 @@
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title><?php echo ($title); ?></title>
+<link href="/Application/Home/View/Public/css/animate.css" rel="stylesheet">
+<link href="/Application/Home/View/Public/css/bootstrap.min.css" rel="stylesheet">
+<link href="/Application/Home/View/Public/css/bootstrap.css" rel="stylesheet">
+<link href="/Application/Home/View/Public/css/jquery.range.css" rel="stylesheet">
+<link href="/Application/Home/View/Public/css/style.css" rel="stylesheet">
+<link href="http://www.jq22.com/jquery/font-awesome.4.6.0.css" rel="stylesheet">
+<link rel="icon" href="/Application/Home/View/Public/images/pgyicon.png" />
+<script src="/Application/Home/View/Public/js/jquery.min.js" type="text/javascript"></script>
+<script src="/Application/Home/View/Public/js/ZeroClipboard.js" type="text/javascript"></script>
+<script src="/Application/Home/View/Public/js/wow.min.js" type="text/javascript"></script>
+<script src="/Application/Home/View/Public/js/prototype.js" type="text/javascript"></script>
+<script src="/Application/Home/View/Public/js/slide.js" type="text/javascript"></script>
+<script src="/Application/Home/View/Public/js/ImageSlide.js" type="text/javascript"></script>
+<script src="/Application/Home/View/Public/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/Application/Home/View/Public/js/jquery.range.js" type="text/javascript"></script>
+<script src="/Application/Home/View/Public/layer/layer.js" type="text/javascript"></script>
+<script src="/Application/Home/View/Public/js/md5.js" type="text/javascript"></script>
+<script src="/Application/Home/View/Public/js/base64.js" type="text/javascript"></script>
+<?php if($current == 'cloudbuy'): ?><script src="/Application/Home/View/Public/js/cloudbuy.js"></script><?php endif; ?>
+<?php if($current == 'jdcloudbuy'): ?><script src="/Application/Home/View/Public/js/jdcloudbuy.js"></script><?php endif; ?>
+<style>
+.navigation-up .navigation-v3 li h2 {line-height: 60px;font-weight: normal;padding: 0;margin: 0;font-size: 15px;}
+.navigation-up .navigation-v3 li h2 a{padding: 0 14px;color: #fff;display: inline-block;height: 60px;font-family: "microsoft yahei";}
+.nav-up-selected{background: rgba(52, 65, 87, 0.9);}
+.navigation-down .nav-down-menu{background: rgba(52, 65, 87, 0.9);}
+.top{line-height: 60px;}
+.login{margin-top:0;height: 60px;}
+.smlogin{display: none;}
+@media screen and (max-width: 1200px){
+.login{display: none;}
+.smlogin{display: block !important;}
+}
+</style>
+<script>
+$(function(){
+    $('.askbtn').click(function(){
+        $('.float-panel-middle').slideDown();
+    })
+    $('.closetan').click(function(){
+        $('.float-panel-middle').slideUp();
+    });
+})
+</script>
+<script>
+    if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+        new WOW().init();
+    };
+</script>
+<?php if($current == 'index'): ?><script>
+// layer.open({
+//     type: 1
+//     ,title: false
+//     ,closeBtn: false
+//     ,area: '300px;'
+//     ,shade: 0.5
+//     ,id: 'LAY_layuipro'
+//     ,btn: ['火速围观', '残忍拒绝']
+//     ,btnAlign: 'c'
+//     ,moveType: 1
+//     ,content: '<div style="padding: 50px; line-height: 22px; background-color: #393D49; color: #fff; font-weight: 300;">这是一个公告^_^</div>'
+//     ,success: function(layero){
+//         var btn = layero.find('.layui-layer-btn');
+//         btn.find('.layui-layer-btn0').attr({
+//         href: 'http://pgy.com/'
+//         ,target: ''
+//         });
+//     }
+// });
+</script><?php endif; ?>
+<script>
+    $(function(){
+        $('.right-float').mouseenter(function(){
+            $('.float-panel-right').fadeIn();
+            $('#rfloat').css('width','400px');
+        });
+        $('#rfloat').mouseleave(function(){
+            $('.float-panel-right').fadeOut();
+            $('#rfloat').css('width','64px');
+        });
+        $('.left-float').mouseenter(function(){
+            $('.float-panel-left').fadeIn();
+            $('#rfloat').css('width','470px');
+        });
+        $('#lfloat').mouseleave(function(){
+            $('.float-panel-left').fadeOut();
+            $('#rfloat').css('width','64px');
+        });
+    })
+</script>
+<script>
+  $(function(){
+    $(window).scroll(function(){
+      var scrtop=$(window).scrollTop();
+      if(scrtop>50){
+        $('.home').fadeIn();
+      }else{
+        $('.home').fadeOut();
+      }
+    });
+    $('.home').click(function(){
+      $('body,html').animate({scrollTop:0},300);
+    })
+  });
+</script>
+<script>
+  $(function(){  
+      var qcloud={};
+      $('[_t_nav]').hover(function(){
+          var _nav = $(this).attr('_t_nav');
+          clearTimeout( qcloud[ _nav + '_timer' ] );
+          qcloud[ _nav + '_timer' ] = setTimeout(function(){
+          $('[_t_nav]').each(function(){
+          $(this)[ _nav == $(this).attr('_t_nav') ? 'addClass':'removeClass' ]('nav-up-selected');
+          });
+          $('#'+_nav).stop(true,true).slideDown(200);
+          }, 150);
+      },function(){
+          var _nav = $(this).attr('_t_nav');
+          clearTimeout( qcloud[ _nav + '_timer' ] );
+          qcloud[ _nav + '_timer' ] = setTimeout(function(){
+          $('[_t_nav]').removeClass('nav-up-selected');
+          $('#'+_nav).stop(true,true).slideUp(200);
+          }, 150);
+      });
+  });    
+</script>
+<?php if($current == 'index'): ?><script>
+    $(function(){
+        $('#myCarousel').carousel({
+            interval:5000
+        });
+        // new ImageSlide({
+        //     project:"#focusImage",
+        //     content:".contents li",
+        //     tigger:".triggers a",
+        //     dot:".icon-dot a",
+        //     watch:".link-watch",
+        //     auto:!0,
+        //     hide:!0
+        // })
+        $('#wrap li').mouseenter(function(){
+            $(this).find('.divA').stop().animate({bottom:'-66px'});
+            $(this).find('.a2').css({left:'0'})
+            $(this).children('.a2').find('.p4').css({left:'0'})
+            $(this).children('.a2').find('.p5').css({left:'0'})
+            $(this).children('.a2').find('.p6').css({transform:'scale(1)'})
+            $(this).children('.a2').find('.p7').css({bottom:'25px'})
+        })
+        $('#wrap li').mouseleave(function(){
+            $(this).find('.divA').stop().animate({bottom:'0px'});
+            $(this).find('.a2').css({left:-$(this).width()})
+            $(this).children('.a2').find('.p4').css({left:-$(this).width()})
+            $(this).children('.a2').find('.p5').css({left:-$(this).width()})
+            $(this).children('.a2').find('.p6').css({transform:'scale(1.3)'})
+            $(this).children('.a2').find('.p7').css({bottom:'-50px'})
+        })
+        
+    });
+</script><?php endif; ?>
+
+<!-- 关于 -->
+<?php if($current == 'about'): ?><script>
+    $(function(){
+        var scrollToLocation=function(elemnet) {
+            var mainContainer = $(elemnet);
+            $('body,html').animate({
+                scrollTop: mainContainer.offset().top-80
+            }, 500);
+        }
+        
+        var addcurrent=function(element){
+            $('.ul-smbancon li').removeClass('currenton');
+            element.addClass('currenton');
+        }
+        var scrollcheck=function(){
+            var knowustop=$('#knowus').offset().top;
+            var joinustop=$('#joinus').offset().top;
+            var connectustop=$('#connectus').offset().top;
+            var scrotop=$(window).scrollTop();
+            if(scrotop>0&&scrotop<joinustop-90){
+                addcurrent($('.know'));
+            }else if(scrotop>joinustop-90&&scrotop<connectustop-90){
+                addcurrent($('.join'));
+            }else if(scrotop>connectustop-90){
+                addcurrent($('.connect'));
+            }
+        }
+        $('.know').click(function(){
+            scrollToLocation('#knowus');
+            addcurrent($('.know'));
+        })
+        $('.join').click(function(){
+            scrollToLocation('#joinus');
+            addcurrent($('.join'));
+        })
+        $('.connect').click(function(){
+            scrollToLocation('#connectus');
+            addcurrent($('.connect'));
+        })
+        $(window).scroll(function(){
+            var scrtop=$(window).scrollTop();
+            var sbtop=$('.small-banner').offset().top;
+            if(scrtop>sbtop){
+                $('.small-fixbanner').css('display','block');
+            }else{
+                $('.small-fixbanner').css('display','none');
+            }
+            scrollcheck();
+        });
+    })
+</script><?php endif; ?>
+<!-- 文档 -->
+<?php if(($current == 'document')): ?><script>
+    $(function() {
+        $('.accordioncontain-item').mouseenter(function(){
+            $(this).css('background','#60aff6');
+            $(this).find('i').css('color','#fff');
+            $(this).find('.title').css('color','#fff');
+        });
+        $('.accordioncontain-item').mouseleave(function(){
+            $(this).css('background','#fff');
+            $(this).find('i').css('color','#60aff6');
+            $(this).find('.title').css('color','#424242');
+        });
+    });
+</script><?php endif; ?>
+<!-- 下载 -->
+<?php if(($current == 'download') OR ($current == 'paytype') OR ($current == 'document')): ?><script>
+    $(function() {
+        var Accordion = function(el, multiple) {
+            this.el = el || {};
+            this.multiple = multiple || false;
+            var links = this.el.find('.link');
+            links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+        }
+    
+        Accordion.prototype.dropdown = function(e) {
+            var $el = e.data.el;
+                $this = $(this),
+                $next = $this.next();
+    
+            $next.slideToggle();
+            $this.parent().toggleClass('open');
+    
+            if (!e.data.multiple) {
+                $el.find('.submenu').not($next).slideUp().parent().removeClass('open');
+            };
+        }	
+    
+        var accordion = new Accordion($('#accordion'), false);
+    });
+</script><?php endif; ?>
+</head>
+<body>
+<div class="nav_big">
+    <div class="top w1200">
+        <div class="logo"><a href="<?php echo U('Index/index');?>"><img src="/Application/Home/View/Public/images/logo.png" width="160px"></a></div>
+        <div class="head-v3">
+            <div class="navigation-up">
+              <div class="navigation-inner">
+                <div class="navigation-v3">
+                  <ul>
+                    <li _t_nav="home"><h2><a href="<?php echo U('Index/index');?>">网站首页</a></h2></li>
+                    <li _t_nav="newactive"><h2><a href="<?php echo U('Index/newactive');?>">最新活动</a></h2></li>
+                    <li _t_nav="server"><h2><a href="<?php echo U('Index/newserver');?>">主机服务</a></h2></li>
+                    <li _t_nav="product"><h2><a href="http://www.17b.net/cloud/home/buy.html">云服务器</a></h2></li>
+                    <li _t_nav="pay"><h2><a href="#">增值服务</a></h2></li>
+                    <li _t_nav="news"><h2><a href="<?php echo U('Index/news');?>">新闻资讯</a></h2></li>
+                    <li _t_nav="support" class=""><h2><a href="#">帮助中心</a></h2></li>
+                    <li _t_nav="company" class=""><h2><a href="#">关于我们</a></h2></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="navigation-down">
+              <div id="product" class="nav-down-menu menu-1" style="display: none;" _t_nav="product">
+                <div class="navigation-down-inner w1200">
+                  <dl style="margin-left: 35%;">
+                    <dt>云服务器</dt>
+                    <dd><a hotrep="hp.header.product.compute1" href="<?php echo U('Index/cloud');?>">云主机线路1</a></dd>
+                    <dd><a hotrep="hp.header.product.compute1" href="<?php echo U('Hdcloud/jdcloud');?>">云主机线路2</a></dd>
+                    <dd><a hotrep="hp.header.product.compute1" href="http://yun.pgyidc.com/server/buy.html" target="blank">香港云主机</a></dd>
+                  </dl>
+                  <dl>
+                    <dt>云虚拟主机</dt>
+                    <dd>
+                      <a hotrep="hp.header.product.storage1" href="<?php echo U('Index/vhost');?>">云虚拟主机</a></dd>
+                  </dl>
+                </div>
+              </div>
+              <div id="server" class="nav-down-menu menu-1" style="display: none;" _t_nav="server">
+                <div class="navigation-down-inner w1200">
+                  <dl style="margin-left: 35%;">
+                    <dt>服务器租用</dt>
+                    <dd><a hotrep="hp.header.product.compute1" href="<?php echo U('Index/serverbuy');?>">服务器租用</a></dd>
+                  </dl>
+                  <dl>
+                    <dt>服务器托管</dt>
+                    <dd><a hotrep="hp.header.product.storage1" href="<?php echo U('Index/servertrust');?>">服务器托管</a></dd>
+                  </dl>
+                </div>
+              </div>
+              <div id="pay" class="nav-down-menu menu-1" style="display: none;" _t_nav="pay">
+                    <div class="navigation-down-inner w1200">
+                      <!-- <dl style="margin-left: 35%;">
+                        <dt>支付平台</dt>
+                        <dd><a hotrep="hp.header.product.compute1" href="http://pay.17b.net/" target="blank">传奇支付平台</a></dd>
+                        <dd><a hotrep="hp.header.product.storage1" href="http://pay.pgyidc.com/" target="blank">发卡支付平台</a></dd>
+                     </dl> -->
+                      <dl style="margin-left: 35%;">
+                        <dt>网站方案</dt>
+                        <dd><a hotrep="hp.header.product.compute1" href="">网站方案</a></dd>
+                      </dl>
+                      <dl>
+                        <dt>游戏方案</dt>
+                        <dd><a hotrep="hp.header.product.compute1" href="">游戏方案</a></dd>
+                      </dl>
+                    </div>
+                  </div>
+              <div id="solution" class="nav-down-menu menu-1" style="display: none;" _t_nav="solution">
+                <div class="navigation-down-inner w1200">
+                    <dl style="margin-left: 35%;">
+                      <dt>自助防御</dt>
+                      <dd><a hotrep="hp.header.product.compute1" href="http://user.pgyidc.com" target="blank">自动防御系统</a></dd>
+                    </dl>
+                    <dl>
+                      <dt>自动化管理</dt>
+                      <dd><a hotrep="hp.header.product.storage1" href="<?php echo U('Index/sqidc');?>">自动化管理系统</a></dd>
+                    </dl>
+                </div>
+              </div>
+              <div id="support" class="nav-down-menu menu-1" style="display: none;" _t_nav="support">
+                <div class="navigation-down-inner w1200">
+                  <dl style="margin-left: 35%;">
+                    <dt>付款方式</dt>
+                    <dd><a hotrep="hp.header.product.compute1" href="<?php echo U('Index/paytype');?>">付款方式</a></dd>
+                  </dl>
+                  <dl>
+                    <dt>帮助文档</dt>
+                    <dd><a hotrep="hp.header.product.storage1" href="<?php echo U('Index/document');?>">帮助文档</a></dd>
+                  </dl>
+                  <dl>
+                    <dt>下载中心</dt>
+                    <dd><a hotrep="hp.header.product.storage1" href="<?php echo U('Index/download');?>">下载中心</a></dd>
+                    </dl>
+                </div>
+              </div>
+              <div id="company" class="nav-down-menu menu-1" style="display: none;" _t_nav="company">
+                <div class="navigation-down-inner w1200">
+                    <dl style="margin-left: 35%;">
+                    <dt>公司资质</dt>
+                    <dd><a hotrep="hp.header.product.compute1" href="<?php echo U('Index/honer');?>">公司资质</a></dd>
+                    </dl>
+                    <dl>
+                    <dt>关于我们</dt>
+                    <dd><a hotrep="hp.header.product.compute1" href="<?php echo U('Index/about');?>">了解我们</a></dd>
+                    <dd><a hotrep="hp.header.product.compute1" href="<?php echo U('Index/about/#connectus');?>">联系我们</a></dd>
+                    <dd><a hotrep="hp.header.product.compute1" href="<?php echo U('Index/about/#joinus');?>">加入我们</a></dd>
+                    </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="login">
+              <?php if($_SESSION['loginuser']== ''): ?><a href="<?php echo U('Admin/login');?>">登录</a><span>|</span><a href="<?php echo U('Admin/register');?>">注册</a>
+                <?php else: ?><a href="">Hi! <?php echo ($_SESSION['loginuser']['username']); ?></a><span>|</span><a href="<?php echo U('Admin/Index/index');?>">控制台</a><?php endif; ?>
+          </div>
+          <div class="smlogin" style="float: right;color: #fff;"><a href="<?php echo U('Admin/Index/index');?>" style="font-size:14px;color: #fff;">控制台</a></div>
+    </div>
+</div>
+<style>
+    .show-more{border:1px solid #fff;color:#fff;display: inline-block;}
+    ul{margin-bottom: 0;}
+    input[type=checkbox], input[type=radio]{width: 125px;height: 32px;position: absolute;left: -2px;opacity: 0;cursor: pointer;}
+    .onthis{background-color: #60aff6;color: #fff;border: 1px solid #60aff6 !important;}
+    .haveborder{border-right: 1px solid #ddd;}
+    .main{margin: 50px auto;}
+    .main tr td{position: relative;}
+    .title{position: absolute;width: 30px;height:100%;left: 0;top: 0;background-color:#ddd;}
+    .title span{position: absolute;left:50%;top:50%;margin-top:-12px;margin-left:-5px;width:1em;line-height: 1;color: #888;}
+    .panelcon .list{position: relative;margin:10px auto;}
+    .panelcon .list ul{margin-left:130px;height:30px;line-height:30px;cursor: pointer;}
+    .panelcon .list ul li{display: inline-block;position:relative;width:125px;text-align:center;font-size: 12px;border: 1px solid #ddd;padding: 0 15px;}
+    .panelcon .list ul li input{position: absolute;width: 100%;height: 100%;left: 0;opacity: 0;cursor: pointer;}
+    .panelcon .list .list-sp{position: absolute;margin-left: 30px;font-size: 12px;left: 0;top: 50%;margin-top:-10px;width: 90px;text-align: right;color:#999;}
+    .dl-add{position:absolute;border:1px solid #ddd;font-size:12px;width:100px;background-color:#fff;text-align:center;display:none;top:60px;z-index:2;}
+    .dl-add dd{border-bottom:1px solid #ddd;padding:5px 0;}
+    .dl-add dd:hover{background-color: #60aff6;color: #fff;}
+</style>
+<script>
+$(function(){
+    $('.haveborder').mouseenter(function(){
+        $(this).find('.title').css('background-color','#60aff6');
+        $(this).find('.title span').css('color','#fff');
+    });
+    $('.haveborder').mouseleave(function(){
+        $(this).find('.title').css('background-color','#ddd');
+        $(this).find('.title span').css('color','#888');
+    });
+    //滚动
+    $(window).scroll(function(){
+        var docheight=$(window).height();//window高度
+        var trpircetop=$("#tr-pirce").offset().top-$(window).scrollTop();//元素距离window顶部距离
+        
+        if(trpircetop+90<docheight){
+            $('.price-fix').hide();
+        }else{
+            $('.price-fix').show();
+        }
+    });
+    //cpu控制方法
+    var cpublonone=function(state){
+        switch(state){
+            case 0:$('.cpu li:gt(0)').hide();break;
+            case 1:$('.cpu li:gt(0)').show();break;
+        }
+    }
+    //内存控制方法
+    var memblonone=function(state){
+        switch(state){
+            case 0:$('.select-mmr').html('<option>8G</option><option>16G</option><option>32G</option><option>64G</option>');break;
+            case 1:$('.select-mmr').html('<option>32G</option>');break;
+            case 2:$('.select-mmr').html('<option>8G</option><option>16G</option>');break;
+        }
+    }
+    //硬盘
+    var ssdblonone=function(state){
+        switch(state){
+            case 0:$('.ssd').children('li').show();break;
+            case 1:$('.ssd').children('li').eq(1).hide();
+                   $('.ssd').children('li').eq(3).hide();
+                   $('.ssd').children('li').eq(4).hide();break;
+        }
+    }
+    //ip控制方法
+    var ipblonone=function(state){
+        $('.cnipnum').val(0);$('.cmipnum').val(0);$('.cuipnum').val(0);$('.bgpipnum').val(0);
+        switch(state){
+            case 0:$('.cnlist,.cmlist,.culist').show();$('.bgplist,.fhlist').hide();break;
+            case 1:$('.cnlist,.cmlist,.culist,.fhlist').hide();$('.bgplist').show();$("input[name='bgpip']").val(1);break;
+            case 2:$('.cnlist,.cmlist,.culist,.bgplist').hide();$('.fhlist').show();$("input[name='fhip']").val(1);break;
+            case 3:$('.cnlist,.cmlist,.culist,.bgplist').hide();$('.fhlist').show();$("input[name='fhip']").val(2);break;
+        }
+    }
+    //防御
+    var dfblonone=function(state){
+        switch(state){
+            case 0:$('.select-defense').html('<option>50M</option><option>150G</option><option>200G</option>');break;
+            case 1:$('.select-defense').html('<option>20G</option><option>100G</option><option>300G</option>');break;
+            case 2:$('.select-defense').html('<option>120G</option><option>180G</option><option>320G</option><option>400G</option>');break;
+            case 3:$('.select-defense').html('<option>260G集群</option><option>300G集群</option>');break;
+            case 4:$('.select-defense').html('<option>100G独立清洗</option><option>200G独立清洗</option><option>300G独立清洗</option><option>400G独立清洗</option><option>500G独立清洗</option><option>云堤死扛定制</option>');break;
+        }
+        $('.select-defense').change(function(){
+            switch($(this).val()){
+                case '120G':case '180G':$('.select-bw').html("<option>50M</option>");break;
+                case '320G':case '400G':$('.select-bw').html("<option>100M</option>");break;
+                case '260G集群':case '300G集群':$('.select-bw').html("<option>G口共享(100M)</option>");break;
+                case '100G独立清洗':$('.select-bw').html("<option>G口独立(100M)</option>");break;
+                case '200G独立清洗':$('.select-bw').html("<option>G口独立(200M)</option>");break;
+                case '300G独立清洗':$('.select-bw').html("<option>G口独立(300M)</option>");break;
+                case '400G独立清洗':$('.select-bw').html("<option>G口独立(400M)</option>");break;
+                case '500G独立清洗':$('.select-bw').html("<option>G口独立(500M)</option>");break;
+                case '云堤死扛定制':$('.select-bw').html("<option>G口独享</option>");break;
+            }
+            sentkv();
+        })
+    }
+    //带宽
+    var bdblonone=function(state){
+        var bd1=new Array("30M","40M","50M","60M","70M","80M","90M","100M","200M","300M","400M","500M","600M","700M","800M","900M","1G");
+        switch(state){
+            case 0:
+                var n='';
+                for(var i=0;i<bd1.length;i++){
+                    n+="<option>"+bd1[i]+"</option>";
+                }
+                $('.select-bw').html(n);
+                break;
+            case 1:$('.select-bw').html('<option>50M</option>');break;
+            case 2:$('.select-bw').html('<option>G口共享(100M)</option>');break;
+            case 3:$('.select-bw').html('<option>G口独立100M</option>');break;
+        }
+    }
+    //机房点击事件
+    $('.sqdx').click(function(){
+        ipblonone(0);
+        cpublonone(1);
+        dfblonone(0);
+        memblonone(0);
+        ssdblonone(0);
+        bdblonone(0);
+    });
+    $('.sqsx').click(function(){
+        ipblonone(1);
+        cpublonone(1);
+        dfblonone(1);
+        memblonone(0);
+        ssdblonone(0);
+        bdblonone(0);
+    });
+    $('.hzbgp').click(function(){
+        ipblonone(2);
+        cpublonone(0);
+        dfblonone(2);
+        memblonone(1);
+        ssdblonone(1);
+        bdblonone(1);
+    });
+    $('.fzsx').click(function(){
+        ipblonone(3);
+        cpublonone(0);
+        dfblonone(3);
+        memblonone(2);
+        ssdblonone(1);
+        bdblonone(2);
+    });
+    $('.fzdx').click(function(){
+        ipblonone(2);
+        cpublonone(0);
+        dfblonone(4);
+        memblonone(2);
+        ssdblonone(1);
+        bdblonone(3);
+    });
+    var sentkv=function(){
+        var type=$('.type').find('.onthis').data('val');var typearr=new Array("服务器托管","服务器租用");//购买类型1租用，0托管
+        var area=$('.area').find('.onthis').data('val');var areaarr=new Array("宿迁多线","宿迁三线BGP","杭州BGP","福州双线","福州电信");//地区
+        var cpu=$('.cpu').find('.onthis').data('val');//cpu
+        var mmr=$('.select-mmr').children('option:selected').val();//内存
+        var ssd=$('.ssd').find('.onthis').data('val');//硬盘
+        var cnip=$('.cnipnum').val();//电信ip
+        var cmip=$('.cmipnum').val();//移动ip
+        var cuip=$('.cuipnum').val();//联通ip
+        var bgpip=$('.bgpipnum').val();//bgpip
+        var fhip=$('.fhipnum').val();//fhip
+        var exchange=$('.exchange').find('.onthis').data('val');//交换机口
+        var bandwidth=$('.select-bw').children('option:selected').val();//带宽
+        var defense=$('.select-defense').children('option:selected').val();//硬防
+        var abroad=$('.abroad').find('.onthis').data('val');var abroadarr=new Array("不开","开");//国外
+        var udp=$('.udp').find('.onthis').data('val');var udparr=new Array("不阻断","阻断");//udp
+        var noseecc=$('.noseecc').find('.onthis').data('val');var ccparr=new Array("不启用","启用");//无视cc
+        var os=$(".imageselect").children('option:selected').val();//系统
+        var year=$('.year').val();//年
+        var month=$('.month').val();//月
+
+        $('.p-config').text(typearr[type]+" "+areaarr[area]+"(机房) "+cpu+"核(cpu) "+mmr+"G(内存) "+ssd+"G(硬盘) "+cnip+"个(电信ip) "
+        +cmip+"个(移动ip) "+cuip+"个(联通ip) "+bgpip+"个(BGPip) "+fhip+"个(ip) "+exchange+"(交换机口) "+bandwidth+"M(带宽) "+defense+"G(硬防) "+abroadarr[abroad]+"(国外) "+udparr[udp]+"(UDP) "+ccparr[noseecc]+"(无视CC) "+os+"(系统) "+year+"年"+month+"月(时长) ");
+        $('.totalprice').text("价格计算中...");
+        $.post('getrentprice',$('.mform').serialize(),function(data,status){
+            $('.totalprice').text(data);
+        });
+    }
+    var init=function(){
+        sentkv();
+    }
+    init();//初始化
+    
+    //点击按钮
+    $('.list li').click(function(){
+        $(this).closest('ul').find('.onthis').removeClass('onthis');
+        $(this).addClass('onthis');
+        sentkv();
+    });
+    //内存选择事件
+    $('.select-mmr').change(function(){
+        sentkv();
+    });
+    //电信ip
+    $('.cnipnum').change(function(){
+        sentkv();
+    });
+    //移动ip
+    $('.cmipnum').change(function(){
+        sentkv();
+    });
+    //联通ip
+    $('.cuipnum').change(function(){
+        sentkv();
+    });
+    //bgpip
+    $('.bgpipnum').change(function(){
+        sentkv();
+    });
+    //系统选择
+    $(".select-os").change(function(){  
+        var val = $(this).children('option:selected').val();  
+        switch(val){
+            case 'win':$('.imageselect').html('<option value="--">--请选择镜像--</option><option value="Windows 2003 x32">Windows 2003 x32</option><option value="Windows 2003 x64">Windows 2003 x64</option><option value="Windows 2003 R2 x32">Windows 2003 R2 x32</option><option value="Windows 2003 R2 x64">Windows 2003 R2 x64</option><option value="Windows 2008 x32">Windows 2008 x32</option><option value="Windows 2008 x64">Windows 2008 x64</option><option value="Windows 2008 R2 x32">Windows 2008 R2 x32</option><option value="Windows 2008 R2 x64">Windows 2008 R2 x64</option><option value="Windows 2012">Windows 2012</option><option value="Windows 2012 R2">Windows 2012 R2</option><option value="Windows 2016">Windows 2016</option><option value="Windows7 x32">Windows7 x32</option><option value="Windows7 x64">Windows7 x64</option>');break;
+            case 'linux':$('.imageselect').html('<option value="--">--请选择镜像--</option><option value="CentOS 5.8 x32">CentOS 5.8 x32</option><option value="CentOS 5.8 x64">CentOS 5.8 x64</option><option value="CentOS 5.9 x32">CentOS 5.9 x32</option><option value="CentOS 5.9 x64">CentOS 5.9 x64</option><option value="CentOS 6.5 x32">CentOS 6.5 x32</option><option value="CentOS 6.5 x64">CentOS 6.5 x64</option><option value="CentOS 6.8 x32">CentOS 6.8 x32</option><option value="CentOS 6.8 x64">CentOS 6.8 x64</option><option value="CentOS 6.9 x32">CentOS 6.9 x32</option><option value="CentOS 6.9 x64">CentOS 6.9 x64</option><option value="CentOS 7.0 x32">CentOS 7.0 x32</option><option value="CentOS 7.0 x64">CentOS 7.0 x64</option><option value="CentOS 7.1 x32">CentOS 7.1 x32</option><option value="CentOS 7.1 x64">CentOS 7.1 x64</option><option value="CentOS 7.2 x32">CentOS 7.2 x32</option><option value="CentOS 7.2 x64">CentOS 7.2 x64</option><option value="CentOS 7.3 x32">CentOS 7.3 x32</option><option value="CentOS 7.3 x64">CentOS 7.3 x64</option><option value="CentOS 7.4 x32">CentOS 7.4 x32</option><option value="CentOS 7.4 x64">CentOS 7.4 x64</option><option value="Debian 8.6">Debian 8.6</option><option value="FreeBSD 9.2">FreeBSD 9.2</option><option value="Ubuntu 16.04.4">Ubuntu 16.04.4</option><option value="Xenserver 6.5">Xenserver 6.5</option>');break;
+        }
+    });
+    $(".imageselect").change(function(){
+        sentkv();
+    });
+    //带宽选择
+    $(".select-bw").change(function(){
+        sentkv();
+    });
+    //防御
+    $('.select-defense').change(function(){
+        // var val = $(this).children('option:selected').val();
+        // val=parseInt(val);
+        // if(val>200||val==200){
+        //     $('.abroad').find('li:eq(1)').hide();
+        //     $('.abroad').find('.onthis').removeClass('onthis');
+        //     $('.abroad').find('li:eq(0)').addClass('onthis');
+        // }else{
+        //     $('.abroad').find('li:eq(1)').css('display','inline-block');
+        //     $('.abroad').find('.onthis').removeClass('onthis');
+        //     $('.abroad').find('li:eq(0)').addClass('onthis');
+        // }
+        sentkv();
+    });
+    //时长
+    $('.year,.month').change(function(){
+        sentkv();
+    });
+    //复制配置
+    $('.copyconf').click(function(){
+        var c = document.getElementById("p-config");
+        var s=c.innerHTML;
+        var clipboard = new Clipboard('.copyconf', {
+            text: function() {
+                return s;
+            }
+        });
+
+        clipboard.on('success', function(e) {
+            layer.msg("复制成功,可粘贴到消息框立即咨询");
+        });
+
+        clipboard.on('error', function(e) {
+            console.log(e);
+        });
+    })
+});
+</script>
+<div class="banner">
+    <div class="banner-contain w1200 pr">
+        <div class="bc-left"><span class="circle1"></span><span class="circle2"></span><img src="/Application/Home/View/Public/images/server_ban.png"></div>
+        <div class="bc-right tl pa" style="left:200px;top:20px;">
+            <h2 class="m0 wow fadeInUp">服务器托管与租用</h2>
+            <p class="mt20 wow fadeInUp">华东地区第一家带防BGP，国家甲级机房，超级数据港。专门技术人员7X24小时维护;标准机房环境，提供365天全天候运营服务。</p>
+            <div class="show-more m0 mt30 wow fadeInUp askbtn">立即咨询</div>
+        </div>
+    </div>
+</div>
+
+<div class="main w1200 tl">
+        <table class="table">
+            <tbody>
+                <form class="mform">
+                <tr>
+                    <td class="haveborder">
+                        <div class="title"><span>类型</span></div>
+                        <div class="panelcon">
+                            <div class="list">
+                                <span class="list-sp">产品类型：</span>
+                                <ul class="type">
+                                    <a href="<?php echo U('Index/serverbuy');?>"><li class="onthis" data-val="1">服务器租用</li></a>
+                                    <a href="<?php echo U('Index/servertrust');?>"><li data-val="0">服务器托管</li></a>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="haveborder">
+                        <div class="title"><span>区域</span></div>
+                        <div class="panelcon">
+                            <div class="list">
+                                <span class="list-sp">机房：</span>
+                                <ul class="area">
+                                    <li class="onthis sqdx" data-val="0"><input type="radio" name="area" value="宿迁多线" checked>宿迁多线</li>
+                                    <li class="sqsx" data-val="1"><input type="radio" name="area" value="宿迁BGP">宿迁三线BGP</li>
+                                    <li class="hzbgp" data-val="2"><input type="radio" name="area" value="杭州BGP">杭州BGP</li>
+                                    <li class="fzsx" data-val="3"><input type="radio" name="area" value="福州双线">福州双线</li>
+                                    <li class="fzdx" data-val="4"><input type="radio" name="area" value="福州电信">福州电信</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="haveborder">
+                        <div class="title"><span>规格</span></div>
+                        <div class="panelcon">
+                            <div class="list">
+                                <span class="list-sp">CPU：</span>
+                                <ul class="cpu">
+                                    <li class="onthis" data-type="cpu" data-val="16核L5630*2"><input type="radio" name="cpu" value="L5630*2" checked>16核L5630*2</li>
+                                    <li data-type="cpu" data-val="24核E5-2430*2"><input type="radio" name="cpu" value="E5-2430*2">24核E5-2430*2</li>
+                                    <li data-type="cpu" data-val="24核E5-2450*2"><input type="radio" name="cpu" value="E5-2450*2">24核E5-2450*2</li>
+                                    <li data-type="cpu" data-val="32核E5-2670*2"><input type="radio" name="cpu" value="E5-2670*2">32核E5-2670*2</li>
+                                </ul>
+                            </div>
+                            <div class="list">
+                                <span class="list-sp">内存：</span>
+                                <ul class="mmr">
+                                    <div class="selecon" style="width:125px;float:left;">
+                                        <select class="form-control select-mmr" name="ram">
+                                            <option value="8G">8G</option>
+                                            <option value="16G">16G</option>
+                                            <option value="32G">32G</option>
+                                            <option value="64G">64G</option>
+                                        </select>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="haveborder">
+                        <div class="title"><span>存储</span></div>
+                        <div class="panelcon">
+                            <div class="list">
+                                <span class="list-sp">硬盘：</span>
+                                <ul class="ssd">
+                                    <li class="onthis" data-type="ssd" data-val="120"><input type="radio" name="ssd" value="120G固态" checked>120G固态</li>
+                                    <li data-type="ssd" data-val="240"><input type="radio" name="ssd" value="240G固态">240G固态</li>
+                                    <li data-type="ssd" data-val="500"><input type="radio" name="ssd" value="500G机械">500G机械</li>
+                                    <li data-type="ssd" data-val="1000"><input type="radio" name="ssd" value="1T机械">1T机械</li>
+                                    <li data-type="ssd" data-val="2000"><input type="radio" name="ssd" value="2T机械">2T机械</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="haveborder">
+                        <div class="title"><span style="margin-top: -5px;">IP</span></div>
+                        <div class="panelcon">
+                            <div class="list cnlist">
+                                <span class="list-sp">电信IP：</span>
+                                <ul>
+                                    <input type="number" name="cnip" class="form-control cnipnum" value="0" min="0" max="256" style="width: 100px;display: inline-block;"> 个
+                                </ul>
+                            </div>
+                            <div class="list cmlist">
+                                <span class="list-sp">移动IP：</span>
+                                <ul>
+                                    <input type="number" name="cmip" class="form-control cmipnum" value="0" min="0" max="256" style="width: 100px;display: inline-block;"> 个
+                                </ul>
+                            </div>
+                            <div class="list culist">
+                                <span class="list-sp">联通IP：</span>
+                                <ul>
+                                    <input type="number" name="cuip" class="form-control cuipnum" value="0" min="0" max="256" style="width: 100px;display: inline-block;"> 个
+                                </ul>
+                            </div>
+                            <div class="list bgplist" style="display: none;">
+                                <span class="list-sp">BGP IP：</span>
+                                <ul>
+                                    <input type="number" name="bgpip" class="form-control bgpipnum" value="0" min="0" max="256" style="width: 100px;display: inline-block;"> 个
+                                </ul>
+                            </div>
+                            <div class="list fhlist" style="display: none;">
+                                <span class="list-sp">IP：</span>
+                                <ul>
+                                    <input type="number" name="fhip" class="form-control fhipnum" value="0" min="0" max="256" style="width: 100px;display: inline-block;"> 个
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="haveborder">
+                        <div class="title"><span style="margin-top: -20px;">交换机口</span></div>
+                        <div class="panelcon">
+                            <div class="list">
+                                <span class="list-sp">大小：</span>
+                                <ul class="exchange">
+                                    <li class="onthis" data-type="exchange" data-val="百兆"><input type="radio" name="exchange" value="b" checked>百兆口</li>
+                                    <li data-type="exchange" data-val="G"><input type="radio" name="exchange" value="g">G口</li>
+                                    <!-- <li data-type="exchange" data-val="万兆"><input type="radio" name="exchange" value="w">万兆口</li> -->
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="haveborder">
+                        <div class="title"><span>带宽</span></div>
+                        <div class="panelcon">
+                            <div class="list">
+                                <span class="list-sp">带宽：</span>
+                                <ul class="bandwidth">
+                                    <div class="selecon" style="width:125px;float:left;">
+                                        <select class="form-control select-bw" name="bandwidth">
+                                            <option value="30">30M</option>
+                                            <option value="40">40M</option>
+                                            <option value="50">50M</option>
+                                            <option value="60">60M</option>
+                                            <option value="70">70M</option>
+                                            <option value="80">80M</option>
+                                            <option value="90">90M</option>
+                                            <option value="100">100M</option>
+                                            <option value="200">200M</option>
+                                            <option value="300">300M</option>
+                                            <option value="400">400M</option>
+                                            <option value="500">500M</option>
+                                            <option value="600">600M</option>
+                                            <option value="700">700M</option>
+                                            <option value="800">800M</option>
+                                            <option value="900">900M</option>
+                                            <option value="1000">1G</option>
+                                        </select>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="haveborder">
+                        <div class="title"><span>防御</span></div>
+                        <div class="panelcon">
+                            <div class="list">
+                                <span class="list-sp">硬防：</span>
+                                <ul class="defense">
+                                    <div class="selecon" style="width:125px;float:left;">
+                                        <select class="form-control select-defense" name="defense">
+                                            <option value="100G">100G</option>
+                                            <option value="150G">150G</option>
+                                            <option value="200G">200G</option>
+                                        </select>
+                                    </div>
+                                </ul>
+                            </div>
+                            <div class="list">
+                                <span class="list-sp">国外：</span>
+                                <ul class="abroad">
+                                    <li class="onthis" data-type="abroad" data-val="0"><input type="radio" name="abroad" value="0" checked>不开</li>
+                                    <!-- <li data-type="abroad" data-val="1"><input type="radio" name="abroad" value="1">开</li> -->
+                                </ul>
+                            </div>
+                            <div class="list">
+                                <span class="list-sp">UDP：</span>
+                                <ul class="udp">
+                                    <li class="onthis" data-type="udp" data-val="0"><input type="radio" name="udp" value="0" checked>不阻断</li>
+                                    <li data-type="udp" data-val="1"><input type="radio" name="udp" value="1">阻断</li>
+                                </ul>
+                            </div>
+                            <div class="list">
+                                <span class="list-sp">无视CC：</span>
+                                <ul class="noseecc">
+                                    <li class="onthis" data-type="noseecc" data-val="0"><input type="radio" name="noseecc" value="0" checked>不启用</li>
+                                    <li data-type="noseecc" data-val="1"><input type="radio" name="noseecc" value="1">启用</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="haveborder">
+                        <div class="title"><span>系统</span></div>
+                        <div class="panelcon">
+                            <div class="list">
+                                <span class="list-sp">系统镜像:</span>
+                                <div style="margin-left:130px;height:30px;line-height:30px;display:inline-block;cursor: pointer;">
+                                    <div class="selecon" style="width:150px;float:left;">
+                                        <select class="form-control select-os">
+                                            <option value="win">windows</option>
+                                            <option value="linux">Linux</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="seleimages" style="width:190px;float:left;margin-left:10px;display:block;">
+                                        <select class="form-control imageselect" name="images">
+                                            <option value="--">--请选择镜像--</option>
+                                            <option value="Windows 2003 x32">Windows 2003 x32</option>
+                                            <option value="Windows 2003 x64">Windows 2003 x64</option>
+                                            <option value="Windows 2003 R2 x32">Windows 2003 R2 x32</option>
+                                            <option value="Windows 2003 R2 x64">Windows 2003 R2 x64</option>
+                                            <option value="Windows 2008 x32">Windows 2008 x32</option>
+                                            <option value="Windows 2008 x64">Windows 2008 x64</option>
+                                            <option value="Windows 2008 R2 x32">Windows 2008 R2 x32</option>
+                                            <option value="Windows 2008 R2 x64">Windows 2008 R2 x64</option>
+                                            <option value="Windows 2012">Windows 2012</option>
+                                            <option value="Windows 2012 R2">Windows 2012 R2</option>
+                                            <option value="Windows 2016">Windows 2016</option>
+                                            <option value="Windows7 x32">Windows7 x32</option>
+                                            <option value="Windows7 x64">Windows7 x64</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="haveborder">
+                        <div class="title"><span>时长</span></div>
+                        <div class="panelcon">
+                            <div class="list">
+                                <span class="list-sp">时长：</span>
+                                <ul>
+                                    <input type="number" name="duration_y" class="form-control year" value="0" min="0" max="10" style="width: 100px;display: inline-block;"> 年
+                                    <input type="number" name="duration_m" class="form-control month" value="1" min="1" max="12" style="width: 100px;display: inline-block;"> 个月
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td></td>
+                </tr>
+                <tr id="tr-pirce">
+                    <td class="haveborder">
+                        <div class="title"><span>价格</span></div>
+                        <div class="panelcon">
+                            <div class="list">
+                                <span class="list-sp">配置价格：</span>
+                                <div style="height:80px;margin-left:130px;position:relative;">
+                                    <span style="position:absolute;width:10px;font-size:24px;font-weight:700;color:red;margin-left:0;left:0;">￥</span>
+                                    <span class="totalprice" style="position:absolute;font-size:24px;font-weight:700;color:red;margin-left:0;left:20px;">价格计算中...</span>
+                                    <p class="p-config" id="p-config" style="position:absolute;top:50px;font-size:12px;color:#999;"></p>
+                                    <a class="copyconf" style="position:absolute;top:80px;right:10px;font-size:12px;"><i class="fa fa-files-o"></i> 复制配置，快速咨询</a>
+                                </div>
+                                <a class="btn btn-default askbtn" style="position:absolute;right:10px;top:5%;background-color:#60affd;border:0;color:#fff;font-size:20px;font-weight:bold;">立即咨询</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                </form>
+            </tbody>
+        </table>
+        <div class="price-fix w1200" style="position:fixed;display:block;padding:8px;bottom:0;background-color:#fff;box-shadow: 0px -2px 16px rgba(0, 0, 0, .12);z-index:3;">
+            <div class="title"><span>价格</span></div>
+            <div class="panelcon">
+                <div class="list">
+                    <span class="list-sp">配置价格：</span>
+                    <div style="height:80px;margin-left:130px;position:relative;">
+                        <span style="position:absolute;width:10px;font-size:24px;font-weight:700;color:red;margin-left:0;left:0;">￥</span>
+                        <span class="totalprice" style="position:absolute;font-size:24px;font-weight:700;color:red;margin-left:0;left:20px;">价格计算中...</span>
+                        <p class="p-config" style="position:absolute;top:50px;font-size:12px;color:#999;"></p>
+                        <a class="copyconf" style="position:absolute;top:80px;right:10px;font-size:12px;"><i class="fa fa-files-o"></i> 复制配置，快速咨询</a>
+                    </div>
+                    <button class="btn btn-default askbtn" style="position:absolute;right:10px;top:5%;background-color:#60affd;border:0;color:#fff;font-size:20px;font-weight:bold;">立即咨询</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--左右悬浮-->
+<style>
+    .float{
+        position: fixed;
+        width: 64px;
+        height: 158px;
+        box-shadow: 0 6px 12px 0 rgba(0,0,0,.15);
+        background-color: #60aff6;
+        text-align: center;
+        top:0;
+        bottom: 0;
+        margin: auto;
+    }
+    .float img{
+        width: 48px;
+        margin: 8px 0 4px;
+    }
+    .float span{
+        cursor: default;
+        display: inline-block;
+        width: 18px;
+        font-size: 18px;
+        color: #fff;
+        line-height: 21px;
+    }
+    .float-panel{
+        box-sizing: border-box;
+        position: fixed;
+        padding: 20px;
+        background: #fff;
+        box-shadow: 0 6px 12px 0 rgba(0,0,0,.15);
+        z-index: 4;
+    }
+    /*right*/
+    .right-float{
+        right: 20px;
+    }
+    .float-panel-right{
+        right: 100px;
+        width: 320px;
+        height: 224px;
+        top: 0;
+        bottom: 66px;
+        margin: auto;
+    }
+    .float-panel-right .panel-content{
+        min-height: 24px;
+        padding-left: 0;
+    }
+    
+    .float-panel-right .panel-content li{
+        list-style: none;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+    .float-panel-right .panel-content li:hover{
+        background: #ece9e9;
+    }
+    .float-panel-right .panel-content .content-icon{
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .float-panel-right .panel-content .content-icon img{
+        width: 100%;
+    }
+    .float-panel-right .panel-content .content-main{
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 12px;
+        text-align: left;
+    }
+    .float-panel-right .panel-content .content-main .content-title{
+        line-height: 24px;
+    }
+    .float-panel-right .panel-content .content-main .content-desc{
+        color: #9b9ea0;
+        font-size: 12px;
+        line-height: 24px;
+    }
+    .float-panel-right .panel-content .content-main a{
+        text-decoration: none;
+        color: #5f6367;
+        font-size: 14px;
+    }
+    /*left*/
+    .left-float{
+        left: 20px;
+    }
+    .float-panel-left{
+        left: 100px;
+        width: 470px;
+        height: 224px;
+        top: 0;
+        bottom: 66px;
+        margin: auto;
+    }
+    
+    .float-panel-left ul li{
+        text-align: left;
+        padding: 5px 5px;
+    }
+    .float-panel-left ul li span{
+        border: 1px solid #c1c2c3;
+        margin-left: 10px;
+        font-size: 15px;
+        padding: 2px;
+        cursor: pointer;
+        border: 1px solid #60aff6;
+        color: #60aff6;
+        border-radius: 5px;
+    }
+    .float-panel-left ul li span:hover{
+        background: #60aff6;
+        color: #fff;
+    }
+    .float-panel-left ul li img{
+        width: 15px;
+        margin-top: -5px;
+    }
+    /*middle*/
+    .float-panel-middle{
+        position: fixed;
+        background: #eee;
+        padding: 20px;
+        box-shadow: 0 6px 12px 0 rgba(0,0,0,.15);
+        left: 0; top: 0; right: 0; bottom: 0;
+        width: 470px;
+        height: 240px;
+        margin: auto;
+        opacity: 0.9;
+        z-index: 16;
+    }
+    
+    .float-panel-middle ul li{
+        text-align: left;
+        padding: 5px 5px;
+    }
+    .float-panel-middle ul li span{
+        border: 1px solid #c1c2c3;
+        margin-left: 10px;
+        font-size: 15px;
+        padding: 2px;
+        cursor: pointer;
+        border: 1px solid #60aff6;
+        color: #60aff6;
+        border-radius: 5px;
+    }
+    .float-panel-middle ul li span:hover{
+        background: #60aff6;
+        color: #fff;
+    }
+    .float-panel-middle ul li img{
+        width: 15px;
+        margin-top: -5px;
+    }
+    /*弹窗*/
+    .closetan{position: absolute;top: -15px;right: 0;font-size: 25px;}
+    .closetan:hover{color: red;}
+</style>
+<div class="footer_above" style="width:100%;height:160px;background-image:url('/Application/Home/View/Public/images/footer-bg.jpg');">
+    <p style="height:90px;line-height:100px;font-size:24px;color:#fff;">加入我们，立即开启您的互联网飞速之旅！</p>
+    <a href="<?php echo U('Admin/register');?>" style="color:#60aff6;font-size:17px;" class="btn btn-default default-transition">免费注册</a>
+</div>
+<div class="footer_big">
+	<div class="footer_content w1200">
+        <div class="footer_left">
+            <p>产品导航</p>
+            <ul>
+                <li><a href="<?php echo U('Index/cloud');?>">VPS云主机</a></li>
+                <li><a href="<?php echo U('Index/vhost');?>">虚拟主机</a></li>
+                <li><a href="<?php echo U('Index/newserver');?>">服务器租用</a></li>
+                <li><a href="<?php echo U('Index/newserver');?>">服务器托管</a></li>
+            </ul>
+        </div>
+        <div class="footer_left footer_service">
+            <p>服务支持</p>
+            <ul>
+                <li class="qq">售后ＱＱ：800002004</li>
+                <li class="phone">售后电话：0527-84224055转800</li>
+                <li class="wechat">微信服务号: 扫描下方二维码</li>
+                <li style="width:100px;height:100px;"><img src="/Application/Home/View/Public/images/ewm.jpg" width="100%"></li>
+            </ul>
+        </div>
+        <div class="footer_left">
+        	<p>服务承诺</p>
+            <ul>
+            	<li><a href="">用户政策</a></li>
+                <li><a href="">服务条款</a></li>
+                <li><a href="">隐私保护</a></li>
+                <li><a href="">DMCA政策</a></li>
+            </ul>
+        </div>
+        <div class="footer_left">
+            <p>公司资质</p>
+            <ul>
+                <li>增值电信业务经营许可证</li>
+                <li>电信与信息服务业务经营许可证</li>
+                <li>电信业务审批[2008]字第888号</li>
+                <li>ISO9001国际标准质量体系认证</li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+        <p class="footer_bottom mt20" style="margin:0;padding:10px;border-top:1px solid #aaa;">
+            <span style="color:#bbb;font-size:12px">Copyright ©2014 宿迁蒲公英网络 All Rights Reserved</br> ICP证：苏B2-20070043-1</span></br>
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32130202080002" target="blank" style="color:#fff;font-size:13px"> <img src="/Application/Home/View/Public/images/20160331152326_4663.png">  备案号：苏公网安备 32130202080002号</a>
+        </p>
+    </div>
+
+    <div id="rfloat" style="position:fixed;top:0;bottom:0;margin:auto;right:20px;width:84px;height:224px;z-index:999;">
+        <div class="float right-float">
+            <img class="button-background" src="/Application/Home/View/Public/images/service.png" alt="">
+            <span>售后服务</span>
+        </div>
+        <div class="float-panel float-panel-right" style="display:none;">
+            <ul class="panel-content">
+                <li>
+                    <div class="content-icon">
+                        <img src="/Application/Home/View/Public/images/telephone.png" alt="">
+                    </div>
+                    <div class="content-main">
+                        <a href="javascript:void(0);">
+                            <div>
+                                <div class="content-title">
+                                    售后服务电话
+                                </div>
+                                <div class="content-desc">
+                                    <span style="color: #ff9900;">0527-84224055转800</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li data-spm-anchor-id="5176.8142029.762944.i3.e93976f4s5uTHh">
+                    <div class="content-icon">
+                        <img src="/Application/Home/View/Public/images/qq.png" alt="">
+                    </div>
+                    <div class="content-main">
+                        <a target="_blank" href="http://crm2.qq.com/page/portalpage/wpa.php?uin=800002004&aty=0&a=0&curl=&ty=1">
+                            <div>
+                                <div class="content-title">
+                                    售后QQ
+                                </div>
+                                <div class="content-desc">
+                                    24小时在线解答
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="lfloat" style="position:fixed;top:0;bottom:0;margin:auto;left:20px;width:84px;height:224px;z-index:999;">
+        <div class="float left-float">
+            <img class="button-background" src="/Application/Home/View/Public/images/service-2.png" alt="">
+            <span>售前咨询</span>
+        </div>
+        <div class="float-panel float-panel-left" style="display:none;">
+            <h4 style="text-align:left;margin-left:10px;line-height:25px;border-bottom:2px solid #60aff6">售前咨询</h2>
+            <ul>
+                <li>
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=3002725400&site=qq&menu=yes" target="blank"><span><img src="/Application/Home/View/Public/images/qq.png" alt="">  销售依一</span></a>
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=2851391907&site=qq&menu=yes" target="blank"><span><img src="/Application/Home/View/Public/images/qq.png" alt="">  销售硕硕</span></a>
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=2851391890&site=qq&menu=yes" target="blank"><span><img src="/Application/Home/View/Public/images/qq.png" alt="">  销售宁宁</span></a>
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=3002738725&site=qq&menu=yes" target="blank"><span><img src="/Application/Home/View/Public/images/qq.png" alt="">  销售吉祥</span></a>
+                </li>
+                <li>
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=2851391894&site=qq&menu=yes" target="blank"><span><img src="/Application/Home/View/Public/images/qq.png" alt="">  销售阿东</span></a>
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=2851391885&site=qq&menu=yes" target="blank"><span><img src="/Application/Home/View/Public/images/qq.png" alt="">  销售慧慧</span></a>
+                </li>
+            </ul>
+            <h4 style="text-align:left;margin-left:10px;line-height:25px;border-bottom:2px solid #60aff6;margin-top:20px;">投诉建议</h4>
+            <ul>
+                <li>
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=3002951580&site=qq&menu=yes" target="blank"><span><img src="/Application/Home/View/Public/images/qq.png" alt="">  投诉受理</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="float-panel-middle" style="display:none;">
+        <div style="position: relative;">
+            <div class="closetan"><i class="fa fa-times"></i></div>
+            <h4 style="text-align:left;margin-left:10px;line-height:25px;border-bottom:2px solid #60aff6">售前咨询</h2>
+            <ul>
+                <li>
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=3002725400&site=qq&menu=yes" target="blank"><span><img src="/Application/Home/View/Public/images/qq.png" alt="">  销售依一</span></a>
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=2851391907&site=qq&menu=yes" target="blank"><span><img src="/Application/Home/View/Public/images/qq.png" alt="">  销售硕硕</span></a>
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=2851391890&site=qq&menu=yes" target="blank"><span><img src="/Application/Home/View/Public/images/qq.png" alt="">  销售宁宁</span></a>
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=3002738725&site=qq&menu=yes" target="blank"><span><img src="/Application/Home/View/Public/images/qq.png" alt="">  销售吉祥</span></a>
+                </li>
+                <li>
+                        <a href="http://wpa.qq.com/msgrd?v=3&uin=2851391894&site=qq&menu=yes" target="blank"><span><img src="/Application/Home/View/Public/images/qq.png" alt="">  销售阿东</span></a>
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=2851391885&site=qq&menu=yes" target="blank"><span><img src="/Application/Home/View/Public/images/qq.png" alt="">  销售慧慧</span></a>
+                </li>
+            </ul>
+            <h4 style="text-align:left;margin-left:10px;line-height:25px;border-bottom:2px solid #60aff6;margin-top:20px;">投诉建议</h4>
+            <ul>
+                <li>
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=3002951580&site=qq&menu=yes" target="blank"><span><img src="/Application/Home/View/Public/images/qq.png" alt="">  投诉受理</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="home" style="display:none;"><a href="javascript:void(0);"><img src="/Application/Home/View/Public/images/home.png"></a></div>
+</div>
+<?php if($current == 'about'): ?><script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&amp;ak=C13c98650aa84efc4279c4fd5ac4bac6"></script>
+<script type="text/javascript" src="https://api.map.baidu.com/getscript?v=2.0&amp;ak=C13c98650aa84efc4279c4fd5ac4bac6&amp;services=&amp;t=20180323171755"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/js/pgymap.js"></script><?php endif; ?>
+</body>
+</html>

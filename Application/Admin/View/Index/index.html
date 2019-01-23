@@ -1,0 +1,219 @@
+﻿<include file="Public/header" title="后台管理" />
+<style>
+  /*middle*/
+  .float-panel-middle{
+        position: fixed;
+        background: #eee;
+        padding: 20px;
+        box-shadow: 0 6px 12px 0 rgba(0,0,0,.15);
+        left: 0; top: 0; right: 0; bottom: 0;
+        width: 470px;
+        height: 240px;
+        margin: auto;
+        opacity: 0.9;
+        z-index: 16;
+    }
+    
+    .float-panel-middle ul li{
+        text-align: left;
+        padding: 5px 5px;
+    }
+    .float-panel-middle ul li span{
+        border: 1px solid #c1c2c3;
+        margin-left: 10px;
+        font-size: 15px;
+        padding: 2px;
+        cursor: pointer;
+        border: 1px solid #60aff6;
+        color: #60aff6;
+        border-radius: 5px;
+    }
+    .float-panel-middle ul li span:hover{
+        background: #60aff6;
+        color: #fff;
+    }
+    .float-panel-middle ul li img{
+        width: 15px;
+        margin-top: -5px;
+    }
+    /*弹窗*/
+    .closetan{position: absolute;top: -15px;right: 0;font-size: 25px;}
+    .closetan:hover{color: red;}
+</style>
+<link rel="stylesheet" type="text/css" href="__APC__/css/layout.css" />
+<link rel="stylesheet" type="text/css" href="__APC__/css/control_index.css" />
+  <div class="right-product my-index right-full">
+     <div class="view-product background-color">
+        <div class="padding-big background-color">
+          <div class="account-info clearfix">
+            <div class="text-box-main min-width-300 fl">
+              <dl>
+                <dt class="padding-big-left lists-border-list clearfix">
+                  <div class="title fl padding-big-top padding-big-bottom">
+                    <p>HI,{$userinfolist.username}</p>
+                    <p class="margin-small-top clearfix">
+                      <span class="fl">账户安全级别：<em class="text-blue-deep">高</em></span>
+                      <!--没有实名认证-->
+                      <!-- <a class="button bg-blue-deep icon icon-button-blue fl margin-left" href="#">立即实名认证</a> -->
+                      <!--通过实名认证-->
+                      <a class="button bg-green-deep icon icon-button-green fl margin-left" href="{:U('Userinfo/identificat')}">通过实名认证</a>
+                    </p>
+                  </div>
+                </dt>
+                <dd class="padding-big clearfix">
+                  <p class="w50 fl">
+                    <i class="fa fa-phone fl" style="margin-top: 3px;"></i>
+
+                    <span class="fl margin-left">手机：
+                      {$userinfolist.phone}
+                    </span>
+                  </p>
+                  <p class="w50 fl">
+                    <i class="fa fa-envelope-o fl" style="margin-top: 3px;"></i>
+
+                    <span class="fl margin-left">邮箱：
+                        {$userinfolist.linkmail}
+                    </span>
+                  </p>
+                </dd>
+              </dl>
+            </div>
+            <div class="text-box-main min-width-360 fl">
+              <dl>
+                <dt class="padding-big lists-border-list clearfix">
+                  <div class="fl w50 title">
+                    <p>账户余额</p>
+                    <p class="margin-small-top clearfix">
+                      <span class="fl"><em class="h3 text-red-deep">{$balance}</em>元</span>
+                      <a class="fl margin-left button btn-red text-white"  href="{:U('Userinfo/account')}">充值</a>
+                    </p>
+                  </div>
+                </dt>
+                <dd class="padding-big">
+                  <div class="account-class text-hidden">
+                    <a href="{:U('Userinfo/account')}">订单记录</a>
+                    <a href="{:U('Userinfo/account')}">充值记录</a>
+                    <a href="{:U('Userinfo/account')}">消费记录</a>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+            <div class="text-box-main min-width-300 fl margin-right-none">
+              <dl>
+                <dt class="padding-big lists-border-list clearfix">
+                  <div class="fl title">
+                    
+                    <p class="text-sliver text-default margin-small-top">
+                      <span style="color: #2f2f2f;">售后客服：</span>
+                      <em class="text-golden margin-big-right">QQ：</em><a href="http://crm2.qq.com/page/portalpage/wpa.php?uin=800002004&aty=0&a=0&curl=&ty=1" target="_blank">800002004</a>
+                      <em class="text-golden margin-big-right">Tel：</em>0527-84224055
+                    </p>
+                    <p class="text-sliver text-default margin-small-top">
+                        <span style="color: #2f2f2f;">售前客服：</span>
+                        <a class="button btn-orange text-white askbtn" style="margin:0;padding: 2px 4px;" href="javacript:;">购机立即咨询</a>
+                    </p>
+                  </div>
+                  <div class="fr">
+                    
+                  </div>
+                </dt>
+                <dd class="padding-big">
+                  <div class="account-class text-hidden">
+                    <p>您好，在使用中有任何问题，欢迎随时联系！</p>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+          </div>
+          <!-- 最新活动 -->
+          <div class="account-product margin-big-top clearfix">
+              <div class="text-box-main padding-big fl mine-product" style="width: 100%;height: 150px;background: url(__APC__/img/admin_active.png) #04113b no-repeat center;">
+                 <a href="{:U('/Home/Index/newactive')}" target="_blank" class="btn btn-danger fr" style="margin-top: 25px;font-size: 28px;">查看详情</a>
+              </div>
+          </div>
+          <!--产品-->
+          <div class="account-product margin-big-top clearfix">
+            <div class="text-box-main padding-big fl mine-product">
+              <h2 class="h6 margin-big-bottom">我的产品</h2>
+              <div class="mine-product-content clearfix">
+                <ul class="w50 fl lists">
+                  <!-- <li class="w70 lists-border-list">
+                    <p class="border-list-text">云托管服务： <em class="orange">0</em>  台 
+                      <a class="text-main fr" href="#">查看</a>
+                    </p>
+                  </li>  -->
+                  <li class="w70 lists-border-list">
+                    <p class="border-list-text">云主机线路一： <em class="orange">{$cloudnum1}</em> 台
+                      <a class="text-main fr" href="{:U('Cloud/cloudmanage')}">查看</a>
+                    </p>
+                  <li class="w70 lists-border-list">
+                    <p class="border-list-text">云主机线路二： <em class="orange">{$cloudnum2}</em> 台
+                      <a class="text-main fr" href="{:U('Jdcloud/jdcloudmanage')}">查看</a>
+                    </p>
+                  </li>
+                  <li class="w70 lists-border-list">
+                    <p class="border-list-text">物理机： <em class="orange">0</em> 台
+                      <a class="text-main fr" href="#">查看</a>
+                    </p>
+                  </li>
+
+                </ul>
+                <ul class="w50 fl lists">
+                  <li class="w80 lists-border-list">
+                    <p class="border-list-text">15天内到期的云主机线路一： <em class="orange">{$cloudnumdq1}</em> 台
+                      <a class="text-main fr" href="{:U('Cloud/cloudmanage')}">查看</a>
+                    </p>
+                  </li>
+                  <li class="w80 lists-border-list">
+                      <p class="border-list-text">15天内到期的云主机线路二： <em class="orange">{$cloudnumdq2}</em> 台
+                        <a class="text-main fr" href="{:U('Jdcloud/jdcloudmanage')}">查看</a>
+                      </p>
+                  </li>
+                  <li class="w80 lists-border-list">
+                    <p class="border-list-text">15天内到期的物理机： <em class="orange">0</em> 台
+                      <a class="text-main fr" href="#">查看</a>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="text-box-main padding-big fl w25">
+              <h2 class="h6 margin-big-bottom">公告</h2>
+              <ul class="lists">
+                <li class="lists-list"><a href="#">05-10 云托管服务临时维护公告管服务临时维护公告管服务临时维护公告管服务临时维护公告管服务临时维护公告管服务临时维护公告</a></li>
+                <li class="lists-list"><a href="#">05-10 云托管服务临时维护公告</a></li>
+                <li class="lists-list"><a href="#">05-10 云托管服务临时维护公告</a></li>
+                <li class="lists-list"><a href="#">05-10 云托管服务临时维护公告</a></li>
+                <li class="lists-list"><a href="#">05-10 云托管服务临时维护公告</a></li>
+                <li class="lists-list"><a href="#">05-10 云托管服务临时维护公告</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="float-panel-middle" style="display:none;">
+      <div style="position: relative;">
+          <div class="closetan"><i class="fa fa-times"></i></div>
+          <h4 style="text-align:left;margin-left:10px;line-height:25px;border-bottom:2px solid #60aff6">售前咨询</h2>
+          <ul>
+              <li>
+                  <a href="http://wpa.qq.com/msgrd?v=3&uin=2851391894&site=qq&menu=yes" target="blank"><span><img src="__APC__/img/qq.png" alt="">  销售阿东</span></a>
+                  <a href="http://wpa.qq.com/msgrd?v=3&uin=2851391907&site=qq&menu=yes" target="blank"><span><img src="__APC__/img/qq.png" alt="">  销售硕硕</span></a>
+                  <a href="http://wpa.qq.com/msgrd?v=3&uin=2851391890&site=qq&menu=yes" target="blank"><span><img src="__APC__/img/qq.png" alt="">  销售宁宁</span></a>
+                  <a href="http://wpa.qq.com/msgrd?v=3&uin=3002738725&site=qq&menu=yes" target="blank"><span><img src="__APC__/img/qq.png" alt="">  销售吉祥</span></a>
+              </li>
+              <li>
+                  <a href="http://wpa.qq.com/msgrd?v=3&uin=3002725400&site=qq&menu=yes" target="blank"><span><img src="__APC__/img/qq.png" alt="">  销售依一</span></a>
+                  <a href="http://wpa.qq.com/msgrd?v=3&uin=2851391885&site=qq&menu=yes" target="blank"><span><img src="__APC__/img/qq.png" alt="">  销售慧慧</span></a>
+              </li>
+          </ul>
+          <h4 style="text-align:left;margin-left:10px;line-height:25px;border-bottom:2px solid #60aff6;margin-top:20px;">投诉建议</h4>
+          <ul>
+              <li>
+                  <a href="http://wpa.qq.com/msgrd?v=3&uin=3002951580&site=qq&menu=yes" target="blank"><span><img src="__APC__/img/qq.png" alt="">  投诉受理</span></a>
+              </li>
+          </ul>
+      </div>
+  </div>
+<include file="Public/footer" title="" />

@@ -1,0 +1,130 @@
+<include file="Public/header" title="蒲公英控制台" />
+<style>
+    .ml15{margin-left:15px;}
+    th{color: #FFF;font-weight: normal;}
+    td{color: #4b556a;}
+    .tr{text-align: right;}
+    .table-condensed>thead>tr>th,.table-condensed>tbody>tr>td{vertical-align: middle;padding: 10px;text-align: center;}
+    .page-body{width: 100%;background: #fff;padding: 20px;box-shadow: 0 0 5px 0 #dedfe4;border-radius: 4px;}
+</style>
+<div class="right-product right-full" style="background: #eef0f6;">
+    <div class="center-back right-back">
+        <div class="container-fluid">
+            <div class="info-center">
+                <div class="page-header">
+                    <div class="pull-left">
+                        <h4>防御相关设置 ＞ 防御阻断</h4>      
+                    </div>
+                </div>
+                <div class="page-body">
+                    <h4 style="font-weight: bold;margin: 0 auto 35px;">蒲公英网络防御及阻断</h4>
+                    <span>防御类型：</span>
+                    <select id="datatype" class="form-control" style="width: 250px;display: inline-block;font-size: 12px;">
+                        <option value="9">防御及阻断国外IP(不包含港澳台)</option>
+                        <option value="2">防御及阻断国外IP(包含港、澳、台)</option>
+                        <option value="3">防御不阻断国外IP</option>
+                        <option value="4">防御阻断UDP</option>
+                        <option value="5">防御阻断UDP及国外IP</option>
+                        <option value="6">防御关闭</option>
+                    </select>
+                    <span class="ml15">IP：</span><input class="form-control" id="ipaddr" placeholder="请输入IP地址" style="width: 180px;display: inline-block;">
+                    <span class="ml15">关闭时间：</span>
+                    <input type="number" id="releasetime" class="form-control" min="0" value="0" style="display: inline-block;width: 70px;"> 天后
+                    <button class="btn btn-primary btn-sm ml15" id="defense">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+<script>
+    $(function(){
+        $("#defense").click(function(){
+            var datatype=$("#datatype").val();
+            var ipaddr=$("#ipaddr").val();
+            var releasetime=$("#releasetime").val();
+            if(releasetime==0||releasetime=="")
+            {
+                $("#releasetime").css("background","#FFF3F3");
+                $("#releasetime").attr("value","");
+                $("#releasetime").focus();
+                return;
+            }
+            if(releasetime>30)
+            {
+                layer.msg('时间必须小于30天', {icon: 0});
+                return false;
+            }
+            if(ipaddr=="")
+            {
+                $("#ipaddr").css("background","#FFF3F3");
+                $("#ipaddr").focus();
+                return;
+            }
+            var str = ipaddr.match(/(\d+)\.(\d+)\.(\d+)\.(\d+)/g); 
+            if (str == null){
+                layer.msg('你输入的IP地址无效', {icon: 0});
+                return false;
+            }else if (RegExp.$1>255 || RegExp.$2>255 || RegExp.$3>255 || RegExp.$4>255){
+                layer.msg("你输入的IP地址无效"); 
+                return false;
+            }
+            layer.load();
+            $.ajax({
+                 type: "POST",
+                 url: "{:U('blockdefense')}",
+                 data:"datatype="+datatype+"&ipaddr="+ipaddr+"&releasetime="+releasetime,
+                 success: function(msg){
+                     if(msg==60)
+                     {
+                        layer.closeAll(); 
+                        layer.msg('执行成功', {icon: 1}); 
+                        window.location.href='/template/blockabroadip';
+                        return;
+                     }
+                     else if(msg==61)
+                     {
+                        layer.closeAll(); 
+                        layer.msg('系统出错', {icon: 2});
+                        return;
+                     }
+                     else if(msg==62)
+                     {
+                        layer.closeAll(); 
+                        layer.msg('token过期，请重新登录', {icon: 5}); 
+                        parent.location.reload();
+                        return;
+                     }
+                     else if(msg==65)
+                     {
+                        layer.closeAll(); 
+                        layer.msg('IP不存在或不属于您的服务器', {icon: 0});
+                        return;
+                     }
+                     else
+                     {
+                        layer.closeAll();
+                        var c=60-parseInt(msg);
+                        timedCount(c);
+                        layer.msg('排队中...', {icon: 4});
+                        return;   
+                     }
+                 }
+            })
+        });
+    });
+
+    function timedCount(tm)
+    {
+        var c=tm; 
+        document.getElementById('getmsgcode').innerHTML="<font style='color:#FF0000'>"+c+"</font>秒后可操作";
+        c=c-1;
+        t=setTimeout("timedCount("+c+")",1000);
+        if(c==-1)
+        {
+             clearTimeout(t);
+             layer.closeAll();
+             $("#getmsgcode").css("display","none");
+        }
+    }
+</script>
+<include file="Public/footer" title="" />

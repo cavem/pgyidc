@@ -1,0 +1,39 @@
+<include file="Public/header" title="pgyidc" />
+<style>
+    .newslist{text-align: left;padding: 30px 0;}
+    .newslist dl{display: block;margin-bottom: 30px;}
+    .newslist dl dt{width: 100%;display: inline-block;border-bottom: 1px dashed #cfcfcf;line-height: 28px;font-size: 18px;padding-bottom: 6px;margin-bottom: 10px;}
+    .newslist dl dd{height:34px;line-height: 34px;color: #666;background-color: #f8f7f7;overflow: hidden;}
+</style>
+<script>
+$(function(){
+    var domain = document.domain;
+    $('.godetail').click(function(){
+        var newsid=$(this).closest('dl').find('.newsid').val();
+        window.open("http://"+domain+"/Index/newscontain?id="+newsid);
+    })
+})
+</script>
+<div class="banner">
+    <div class="banner-contain w1200 pr">
+        <div class="bc-left"><span class="circle1"></span><span class="circle2"></span><img src="__ASSETS__/images/news.png"></div>
+        <div class="bc-right tl pa" style="left:200px;top:20px;">
+            <h2 class="m0 wow fadeInUp">新闻动态</h2>
+            <p class="mt20 wow fadeInUp">定时更新互联网最新动态</p>
+        </div>
+    </div>
+</div>
+<div class="news">
+    <div class="newslist w1200">
+        <if condition="$newslist[0] eq ''"><p style="text-align: center;font-size: 20px;color:#888;">暂无动态</p></if>
+        <volist name="newslist" id="vo">
+        <dl>
+            <input class="newsid" type="hidden" value="{$vo.id}">
+            <dt><a href="javascript:;" class="godetail" target="_blank">{$vo.title}</a> <span class="time"  style="font-size: 16px;">20{$vo.data|date="y-m-d",###}</span></dt>
+            <dd>{$vo.content}</dd>
+        </dl>
+        </volist>
+    </div>
+    <div class="page">{$page}</div>
+</div>
+<include file="Public/footer" title="footer" />

@@ -1,0 +1,345 @@
+<include file="Public/header" title="pgyidc" />
+<style>
+ol,ul,dl{margin-bottom: 0;}
+.item{background-repeat:no-repeat;background-size:1920px 550px;background-position: top;}
+.item-contain{animation-delay: 0.5s;position:absolute;left:20px;top:100px;text-align: left;}
+.item-contain h1{color:#fff;font-size: 50px;}
+.item-contain p{color: #fff;font-size: 25px;margin-top: 25px;}
+h4{margin:0;}
+.show-detail {width: 150px;height: 45px;line-height: 44px;float:left;margin: 35px auto 40px 0px;;text-align: center;font-size: 16px;color: #fff;border: 1px solid #fff;border-radius:5px;cursor: pointer;}
+.show-detail:hover{border:1px solid #60aff6;background-color: #60aff6;}
+.iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+.iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+.BMapLabel{max-width: fit-content !important;}
+.BMap_Marker div{overflow: initial !important}
+.ps-item{width: 260px;padding:25px;height:100%;margin:0 19px;float:left;box-shadow: 0px 4px 5px #bbb;} 
+.ps-item-title{font-size: 19px;margin-top: 15px;}
+.ps-item-contain{font-size: 14px;text-align: center;margin-top: 45px;color:#868282;}
+.ps-item-contain span{display: block;width: 93px;text-align: left;margin: 0 auto;font-size: 15px;}
+.ps-item-btn{width: 123px;height: 33px;margin: 0 auto;padding: 5px 8px;margin-top:25px;font-size: 15px;color: #fff;box-shadow: 0px 4px 15px #aaa;}
+.advance-item{width: 400px;height:274px;float: left;}
+.advance-item i{color: #A9A9A9;margin-top: 45px;transition: all .3;}
+.advance-item i:hover{transform: scale(1.5);-webkit-transform: scale(1.5);}
+.advance-item-title{font-size: 18px;margin-top: 10px;}
+.advance-item p{margin:25px auto;font-size: 15px;color: #868282;width: 250px;}
+.intro-item{width: 380px;margin:2px;float: left;height: 280px;}
+.intro-item img{width: 100%;height: 100%;}
+.cooper-item{width: 210px;height: 60px;float:left;margin: 10px;background: #fff;box-shadow: 3px 2px 2px #ddd;padding: 4px 8px;transition: all .5;-webkit-transition: all .5;}
+.cooper-item:hover{transform: scale(1.5);-webkit-transform: scale(1.5);}
+.cooper-item img{height: 100%;} 
+.carousel-inner .item{background-color: #000c18;}
+@media screen and (max-width: 1200px){
+.ps-item{width: 22%;margin: 0 1%;}
+.intro-item{width: 32%;}
+.advance-item{width: 33.3%;}
+} 
+</style>
+<!--全屏滚动-->
+<div id="myCarousel" class="carousel slide">
+    <!-- 轮播（Carousel）指标 -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>   
+
+    <!-- 轮播（Carousel）项目 -->
+    <div class="carousel-inner">
+        <div class="item active" style="background:#000c18 url(__ASSETS__/images/slider1.jpg) no-repeat center;;">
+            <div style="position:relative;height:550px;width:1200px;margin:0 auto;">
+                <a href="{:U('Index/serverbuy')}" style="width: 220px; height: 60px;position: absolute;bottom: 105px;left: 15px;"></a>
+            </div>
+        </div>
+        <div class="item" style="background:#000c18 url(__ASSETS__/images/slider2.jpg) no-repeat center;;">
+            <div style="position:relative;height:550px;width:1200px;margin:0 auto;">
+                <a href="{:U('Index/serverbuy')}" style="width: 220px; height: 60px;position: absolute;bottom: 105px;left: 15px;"></a>
+            </div>
+        </div>
+        <div class="item" style="background:#000c18 url(__ASSETS__/images/slider3.jpg) no-repeat center;">
+            <div style="position:relative;height:550px;width:1200px;margin:0 auto;">
+                <a href="http://user.pgyidc.com" target="blank" style="width: 220px; height: 60px;position: absolute;bottom: 105px;left: 15px;"></a>
+            </div>
+        </div>
+        <div class="item" style="background:url(__ASSETS__/images/活动31.jpg) no-repeat center;background-size:cover;">
+            <div style="position:relative;height:550px;width:1200px;margin:0 auto;">
+                <a href="{:U('Index/serverbuy')}" target="blank" style="width: 220px; height: 60px;position: absolute;bottom: 85px;left: 15px;"></a>
+            </div>
+        </div>
+    </div>
+    <!-- 轮播（Carousel）导航 -->
+    <!-- <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>
+    <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a> -->
+</div>
+<!--end 全屏滚动-->
+<!--主打产品-->
+<div class="free_composing pt50 pb50" style="background-color: #f5f5f5;">
+    <div class="free_composing_content w1200">
+        <h3 class="content-group-title wow bounceIn">产品与服务</h3>
+        <!-- <div style="width:100%; margin:0 auto;"><img src="__ASSETS__/images/product_line.png"></div> -->
+        <div class="product_service mt50" style="width:100%;height:300px; margin:0 auto;">
+            <div class="ps-item" style="background:#fff url(__ASSETS__/images/rcorner_1.png) no-repeat right top;">
+                <div class="ps-item-title wow bounceIn">
+                    服务器租用
+                </div>
+                <div class="ps-item-contain wow bounceInUp">
+                    <span>弹性升级</span>
+                    <span>超高性价比</span>
+                    <span>无忧售后服务</span>
+                    <span>网络安全稳定</span>
+                </div>
+                <a  href="{:U('Index/serverbuy')}"><div class="ps-item-btn wow bounceIn" style="background: #FF4162;">立即前往</div></a>
+            </div>
+            <div class="ps-item" style="background:#fff url(__ASSETS__/images/rcorner_2.png) no-repeat right top;">
+                <div class="ps-item-title wow bounceIn">
+                    服务器托管
+                </div>
+                <div class="ps-item-contain wow bounceInUp">
+                    <span>弹性升级</span>
+                    <span>专享高防</span>
+                    <span>独家大宽带</span>
+                    <span>网络安全稳定</span>
+                </div>
+                <a  href="{:U('Index/servertrust')}"><div class="ps-item-btn wow bounceIn" style="background: #01BDD1;">立即前往</div></a>
+            </div>
+            <div class="ps-item" style="background:#fff url(__ASSETS__/images/rcorner_3.png) no-repeat right top;">
+                <div class="ps-item-title wow bounceIn">
+                    云服务器
+                </div>
+                <div class="ps-item-contain wow bounceInUp">
+                    <span>一键重装</span>
+                    <span>自助管理</span>
+                    <span>方便快捷</span>
+                    <span>网络安全稳定</span>
+                </div>
+                <a href="{:U('Index/cloudbuy')}"><div class="ps-item-btn wow bounceIn" style="background: #032677;">立即前往</div></a>
+            </div>
+            <div class="ps-item" style="background:#fff url(__ASSETS__/images/rcorner_4.png) no-repeat right top;">
+                <div class="ps-item-title wow bounceIn">
+                    自助防御
+                </div>
+                <div class="ps-item-contain wow bounceInUp">
+                    <span>自助管理平台</span>
+                    <span>24H流量监测</span>
+                    <span>攻击报警提示</span>
+                    <span>网络安全稳定</span>
+                </div>
+                <a href="http://user.pgyidc.com" target="_blank"><div class="ps-item-btn wow bounceIn" style="background: #8849FD;">立即前往</div></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--我们的服务-->
+<div class="free_composing pt50 pb50" style="background-color:#fff;">
+    <div class="free_composing_content w1200">
+        <h3 class="content-group-title wow bounceIn">蒲公英网络优势</h3>
+        <!-- <div style="width:100%; margin:0 auto;"><img src="__ASSETS__/images/product_line.png"></div> -->
+        <div class="mt50 advance" style="width:100%; margin:0 auto;">
+            <div class="advance-item">
+                <i class="fa fa-server fa-5x wow bounceIn" aria-hidden="true"></i>
+                <div class="advance-item-title wow bounceIn">产品弹性升级</div>
+                <p class="wow bounceInUp">根据客户需求，服务器可做任何弹性升级，如防御、带宽等。</p>
+            </div>
+            <div class="advance-item">
+                <i class="fa fa-database fa-5x wow bounceIn" aria-hidden="true"></i>
+                <div class="advance-item-title wow bounceIn">自动化管理系统</div>
+                <p class="wow bounceInUp">一件安装，自助重启，快速装系统，高效率完成服务器运维工作，节省时间。</p>
+            </div>
+            <div class="advance-item">
+                <i class="fa fa-diamond fa-5x wow bounceIn" aria-hidden="true"></i>
+                <div class="advance-item-title wow bounceIn">品牌专业保证</div>
+                <p class="wow bounceInUp">13年IDC行业经验，传统IDC的领先者，百万客户信赖选择。</p>
+            </div>
+            <div class="advance-item">
+                <i class="fa fa-shield fa-5x wow bounceIn" aria-hidden="true"></i>
+                <div class="advance-item-title wow bounceIn">自助防御系统</div>
+                <p class="wow bounceInUp">随时监测服务器运行状态，通过短信、邮箱等报警，让客户安心。</p>
+            </div>
+            <div class="advance-item">
+                <i class="fa fa-globe fa-5x wow bounceIn" aria-hidden="true"></i>
+                <div class="advance-item-title wow bounceIn">网络安全稳定</div>
+                <p class="wow bounceInUp">骨干网接入，安全稳定，拥有华为、金盾、傲盾、chinaddos等多重防火墙，600GDDOS清洗，单机防御高达300G。</p>
+            </div>
+            <div class="advance-item">
+                <i class="fa fa-users fa-5x wow bounceIn" aria-hidden="true"></i>
+                <div class="advance-item-title wow bounceIn">无忧售后服务</div>
+                <p class="wow bounceInUp">365*24H专业售后服务，3分钟快速响应，50人以上专业技术团队，跟踪解决问题。</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 合作案例-->
+<div class="free_composing pt50 pb50" style="background: #f5f5f5">
+    <div class="free_composing_content w1200" style="background: #f5f5f5">
+        <h3 class="content-group-title wow bounceIn">合作案例</h3>
+        <!-- <div style="width:100%; margin:0 auto;"><img src="__ASSETS__/images/product_line.png"></div> -->
+        <div class="mt50" style="width:100%; margin:0 auto;padding:10px 20px;">
+            <div class="cooper-item wow bounceIn">
+                <img src="__ASSETS__/images/cooper1.jpg">
+            </div>
+            <div class="cooper-item wow bounceIn">
+                <img src="__ASSETS__/images/cooper2.jpg">
+            </div>
+            <div class="cooper-item wow bounceIn">
+                <img src="__ASSETS__/images/cooper3.jpg">
+            </div>
+            <div class="cooper-item wow bounceIn">
+                <img src="__ASSETS__/images/cooper4.jpg">
+            </div>
+            <div class="cooper-item wow bounceIn">
+                <img src="__ASSETS__/images/cooper5.jpg">
+            </div>
+            <div class="cooper-item wow bounceIn">
+                <img src="__ASSETS__/images/cooper6.jpg">
+            </div>
+            <div class="cooper-item wow bounceIn">
+                <img src="__ASSETS__/images/cooper7.jpg">
+            </div>
+            <div class="cooper-item wow bounceIn">
+                <img src="__ASSETS__/images/cooper8.jpg">
+            </div>
+            <div class="cooper-item wow bounceIn">
+                <img src="__ASSETS__/images/cooper9.jpg">
+            </div>
+            <div class="cooper-item wow bounceIn">
+                <img src="__ASSETS__/images/cooper10.jpg">
+            </div>
+        </div>
+    </div>
+</div>
+<!--机房介绍-->
+<div class="free_composing pt50 pb50">
+    <div class="free_composing_content w1200">
+        <h3 class="content-group-title wow bounceIn">蒲公英机房介绍</h3>
+        <div class="mt50" style="width:100%; margin:0 auto;padding:10px 20px;">
+            <div class="intro-item wow bounceIn">
+                <img src="__ASSETS__/images/house1.jpg">
+            </div>
+            <div class="intro-item wow bounceIn">
+                <img src="__ASSETS__/images/house2.jpg">
+            </div>
+            <div class="intro-item wow bounceIn">
+                <img src="__ASSETS__/images/house3.jpg">
+            </div>
+            <div class="intro-item wow bounceIn">
+                <img src="__ASSETS__/images/house4.jpg">
+            </div>
+            <div class="intro-item wow bounceIn">
+                <img src="__ASSETS__/images/house5.jpg">
+            </div>
+            <div class="intro-item wow bounceIn">
+                <img src="__ASSETS__/images/house6.jpg">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 机房         -->
+<div class="free_composing pt50" style="width: 100%;background-color: #f5f5f5;">
+    <div class="free_composing_content">
+        <h3 class="content-group-title wow bounceIn">蒲公英来访地图</h3>
+        <div class="wow bounceInUp" style="width:100%;height:550px;border:#ccc solid 1px;margin-top: 50px;" id="dituContent"></div>
+    </div>
+</div>
+<include file="Public/footer" title="footer" />
+<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&amp;ak=C13c98650aa84efc4279c4fd5ac4bac6"></script>
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMarker();//向地图中添加marker
+    }
+    
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(118.285899,33.966545);//定义一个中心点坐标
+        map.centerAndZoom(point,12);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+    
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        //map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+    
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+	map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+	var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+	map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	map.addControl(ctrl_sca);
+    }
+    
+    //标注点数组
+    var markerArr = [{title:"宿迁电信机房",content:"宿迁电信分公司长线分局",point:"118.337045|33.956197",isOpen:0,icon:{w:23,h:25,l:23,t:21,x:9,lb:12}}
+		 ,{title:"京东云华东数据中心",content:"京东云华东数据中心",point:"118.298153|34.069007",isOpen:0,icon:{w:23,h:25,l:23,t:21,x:9,lb:12}}
+		 ,{title:"中国移动机房",content:"中国移动宿城区分公司",point:"118.285154|33.966949",isOpen:0,icon:{w:23,h:25,l:23,t:21,x:9,lb:12}}
+		 ];
+    //创建marker
+    function addMarker(){
+        for(var i=0;i<markerArr.length;i++){
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0,p1);
+			var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point,{icon:iconImg});
+			var iw = createInfoWindow(i);
+			var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+			marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                        borderColor:"#808080",
+                        color:"#333",
+                        cursor:"pointer"
+            });
+			
+			(function(){
+				var index = i;
+				var _iw = createInfoWindow(i);
+				var _marker = marker;
+				_marker.addEventListener("click",function(){
+				    this.openInfoWindow(_iw);
+			    });
+			    _iw.addEventListener("open",function(){
+				    _marker.getLabel().hide();
+			    })
+			    _iw.addEventListener("close",function(){
+				    _marker.getLabel().show();
+			    })
+				label.addEventListener("click",function(){
+				    _marker.openInfoWindow(_iw);
+			    })
+				if(!!json.isOpen){
+					label.hide();
+					_marker.openInfoWindow(_iw);
+				}
+			})()
+        }
+    }
+    //创建InfoWindow
+    function createInfoWindow(i){
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+        return iw;
+    }
+    //创建一个Icon
+    function createIcon(json){
+        var icon = new BMap.Icon("__ASSETS__/images/zuobiao.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        return icon;
+    }
+    
+    initMap();//创建和初始化地图
+</script>
+
+ 

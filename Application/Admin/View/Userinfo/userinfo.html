@@ -1,0 +1,51 @@
+﻿<include file="Public/header" title="蒲公英自动化" />
+<style>
+	.base-info{padding:0 10px;}
+	.binfo-title{color: #09c;font-size: 15px;margin: 20px 0 10px 0;}
+	.binfo-title .circle{width: 10px;height: 10px;background: #09c;border-radius: 10px;display: inline-block;}
+	.binfo-panel p{display: inline-block;width: 200px;}
+	.flabel{margin-left: 10px;}
+</style>
+  <div class="right-product view-product right-full">
+    <div class="container-fluid">
+		<div class="manage account-manage info-center">
+			<div class="page-header">
+				<div class="pull-left">
+					<h4>用户资料</h4>      
+				</div>
+			</div>
+			<div class="page-body">
+				<div class="base-info">
+					<div class="binfo-title"><span class="circle"></span> 账号信息</div>
+					<div class="binfo-panel">
+						<p><span class="flabel">登录账号：</span><span>{$userinfolist.username}</span></p>
+						<p><span class="flabel">注册时间：</span><span>{$userinfolist.regtime|date="y-m-d",###}</span></p>
+					</div>
+				</div>
+				<div class="base-info">
+					<div class="binfo-title"><span class="circle"></span> 基本信息</div>
+					<div class="binfo-panel">
+						<p><span class="flabel">用户身份：</span>
+							<span>
+								<switch name="userinfolist.company">
+									<case value="">个人用户</case>
+									<default />企业用户
+								</switch>
+							</span>
+						</p>
+						<p><span class="flabel">企业名称：</span><span>{$userinfolist.company}</span></p>
+					</div>
+				</div>
+				<div class="base-info">
+					<div class="binfo-title"><span class="circle"></span> 联系信息</div>
+					<div class="binfo-panel">
+						<p><span class="flabel">邮箱：</span><span>{$userinfolist.linkmail}</span></p>
+						<p><span class="flabel">手机：</span><span>{$userinfolist.phone}</span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+  </div>
+</div>
+<include file="Public/footer" title="" />

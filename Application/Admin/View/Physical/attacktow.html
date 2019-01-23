@@ -1,0 +1,251 @@
+<include file="Public/header" title="蒲公英控制台" />
+<style>
+    .ml15{margin-left:15px;}
+    th{color: #FFF;font-weight: normal;}
+    td{color: #4b556a;}
+    .tr{text-align: right;}
+    .table>thead>tr>th,.table>tbody>tr>td{vertical-align: middle;padding: 10px;}
+    .page-body{width: 100%;background: #fff;padding: 20px;box-shadow: 0 0 5px 0 #dedfe4;border-radius: 4px;}
+</style>
+<div class="right-product right-full" style="background: #eef0f6;">
+    <div class="center-back right-back">
+        <div class="container-fluid">
+            <div class="info-center">
+                <div class="page-header">
+                    <div class="pull-left">
+                        <h4>物理机管理 ＞ 攻击解封<span style="color: red;font-size: 14px;">(BGP线路IP只提供电信方向阻断国外后攻击流量，联通/移动攻击会在联通及移动运营商接入层进行阻断。)</span></h4>      
+                    </div>
+                </div>
+                <if condition="$sheetdata['list'] neq ''">
+                <div class="page-body">
+                        <table class="table table-condensed" style="margin-top: 20px;">
+                            <thead>
+                                <tr style="background: #09c;color: #fff;">
+                                    <th>IP</th>
+                                    <th>攻击类型</th>
+                                    <th>BPS流量</th>
+                                    <th>PPS流量</th>
+                                    <th>平均包大小</th>
+                                    <th>开始时间</th>
+                                    <th>预计解封时间</th>
+                                    <th>牵引类型</th>
+                                    <th>备注</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <foreach name="myip" item="info">
+                                <tr>
+                                    <td><?=$info['ip']?></td>
+                                    <td><?=$info['type']?></td>
+                                    <td><?=round($info['bps']/1000,2);?>G</td>
+                                    <td><?=$info['pps']?>W</td>
+                                    <td><?=$info['bps'] > 0 ? ceil($info['bps']*1024*1024 / ($info['pps']*10000) / 8):0;?>Bytes</td>
+                                    <td><?=date("Y-m-d H:i:s",$info['start']);?></td>
+                                    <td><?=!empty($info['time']) ? date("Y-m-d H:i:s",$info['start']+$info['time']*60) : "需手动解封";?></td>
+                                    <td><?=$info['qytype']?></td>
+                                    <td><?=$info['note']?></td>
+                                    <td><a href="javascript:void(0)" onclick="delqy(<?=$info['id']?>,<?=$info['num']?>,'<?=$info['ip']?>',<?=round($info['bps']/1000,2);?>)">解除牵引</a></td>
+                                </tr>
+                                </foreach>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                  <td colspan="10">
+                                    <div class="pull-right">
+                                        {$page}
+                                    </div>
+                                  </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                <else />
+                <div class="page-body">
+                    <p>查询无攻击牵引信息</p>
+                </div>
+                </if>
+                <div class="page-header">
+                    <div class="pull-left">
+                        <h4>手动牵引空路由</h4>      
+                    </div>
+                </div>
+                <form name="mform" action="{:U('addqy')}" method="post" target="framepic">
+                <div class="page-body">
+                    <table class="table table-bordered" style="width: 600px;">
+                        <tbody>
+                          <tr>
+                            <td class="tr" width="200px;">IP:</td>
+                            <td width="400px;"><input class="form-control" id="ip" placeholder="请输入IP地址"></td>
+                          </tr>
+                          <tr>
+                            <td class="tr">牵引时间（分）：</td>
+                            <td><input type="text" class="form-control" id="time" maxlength="4" value="4320" onkeyup="value=value.replace(/[^\d]/g,'')" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" style="width: 200px;display: inline-block;" placeholder="请输入牵引时间">(最大设置3天=4320分钟)</td>
+                          </tr>
+                          <tr>
+                            <td class="tr">备注信息：</td>
+                            <td><textarea class="form-control" rows="2" id="note" placeholder="请输入原因"></textarea></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <input type="submit" onclick="return ctrl()" class="btn btn-primary" value="新增"> 
+                </div>
+                <input type="hidden" id="userid" value="{$userid}"></input>
+                <iframe id="framepic" name="framepic" style="display:none"></iframe>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> 
+<script type="text/javascript">
+    function ctrl(){
+        var ip=document.getElementById('ip').value;
+        var time=document.getElementById('time').value;
+        var note=document.getElementById('note').value;
+        if(ip=="")
+        {
+            layer.msg('ip不能为空', {icon: 5});
+            return false;
+        }
+        if(time==""||time=="0")
+        {
+            layer.msg('牵引时间不能为空或零', {icon: 5});
+            return false;
+        }
+        if(time>4320)
+        {
+            layer.msg('牵引时间不得大于三天（4320分钟）', {icon: 5});
+            return false;
+        }
+        if(note=="")
+        {
+            layer.msg('备注信息不能为空', {icon: 5});
+            return false;
+        }
+        $(".btn").val("提交中...");
+        $(".btn").attr("disabled",true);
+        document.mform.action="{:U('addqy')}";
+        document.mform.target="framepic";
+        document.mform.submit();            
+    }
+    function delqy(id,num,bps)
+    {
+        var userid=$("#userid").val();
+        if(num>10)
+        {
+            layer.closeAll(); 
+            layer.msg('该IP今日释放次数已达上限', {icon: 4});
+            return; 
+        }
+        if(bps>200)
+        {
+            layer.closeAll(); 
+            layer.msg('该IP攻击流量过大禁止释放，请联系客服', {icon: 4});
+            return;
+        }
+        var surplus=3-parseInt(num);
+        if(surplus>0)
+        {
+            var tips="该IP今日还可免费"+surplus+"次，";
+            var pay=0;
+        }
+        else
+        {
+            var tips="您今日免费次数已用完，本次操作将扣除10元，";
+            var pay=1;
+        }
+        var tip=tips+"确定要解除牵引吗？";
+        layer.confirm(tip, {
+                btn: ['确定','取消'] //按钮
+        }, function(){
+            layer.closeAll();
+            layer.load();
+            $.ajax({
+                 type: "POST",
+                 url: "{:U('delqy')}",
+                 data:"id="+id+"&ip="+ip+"&pay="+pay,
+                 success: function(msg){
+                     if(msg==0)
+                     {
+                        layer.closeAll();
+                        layer.alert('解除牵引成功', {
+                            icon: 1,
+                            skin: 'layer-ext-moon'
+                        }, function(){
+                            window.location.href="{:U('attacktow')}";
+                            return; 
+                        });
+                     }
+                     else if(msg==1)
+                     {
+                        layer.closeAll(); 
+                        layer.msg('系统出错', {icon: 4});
+                        return;
+                     }
+                     else if(msg==3)
+                     {
+                        layer.closeAll();
+                        layer.msg('余额不足，请充值', {icon: 2});
+                        return;
+                     }
+                     else if(msg==4)
+                     {
+                        //token过期
+                        layer.closeAll(); 
+                        layer.msg('token过期，请重新登录', {icon: 5}); 
+                        parent.location.reload();
+                        return;
+                     }
+                 }
+            })
+        }, function(){
+            layer.closeAll(); 
+        });             
+    }
+
+    function stopupload(rel){
+        switch (rel) {
+            case 0:
+                layer.alert('信息保存成功', {
+                    icon: 1,
+                    skin: 'layer-ext-moon'
+                }, function(){
+                    window.location.href="{:U('attacktow')}";
+                    return; 
+                });
+                break;  
+            case 1:
+                layer.alert('系统出错', {
+                    icon: 2,
+                    skin: 'layer-ext-moon'
+                }, function(){
+                    window.location.href="{:U('attacktow')}";
+                    return; 
+                });
+                break; 
+            case 2: 
+                layer.msg('token过期，请重新登录', {icon: 5});
+                parent.location.reload();
+                break; 
+            case 3: 
+                layer.alert('IP不存在或不属于您的服务器', {
+                    icon: 0,
+                    skin: 'layer-ext-moon'
+                }, function(){
+                    window.location.href="{:U('attacktow')}";
+                    return; 
+                });
+                break;
+            case 4: 
+                layer.alert('该ip已存在，请勿重复添加', {
+                    icon: 2,
+                    skin: 'layer-ext-moon'
+                }, function(){
+                    window.location.href="{:U('attacktow')}";
+                    return; 
+                });
+                break;
+        } 
+    }
+</script>
+<include file="Public/footer" title="" />

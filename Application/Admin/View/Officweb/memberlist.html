@@ -1,0 +1,89 @@
+<include file="Public/header" title="蒲公英自动化" />
+  <div class="right-product right-full">
+        <div class="center-back right-back">
+        <div class="container-fluid">
+          <div class="info-center">
+            <div class="page-header">
+              <div class="pull-left">
+						  <h4>会员列表</h4>      
+					    </div>
+              <div class="pull-right">
+                 <button type="button" class="btn btn-mystyle btn-sm">搜索</button>
+                 <button type="button" class="btn btn-mystyle btn-sm">返回</button>
+              </div>
+            </div>
+            <form action="{:U('Officweb/memberlist')}" method="post">
+            <div class="search-box row">
+               <div class="col-md-8">
+                <div class="form-group">
+                  <input type="text" name="keyword" value="{$keyword}" class="form-control" placeholder="请输入标题">               
+               </div>
+               <div class="form-group btn-search">
+                    <input type="submit" name="" class="btn btn-default" style="width:70px" value="搜索">
+                </div>
+                </div>
+            </div>
+            </form>
+            <div class="clearfix"></div>
+              <div class="table-margin">
+              <table class="table table-bordered table-header">
+                 <thead>
+                 <tr>
+                   <td>ID</td>
+                   <td>云谷ID</td>
+                   <td>用户名</td>
+                   <td>帐户余额</td>
+                   <td>注册时间</td>
+                   <td>最后登录时间</td>
+                   <td>邮箱</td>
+                   <td>操作</td>
+                 </tr>
+                 </thead>
+                 <tbody>
+                 <foreach name="model" item="v">
+                 <tr>
+                    <td>{$v.userid}</td>
+                    <td>{$v.yungoid}</td>
+                    <td>{$v.username}</td>
+                    <td>￥ {$v.balance}</td>
+                    <td>{$v.regtime|date="Y-m-d H:i:s",###}</td>
+                    <td>{$v.lasttime|date="Y-m-d H:i:s",###}</td>
+                    <td>{$v.linkmail}</td>
+                    <td style="white-space:nowrap;">
+                      <a href="javascript:void(0);" class="btn-balance btn btn-info btn-xs" data="<?=$v['userid']?>"><span class="glyphicon glyphicon-usd"></span> 余额管理</a>
+                      <a onclick="return confirm('确定删除?');" href="{:U('Officweb/memberdel',array('id'=>$v['userid']))}" class="btn btn-xs  btn-danger"><span class="glyphicon glyphicon-trash"></span> 删除</a>
+                    </td>
+                 </tr>
+                 </foreach>
+                 </tbody>
+                 <tfoot>
+                    <tr>
+                      <td colspan="10">
+                        <div class="pull-right">
+                            {$page}
+                        </div>
+                      </td>
+                    </tr>
+                 </tfoot>
+              </table>
+            </div>
+
+            </div>
+          </div>
+        </div> 
+ </div>
+<include file="Public/footer" title="" />
+<script type="text/javascript">
+  $(".btn-balance").click(function(){
+      var id=$(this).attr("data");
+          layer.open({
+            type: 2,
+            title: '余额管理',
+            shade: 0.6,
+            shadeClose: true,
+            maxmin: true, //开启最大化最小化按钮
+            area: ['420px', '300px'],
+            content: '/Admin/Officweb/payinfo?userid='+id
+          });
+  })
+</script>

@@ -1,0 +1,729 @@
+[ 2018-07-27T10:19:47+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000807s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001028s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001101s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000495s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000619s ]
+NOTIC: [8] Undefined index: loginuser D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 368 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.112162s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.112297s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001869s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001973s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.010784s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010915s ]
+
+[ 2018-07-27T10:19:51+08:00 ] 127.0.0.1 /Hdcloud/jdcloud.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000478s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000717s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000772s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000199s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000258s ]
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\ef2cc74da925a8b504dc2016d8b2cb37.php 第 23 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\ef2cc74da925a8b504dc2016d8b2cb37.php 第 52 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\ef2cc74da925a8b504dc2016d8b2cb37.php 第 130 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\ef2cc74da925a8b504dc2016d8b2cb37.php 第 165 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\ef2cc74da925a8b504dc2016d8b2cb37.php 第 216 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\ef2cc74da925a8b504dc2016d8b2cb37.php 第 231 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\ef2cc74da925a8b504dc2016d8b2cb37.php 第 231 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\ef2cc74da925a8b504dc2016d8b2cb37.php 第 231 行.
+NOTIC: [8] Undefined index: loginuser D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\ef2cc74da925a8b504dc2016d8b2cb37.php 第 368 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\ef2cc74da925a8b504dc2016d8b2cb37.php 第 924 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040710s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040768s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000537s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000577s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000728s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000781s ]
+
+[ 2018-07-27T10:19:52+08:00 ] 127.0.0.1 /Hdcloud/jdcloudbuy.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000446s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000656s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000713s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000332s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000465s ]
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 23 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 52 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 130 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 165 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 216 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 231 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 231 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 231 行.
+NOTIC: [8] Undefined index: loginuser D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 368 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 1554 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.063208s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.063263s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000503s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000547s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000714s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000771s ]
+
+[ 2018-07-27T10:19:53+08:00 ] 127.0.0.1 /Hdcloud/getimage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001308s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001884s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002057s ]
+
+[ 2018-07-27T10:19:53+08:00 ] 127.0.0.1 /Hdcloud/getstandard
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000944s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001407s ]
+NOTIC: [8] Use of undefined constant CURLOPT_GET - assumed 'CURLOPT_GET' D:\myenv\apache\htdocs\pgyidc\Application\Home\Controller\HdcloudController.class.php 第 60 行.
+NOTIC: [2] curl_setopt() expects parameter 2 to be long, string given D:\myenv\apache\htdocs\pgyidc\Application\Home\Controller\HdcloudController.class.php 第 60 行.
+
+[ 2018-07-27T10:19:55+08:00 ] 127.0.0.1 /Hdcloud/getprice
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000583s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000674s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000732s ]
+SQL: SHOW COLUMNS FROM `jdcstandard` [ RunTime:0.0610s ]
+SQL: SHOW COLUMNS FROM `jdcprice` [ RunTime:0.0631s ]
+SQL: SELECT `price` FROM `jdcstandard` WHERE ( standard='g.n2.medium' ) LIMIT 1   [ RunTime:0.0035s ]
+SQL: SELECT `bgp` FROM `jdcprice` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0013s ]
+
+[ 2018-07-27T10:20:00+08:00 ] 127.0.0.1 /Hdcloud/getprice
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000592s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000843s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000910s ]
+SQL: SHOW COLUMNS FROM `jdcstandard` [ RunTime:0.0163s ]
+SQL: SHOW COLUMNS FROM `jdcprice` [ RunTime:0.0162s ]
+SQL: SELECT `price` FROM `jdcstandard` WHERE ( standard='g.n2.medium' ) LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT `bgp` FROM `jdcprice` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2018-07-27T10:20:01+08:00 ] 127.0.0.1 /Hdcloud/getprice
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000598s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000797s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000862s ]
+SQL: SHOW COLUMNS FROM `jdcstandard` [ RunTime:0.0085s ]
+SQL: SHOW COLUMNS FROM `jdcprice` [ RunTime:0.0091s ]
+SQL: SELECT `price` FROM `jdcstandard` WHERE ( standard='g.n2.medium' ) LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT `bgp` FROM `jdcprice` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2018-07-27T10:20:02+08:00 ] 127.0.0.1 /Hdcloud/getprice
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000405s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000587s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000638s ]
+SQL: SHOW COLUMNS FROM `jdcstandard` [ RunTime:0.0152s ]
+SQL: SHOW COLUMNS FROM `jdcprice` [ RunTime:0.0167s ]
+SQL: SELECT `price` FROM `jdcstandard` WHERE ( standard='g.n2.medium' ) LIMIT 1   [ RunTime:0.0028s ]
+SQL: SELECT `bgp` FROM `jdcprice` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+
+[ 2018-07-27T10:42:06+08:00 ] 127.0.0.1 /Hdcloud/jdcloudbuy.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000578s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000869s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000942s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000419s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000485s ]
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 23 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 52 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 130 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 165 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 216 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 231 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 231 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 231 行.
+NOTIC: [8] Undefined index: loginuser D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 368 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 1554 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027122s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027180s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000587s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000638s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000849s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000916s ]
+
+[ 2018-07-27T10:42:07+08:00 ] 127.0.0.1 /Hdcloud/getimage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000499s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000699s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000759s ]
+
+[ 2018-07-27T10:42:08+08:00 ] 127.0.0.1 /Hdcloud/getstandard
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001124s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000884s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000967s ]
+NOTIC: [8] Use of undefined constant CURLOPT_GET - assumed 'CURLOPT_GET' D:\myenv\apache\htdocs\pgyidc\Application\Home\Controller\HdcloudController.class.php 第 60 行.
+NOTIC: [2] curl_setopt() expects parameter 2 to be long, string given D:\myenv\apache\htdocs\pgyidc\Application\Home\Controller\HdcloudController.class.php 第 60 行.
+
+[ 2018-07-27T10:42:09+08:00 ] 127.0.0.1 /Hdcloud/getprice
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000550s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000678s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000746s ]
+SQL: SHOW COLUMNS FROM `jdcstandard` [ RunTime:0.0171s ]
+SQL: SHOW COLUMNS FROM `jdcprice` [ RunTime:0.0101s ]
+SQL: SELECT `price` FROM `jdcstandard` WHERE ( standard='g.n2.medium' ) LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT `bgp` FROM `jdcprice` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0008s ]
+
+[ 2018-07-27T11:07:33+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000907s ]
+
+[ 2018-07-27T11:09:46+08:00 ] 127.0.0.1 /Application/Admin/View/Public/images/icon_control.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000445s ]
+
+[ 2018-07-27T11:10:02+08:00 ] 127.0.0.1 /Application/Admin/View/Public/images/icon_control.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000456s ]
+
+[ 2018-07-27T11:43:42+08:00 ] 127.0.0.1 /Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000548s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000800s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000858s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000260s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000325s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018180s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018241s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000535s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000584s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000858s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000932s ]
+
+[ 2018-07-27T11:43:44+08:00 ] 127.0.0.1 /Hdcloud/jdcloud.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000443s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000636s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000693s ]
+
+[ 2018-07-27T11:44:18+08:00 ] 127.0.0.1 /Hdcloud/jdcloud.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000503s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000695s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000759s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000241s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000316s ]
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\ef2cc74da925a8b504dc2016d8b2cb37.php 第 23 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\ef2cc74da925a8b504dc2016d8b2cb37.php 第 52 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\ef2cc74da925a8b504dc2016d8b2cb37.php 第 130 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\ef2cc74da925a8b504dc2016d8b2cb37.php 第 165 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\ef2cc74da925a8b504dc2016d8b2cb37.php 第 216 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\ef2cc74da925a8b504dc2016d8b2cb37.php 第 231 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\ef2cc74da925a8b504dc2016d8b2cb37.php 第 231 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\ef2cc74da925a8b504dc2016d8b2cb37.php 第 231 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\ef2cc74da925a8b504dc2016d8b2cb37.php 第 924 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020712s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020774s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000424s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000467s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000692s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000747s ]
+
+[ 2018-07-27T11:44:20+08:00 ] 127.0.0.1 /Hdcloud/jdcloudbuy.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000445s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000645s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000706s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000306s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000369s ]
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 23 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 52 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 130 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 165 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 216 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 231 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 231 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 231 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 1554 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022160s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022210s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000452s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000498s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000714s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000778s ]
+
+[ 2018-07-27T11:44:20+08:00 ] 127.0.0.1 /Hdcloud/getimage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000563s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000641s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000697s ]
+
+[ 2018-07-27T11:44:21+08:00 ] 127.0.0.1 /Hdcloud/getstandard
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000459s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000672s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000732s ]
+NOTIC: [8] Use of undefined constant CURLOPT_GET - assumed 'CURLOPT_GET' D:\myenv\apache\htdocs\pgyidc\Application\Home\Controller\HdcloudController.class.php 第 60 行.
+NOTIC: [2] curl_setopt() expects parameter 2 to be long, string given D:\myenv\apache\htdocs\pgyidc\Application\Home\Controller\HdcloudController.class.php 第 60 行.
+
+[ 2018-07-27T11:44:22+08:00 ] 127.0.0.1 /Hdcloud/getprice
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000531s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000712s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000775s ]
+SQL: SHOW COLUMNS FROM `jdcstandard` [ RunTime:0.0163s ]
+SQL: SHOW COLUMNS FROM `jdcprice` [ RunTime:0.0124s ]
+SQL: SELECT `price` FROM `jdcstandard` WHERE ( standard='g.n2.medium' ) LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT `bgp` FROM `jdcprice` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0008s ]
+
+[ 2018-07-27T11:44:26+08:00 ] 127.0.0.1 /Hdcloud/getprice
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000442s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000622s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000675s ]
+SQL: SHOW COLUMNS FROM `jdcstandard` [ RunTime:0.0163s ]
+SQL: SHOW COLUMNS FROM `jdcprice` [ RunTime:0.0137s ]
+SQL: SELECT `price` FROM `jdcstandard` WHERE ( standard='g.n2.large' ) LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT `bgp` FROM `jdcprice` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+
+[ 2018-07-27T11:44:32+08:00 ] 127.0.0.1 /Hdcloud/getprice
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000499s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000711s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000794s ]
+SQL: SHOW COLUMNS FROM `jdcstandard` [ RunTime:0.0113s ]
+SQL: SHOW COLUMNS FROM `jdcprice` [ RunTime:0.0081s ]
+SQL: SELECT `price` FROM `jdcstandard` WHERE ( standard='g.n2.xlarge' ) LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT `bgp` FROM `jdcprice` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0007s ]
+
+[ 2018-07-27T11:44:39+08:00 ] 127.0.0.1 /Hdcloud/getprice
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000492s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000664s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000721s ]
+SQL: SHOW COLUMNS FROM `jdcstandard` [ RunTime:0.0157s ]
+SQL: SHOW COLUMNS FROM `jdcprice` [ RunTime:0.0160s ]
+SQL: SELECT `price` FROM `jdcstandard` WHERE ( standard='g.n2.xlarge' ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT `bgp` FROM `jdcprice` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT `highpan` FROM `jdcprice` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0015s ]
+
+[ 2018-07-27T11:44:43+08:00 ] 127.0.0.1 /Hdcloud/getprice
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000555s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000658s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000718s ]
+SQL: SHOW COLUMNS FROM `jdcstandard` [ RunTime:0.0151s ]
+SQL: SHOW COLUMNS FROM `jdcprice` [ RunTime:0.0176s ]
+SQL: SELECT `price` FROM `jdcstandard` WHERE ( standard='g.n2.xlarge' ) LIMIT 1   [ RunTime:0.0029s ]
+SQL: SELECT `bgp` FROM `jdcprice` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT `highpan` FROM `jdcprice` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT `highpan` FROM `jdcprice` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0011s ]
+
+[ 2018-07-27T11:44:46+08:00 ] 127.0.0.1 /Hdcloud/getprice
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000519s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000649s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000708s ]
+SQL: SHOW COLUMNS FROM `jdcstandard` [ RunTime:0.0153s ]
+SQL: SHOW COLUMNS FROM `jdcprice` [ RunTime:0.0168s ]
+SQL: SELECT `price` FROM `jdcstandard` WHERE ( standard='g.n2.xlarge' ) LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT `bgp` FROM `jdcprice` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `highpan` FROM `jdcprice` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `highpan` FROM `jdcprice` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `highpan` FROM `jdcprice` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2018-07-27T11:44:50+08:00 ] 127.0.0.1 /Hdcloud/getprice
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000504s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000719s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000777s ]
+SQL: SHOW COLUMNS FROM `jdcstandard` [ RunTime:0.0155s ]
+SQL: SHOW COLUMNS FROM `jdcprice` [ RunTime:0.0162s ]
+SQL: SELECT `price` FROM `jdcstandard` WHERE ( standard='g.n2.medium' ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT `bgp` FROM `jdcprice` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT `highpan` FROM `jdcprice` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT `highpan` FROM `jdcprice` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT `highpan` FROM `jdcprice` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0015s ]
+
+[ 2018-07-27T11:44:54+08:00 ] 127.0.0.1 /Hdcloud/getprice
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000478s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000635s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000691s ]
+SQL: SHOW COLUMNS FROM `jdcstandard` [ RunTime:0.0163s ]
+SQL: SHOW COLUMNS FROM `jdcprice` [ RunTime:0.0144s ]
+SQL: SELECT `price` FROM `jdcstandard` WHERE ( standard='g.n2.medium' ) LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT `bgp` FROM `jdcprice` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT `highpan` FROM `jdcprice` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT `highpan` FROM `jdcprice` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT `highpan` FROM `jdcprice` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT `highpan` FROM `jdcprice` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0008s ]
+
+[ 2018-07-27T11:46:32+08:00 ] 127.0.0.1 /Hdcloud/jdcloudbuy.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000594s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000922s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000984s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000314s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000373s ]
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 23 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 52 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 130 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 165 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 216 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 231 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 231 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 231 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 1554 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024529s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024583s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000690s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000734s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001083s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001157s ]
+
+[ 2018-07-27T11:46:33+08:00 ] 127.0.0.1 /Hdcloud/getimage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000513s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000861s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000927s ]
+
+[ 2018-07-27T11:46:33+08:00 ] 127.0.0.1 /Hdcloud/getstandard
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001053s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001771s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001899s ]
+NOTIC: [8] Use of undefined constant CURLOPT_GET - assumed 'CURLOPT_GET' D:\myenv\apache\htdocs\pgyidc\Application\Home\Controller\HdcloudController.class.php 第 60 行.
+NOTIC: [2] curl_setopt() expects parameter 2 to be long, string given D:\myenv\apache\htdocs\pgyidc\Application\Home\Controller\HdcloudController.class.php 第 60 行.
+
+[ 2018-07-27T11:46:34+08:00 ] 127.0.0.1 /Hdcloud/getprice
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000644s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001546s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001643s ]
+SQL: SHOW COLUMNS FROM `jdcstandard` [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `jdcprice` [ RunTime:0.0133s ]
+SQL: SELECT `price` FROM `jdcstandard` WHERE ( standard='g.n2.medium' ) LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT `bgp` FROM `jdcprice` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2018-07-27T11:46:38+08:00 ] 127.0.0.1 /Hdcloud/getprice
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000526s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000883s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000942s ]
+SQL: SHOW COLUMNS FROM `jdcstandard` [ RunTime:0.0153s ]
+SQL: SHOW COLUMNS FROM `jdcprice` [ RunTime:0.0163s ]
+SQL: SELECT `price` FROM `jdcstandard` WHERE ( standard='g.n2.medium' ) LIMIT 1   [ RunTime:0.0029s ]
+SQL: SELECT `bgp` FROM `jdcprice` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT `highpan` FROM `jdcprice` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0014s ]
+
+[ 2018-07-27T11:46:45+08:00 ] 127.0.0.1 /Hdcloud/getprice
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000586s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000954s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001021s ]
+SQL: SHOW COLUMNS FROM `jdcstandard` [ RunTime:0.0157s ]
+SQL: SHOW COLUMNS FROM `jdcprice` [ RunTime:0.0163s ]
+SQL: SELECT `price` FROM `jdcstandard` WHERE ( standard='g.n2.medium' ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT `bgp` FROM `jdcprice` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT `highpan` FROM `jdcprice` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0015s ]
+
+[ 2018-07-27T11:46:53+08:00 ] 127.0.0.1 /Hdcloud/getprice
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000512s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000833s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000888s ]
+SQL: SHOW COLUMNS FROM `jdcstandard` [ RunTime:0.0157s ]
+SQL: SHOW COLUMNS FROM `jdcprice` [ RunTime:0.0113s ]
+SQL: SELECT `price` FROM `jdcstandard` WHERE ( standard='g.n2.large' ) LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT `bgp` FROM `jdcprice` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT `highpan` FROM `jdcprice` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0009s ]
+
+[ 2018-07-27T11:46:56+08:00 ] 127.0.0.1 /Hdcloud/getprice
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000493s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000895s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000956s ]
+SQL: SHOW COLUMNS FROM `jdcstandard` [ RunTime:0.0074s ]
+SQL: SHOW COLUMNS FROM `jdcprice` [ RunTime:0.0108s ]
+SQL: SELECT `price` FROM `jdcstandard` WHERE ( standard='g.n2.medium' ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `bgp` FROM `jdcprice` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT `highpan` FROM `jdcprice` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0007s ]
+
+[ 2018-07-27T11:47:05+08:00 ] 127.0.0.1 /Hdcloud/jdcloudbuy.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000522s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000890s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000956s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000307s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000369s ]
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 23 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 52 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 130 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 165 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 216 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 231 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 231 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 231 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2c5c93f324edb5ef9fc2ce80317a80a0.php 第 1554 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023464s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023515s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000607s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000651s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000817s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000867s ]
+
+[ 2018-07-27T11:47:05+08:00 ] 127.0.0.1 /Hdcloud/getimage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000585s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000820s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000883s ]
+
+[ 2018-07-27T11:47:06+08:00 ] 127.0.0.1 /Hdcloud/getstandard
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000593s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000986s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001050s ]
+NOTIC: [8] Use of undefined constant CURLOPT_GET - assumed 'CURLOPT_GET' D:\myenv\apache\htdocs\pgyidc\Application\Home\Controller\HdcloudController.class.php 第 60 行.
+NOTIC: [2] curl_setopt() expects parameter 2 to be long, string given D:\myenv\apache\htdocs\pgyidc\Application\Home\Controller\HdcloudController.class.php 第 60 行.
+
+[ 2018-07-27T11:47:07+08:00 ] 127.0.0.1 /Hdcloud/getprice
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001152s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001889s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002011s ]
+SQL: SHOW COLUMNS FROM `jdcstandard` [ RunTime:0.0180s ]
+SQL: SHOW COLUMNS FROM `jdcprice` [ RunTime:0.0169s ]
+SQL: SELECT `price` FROM `jdcstandard` WHERE ( standard='g.n2.medium' ) LIMIT 1   [ RunTime:0.0031s ]
+SQL: SELECT `bgp` FROM `jdcprice` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0020s ]
+
+[ 2018-07-27T11:47:18+08:00 ] 127.0.0.1 /Hdcloud/getprice
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000658s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001093s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001165s ]
+SQL: SHOW COLUMNS FROM `jdcstandard` [ RunTime:0.0153s ]
+SQL: SHOW COLUMNS FROM `jdcprice` [ RunTime:0.0146s ]
+SQL: SELECT `price` FROM `jdcstandard` WHERE ( standard='g.n2.medium' ) LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT `bgp` FROM `jdcprice` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2018-07-27T11:47:21+08:00 ] 127.0.0.1 /Hdcloud/getprice
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000580s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000858s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000913s ]
+SQL: SHOW COLUMNS FROM `jdcstandard` [ RunTime:0.0153s ]
+SQL: SHOW COLUMNS FROM `jdcprice` [ RunTime:0.0144s ]
+SQL: SELECT `price` FROM `jdcstandard` WHERE ( standard='g.n2.medium' ) LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT `bgp` FROM `jdcprice` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0007s ]
+
+[ 2018-07-27T12:09:14+08:00 ] 127.0.0.1 /Hdcloud/getimage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000471s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000801s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000856s ]
+
+[ 2018-07-27T12:09:15+08:00 ] 127.0.0.1 /Hdcloud/getstandard
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000505s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000967s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001040s ]
+NOTIC: [8] Use of undefined constant CURLOPT_GET - assumed 'CURLOPT_GET' D:\myenv\apache\htdocs\pgyidc\Application\Home\Controller\HdcloudController.class.php 第 60 行.
+NOTIC: [2] curl_setopt() expects parameter 2 to be long, string given D:\myenv\apache\htdocs\pgyidc\Application\Home\Controller\HdcloudController.class.php 第 60 行.
+
+[ 2018-07-27T12:09:16+08:00 ] 127.0.0.1 /Hdcloud/getprice
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000695s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000813s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000867s ]
+SQL: SHOW COLUMNS FROM `jdcstandard` [ RunTime:0.0088s ]
+SQL: SHOW COLUMNS FROM `jdcprice` [ RunTime:0.0099s ]
+SQL: SELECT `price` FROM `jdcstandard` WHERE ( standard='g.n2.medium' ) LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT `bgp` FROM `jdcprice` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0009s ]
+
+[ 2018-07-27T12:09:17+08:00 ] 127.0.0.1 /Hdcloud/getimage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000490s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000823s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000877s ]
+
+[ 2018-07-27T12:09:18+08:00 ] 127.0.0.1 /Hdcloud/getstandard
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000482s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000897s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000950s ]
+NOTIC: [8] Use of undefined constant CURLOPT_GET - assumed 'CURLOPT_GET' D:\myenv\apache\htdocs\pgyidc\Application\Home\Controller\HdcloudController.class.php 第 60 行.
+NOTIC: [2] curl_setopt() expects parameter 2 to be long, string given D:\myenv\apache\htdocs\pgyidc\Application\Home\Controller\HdcloudController.class.php 第 60 行.
+
+[ 2018-07-27T12:09:19+08:00 ] 127.0.0.1 /Hdcloud/getprice
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001095s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001877s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001999s ]
+SQL: SHOW COLUMNS FROM `jdcstandard` [ RunTime:0.0194s ]
+SQL: SHOW COLUMNS FROM `jdcprice` [ RunTime:0.0091s ]
+SQL: SELECT `price` FROM `jdcstandard` WHERE ( standard='g.n2.medium' ) LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT `bgp` FROM `jdcprice` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2018-07-27T14:11:10+08:00 ] 127.0.0.1 /Application/Admin/View/Public/images/icon_control.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000464s ]
+
+[ 2018-07-27T14:11:12+08:00 ] 127.0.0.1 /Application/Admin/View/Public/images/icon_control.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000451s ]
+
+[ 2018-07-27T14:11:47+08:00 ] 127.0.0.1 /Application/Admin/View/Public/images/icon_control.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000597s ]
+
+[ 2018-07-27T14:12:16+08:00 ] 127.0.0.1 /Application/Admin/View/Public/images/icon_control.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000551s ]
+
+[ 2018-07-27T14:12:46+08:00 ] 127.0.0.1 /Application/Admin/View/Public/images/icon_control.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000625s ]
+
+[ 2018-07-27T14:12:48+08:00 ] 127.0.0.1 /Application/Admin/View/Public/images/icon_control.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000468s ]
+
+[ 2018-07-27T14:12:58+08:00 ] 127.0.0.1 /Application/Admin/View/Public/images/icon_control.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000541s ]
+
+[ 2018-07-27T14:13:07+08:00 ] 127.0.0.1 /Application/Admin/View/Public/images/icon_control.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000485s ]
+

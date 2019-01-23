@@ -1,0 +1,56 @@
+<include file="Public/header" title="蒲公英控制台" />
+<style>
+    .ml15{margin-left:15px;}
+    th{color: #FFF;font-weight: normal;}
+    td{color: #4b556a;}
+    .tr{text-align: right;}
+    .table-condensed>thead>tr>th,.table-condensed>tbody>tr>td{vertical-align: middle;padding: 10px;text-align: center;}
+    .page-body{width: 100%;background: #fff;padding: 20px;box-shadow: 0 0 5px 0 #dedfe4;border-radius: 4px;}
+</style>
+<div class="right-product right-full" style="background: #eef0f6;">
+    <div class="center-back right-back">
+        <div class="container-fluid">
+            <div class="info-center">
+                <div class="page-header">
+                    <div class="pull-left">
+                        <h4>防御相关设置 ＞ 牵引策略设置</h4>      
+                    </div>
+                </div>
+                <div class="page-body">
+                    <h4 style="font-weight: bold;margin: 0 auto 35px;">牵引策略设置</h4>
+                    <span>IP :</span><input class="form-control" placeholder="请输入IP地址" style="width: 180px;display: inline-block;">
+                    <select class="form-control" style="width: 80px;display: inline-block;">
+                        <option value="1">100G</option>
+                        <option value="2">120G</option>
+                        <option value="3">140G</option>
+                        <option value="4">160G</option>
+                        <option value="12">180G</option>
+                    </select>
+                    <span class="ml15">有效期 :</span>
+                    <select class="form-control" style="width: 90px;display: inline-block;font-size: 12px;">
+                        <option value="1">试用</option>
+                    </select>
+                    <button class="btn btn-primary btn-sm ml15">提交</button>
+                    <p style="margin-top: 30px;">注：试用期间 100G-140G默认有效期6小时，160G-180G默认有效期3小时</p>
+                    <p>ip不可重复设置，超过140G需要客服审核通过后方可使用</p>
+
+                    <h4 style="color: red;margin-top:40px;">以下设置只针对180.101.72段付费防御操作</h4>
+                    <span>IP :</span><input class="form-control" placeholder="请输入IP地址" style="width: 180px;display: inline-block;">
+                    <select class="form-control" style="width: 80px;display: inline-block;">
+                        <option value="1">210G</option>
+                        <option value="2">220G</option>
+                        <option value="3">230G</option>
+                        <option value="4">240G</option>
+                    </select>
+                    <span class="ml15">有效期 :</span>
+                    <select class="form-control" style="width: 90px;display: inline-block;font-size: 12px;">
+                        <option value="1">一个月</option>
+                    </select>
+                    <button class="btn btn-primary btn-sm ml15">提交</button>
+                    <p style="margin-top: 30px;">注：210G防御150元/月，220G防御300元/月，230G防御450元/月，240G防御600元/月</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+<include file="Public/footer" title="" />

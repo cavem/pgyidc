@@ -1,0 +1,321 @@
+[ 2018-11-05T09:05:49+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000929s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001195s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001281s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000238s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000303s ]
+NOTIC: [8] Undefined index: loginuser D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 370 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.109991s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.110090s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001825s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001928s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002772s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002970s ]
+
+[ 2018-11-05T09:05:52+08:00 ] 127.0.0.1 /Index/newactive.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000492s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000751s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000811s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000189s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000251s ]
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 24 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 25 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 54 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 132 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 167 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 218 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 233 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 233 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 233 行.
+NOTIC: [8] Undefined index: loginuser D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 370 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 809 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040854s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040911s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000655s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000711s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001153s ]
+
+[ 2018-11-05T09:07:07+08:00 ] 127.0.0.1 /Index/newactive.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000451s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000662s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000728s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000249s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000331s ]
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 24 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 25 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 54 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 132 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 167 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 218 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 233 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 233 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 233 行.
+NOTIC: [8] Undefined index: loginuser D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 370 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 809 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016380s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016438s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000509s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000555s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000767s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000839s ]
+
+[ 2018-11-05T09:07:09+08:00 ] 127.0.0.1 /Index/newserver.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000463s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000664s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000734s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000201s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000256s ]
+NOTIC: [8] Undefined index: loginuser D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\95a3507e212971b49727ed2ba0455d61.php 第 370 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045140s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045235s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000952s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001049s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001793s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001975s ]
+
+[ 2018-11-05T09:07:13+08:00 ] 127.0.0.1 /Index/serverbuy.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000512s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000686s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000751s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000263s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000329s ]
+NOTIC: [8] Undefined index: loginuser D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\84492f59e1a4a3ddbba6c61742423575.php 第 370 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046378s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046438s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000504s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000551s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001028s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001114s ]
+
+[ 2018-11-05T09:07:15+08:00 ] 127.0.0.1 /Index/getrentprice
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000433s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000677s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000738s ]
+SQL: SHOW COLUMNS FROM `rentprice` [ RunTime:0.1558s ]
+SQL: SELECT `price` FROM `rentprice` WHERE `road` = '宿迁多线100G' AND `cpu` = 'L5630*2' AND `ram` = '8G' AND `ssd` = '120G固态' AND `ip` = '1个' LIMIT 1   [ RunTime:0.0021s ]
+
+[ 2018-11-05T09:07:20+08:00 ] 127.0.0.1 /Index/newactive.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000450s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000641s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000705s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000181s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000233s ]
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 24 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 25 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 54 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 132 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 167 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 218 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 233 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 233 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 233 行.
+NOTIC: [8] Undefined index: loginuser D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 370 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 809 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015176s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015222s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000436s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000478s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000757s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000816s ]
+
+[ 2018-11-05T09:07:22+08:00 ] 127.0.0.1 /Index/newactive.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000462s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000678s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000741s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000230s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000310s ]
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 24 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 25 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 54 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 132 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 167 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 218 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 233 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 233 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 233 行.
+NOTIC: [8] Undefined index: loginuser D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 370 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 809 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016588s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016643s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000556s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000604s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000884s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2018-11-05T09:08:22+08:00 ] 127.0.0.1 /Index/newactive.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000509s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000861s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000936s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000287s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000437s ]
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 24 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 25 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 54 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 132 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 167 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 218 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 233 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 233 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 233 行.
+NOTIC: [8] Undefined index: loginuser D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 370 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 809 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018515s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018565s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000535s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000579s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000797s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000856s ]
+
+[ 2018-11-05T09:08:23+08:00 ] 127.0.0.1 /Index/newactive.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000436s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000624s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000680s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000179s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000229s ]
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 24 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 25 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 54 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 132 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 167 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 218 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 233 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 233 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 233 行.
+NOTIC: [8] Undefined index: loginuser D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 370 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 809 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015144s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015190s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000414s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000455s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000956s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001051s ]
+
+[ 2018-11-05T09:08:26+08:00 ] 127.0.0.1 /Index/newactive.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000422s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000687s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000747s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000192s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000250s ]
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 24 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 25 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 54 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 132 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 167 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 218 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 233 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 233 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 233 行.
+NOTIC: [8] Undefined index: loginuser D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 370 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 809 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015899s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015952s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000504s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000550s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000807s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000880s ]
+
+[ 2018-11-05T09:08:29+08:00 ] 127.0.0.1 /Index/newactive.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000430s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000639s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000699s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000199s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000259s ]
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 24 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 25 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 54 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 132 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 167 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 218 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 233 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 233 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 233 行.
+NOTIC: [8] Undefined index: loginuser D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 370 行.
+NOTIC: [8] Undefined variable: current D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Home\fe4e6e8da462c43b5d4fe42401b47168.php 第 809 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015916s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015965s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000446s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000489s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000705s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000764s ]
+

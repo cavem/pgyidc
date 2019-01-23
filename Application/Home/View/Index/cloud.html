@@ -1,0 +1,134 @@
+<include file="Public/header" title="pgyidc" />
+<style>
+    .show-more{border:1px solid #fff;color:#fff;display: inline-block;}
+    
+    .ul-smbancon{height: 60px;line-height: 60px;}
+    .ul-smbancon li{display: inline-block;font-size: 16px;margin:0 50px 0 50px;}
+    .currenton{color: #60aff6}
+    .bborder{border-bottom: 2px solid #dedfe4;}
+    .cloud-main-contain .main-h3,.main-p{color: #4b556a;}
+    .cloud-main-contain .main-p{font-size: 14px;line-height: 24px;}
+    .cloud-main-contain .main-ulscene{width: 380px;height: 110px;margin:0 auto;}
+    .cloud-main-contain .main-ulscene li{display: inline-block;width: 150px;height: 110px;background-color: #f5f6f7;text-align: center;cursor: pointer;}
+    .cloud-main-contain .active{background-color: #fff;box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(96,175,246,.5);}
+    .cloud-main-contain .main-conscene{width: 870px;height: 500px;margin:20px auto;box-shadow: 0 0 10px 0 #dedfe4;overflow: hidden;}
+    .cloud-main-contain .main-ulscene img{margin-top: 20px;}
+    .cloud-main-contain .scene-span{display: block;padding: 10px 0;}
+    .cloud-main-contain .conscene-game,.conscene-initial{width: 100%;height: 100%;}
+    .initial{width: 100%;border-top: 1px dotted #ddd;height: 150px;line-height:150px;margin-top: 30px;}
+    .initial-title{color: #60aff6;font-size: 16px;display: inline-block;margin-right: 20px;}
+    .initial-item{display: inline-block;padding:18px 24px;border: 1px solid #ddd;margin-left: 10px;}
+    .initial-item span:first-child{display: block;line-height: 1em;font-size: 16px;color: #60aff6;}
+    .initial-item span:last-child{display: block;line-height: 1em;margin-top: 5px;color: #888;}
+    .initial .btn{display: inline-block;margin-left:200px;background: red;font-weight:bold;font-size:16px;color: #fff;}
+    .cloud-main-item{width:100%;}
+    .intro-contain{width:100%;height: 360px;}
+    .intro-contain-item{width:24%;height: 360px;padding: 25px;border: 1px solid #eee;margin-left:9px;float: left;background-color: #fff;}
+    .intro-contain-item:hover{border:1px solid #60aff6;box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(96,175,246,.5);}
+    .intro-contain-item img{margin-top: 30px;}
+    .intro-contain-item .title{color: #60aff6;font-size: 16px;margin-top:30px;}
+    .intro-contain-item .contain{color: #999;font-size: 12px;line-height: 2em;}
+</style>
+<div class="banner">
+    <div class="banner-contain w1200 pr">
+        <div class="bc-left"><span class="circle1"></span><span class="circle2"></span><img src="__ASSETS__/images/cloud.png"></div>
+        <div class="bc-right tl pa" style="left:200px;top:20px;">
+            <h2 class="m0 wow fadeInUp">云主机线路1</h2>
+            <p class="mt20 wow fadeInUp">蒲公英云服务器配备纯SSD架构打造的高性能存储，旨在为用户提供优质、高效、弹性伸缩的云计算服务。云服务器采用由数据切片技术构建的三层存储功能，切实保护客户数据的安全。同时可弹性扩展的资源用量，为客户业务在高峰期的顺畅保驾护航；灵活多样的计费方式，为客户最大程度的节省IT运营成本，提高资源的有效利用率。</p>
+            <div class="show-more m0 mt30 wow fadeInUp askbtn">立即咨询</div>
+            <a href="{:U('Index/cloudbuy')}"><div class="show-more m0 mt30 wow fadeInUp">立即购买</div></a>
+        </div>
+    </div>
+</div>
+<div class="cloud-main-contain">
+    <div class="cloud-main-item">
+        <div class="w1200 pt25 pb25 bborder">
+            <h3 class="main-h3 pt20 pb20">产品介绍</h3>
+            <div class="intro-contain">
+                <div class="intro-contain-item">
+                    <img src="__ASSETS__/images/move.png">
+                    <p class="title">跨机房热迁移服务</p>
+                    <p class="tl contain">打破地域限制，轻松应对时间空间带来的运营困扰，最快仅需5分钟，即可将数据从一机房迁移至另一机房。</p>
+                </div>
+                <div class="intro-contain-item">
+                    <img src="__ASSETS__/images/push.png">
+                    <p class="title">服务器在线push功能</p>
+                    <p class="tl contain">蒲公英香港服务器鼓励支持用户将手中闲置服务器随时转让，提高闲置资源使用率，减少资源浪费并帮用户有效降低成本。</p>
+                </div>
+                <div class="intro-contain-item">
+                    <img src="__ASSETS__/images/ceng.png">
+                    <p class="title">三层存储技术</p>
+                    <p class="tl contain">缓存、沉淀、备份层，三层分别对数据进行处理、缓存与灾备，三层间实时同步，数据安全性达到99.999%，高可用性达到99.99%。</p>
+                </div>
+                <div class="intro-contain-item">
+                    <img src="__ASSETS__/images/dun.png">
+                    <p class="title">免费20G防御</p>
+                    <p class="tl contain">蒲公英香港服务器采用自带硬防节点，最高可享免费20G防御，最高实现300G防御峰值，有效防御DDoS、CC等恶意攻击，保障用户网络安全。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cloud-main-item">
+        <div class="w1200 pt25 pb25 bborder">
+            <h3 class="main-h3 pt20 pb20">应用场景</h3>
+            <ul class="main-ulscene">
+                <li class="fl active"><img src="__ASSETS__/images/web.png"><span class="scene-span">进阶型</span></li>
+                <li class="fr"><img src="__ASSETS__/images/tall.png"><span class="scene-span">专业型</span></li>
+            </ul>
+            <div class="main-conscene">
+                <div class="conscene-initial p50">
+                    <p class="tl" style="font-size: 16px;">适用对象：地方与行业门户网站</p>
+                    <p class="tl" style="color: #888;line-height: 2em;">社区网站业务相对个人网站，有更多的用户访问，为保证性能，此时就需要对带宽、内存、CPU进行优化，以便提供更大的空间，提升访问速度。
+                            <span style="color: #60aff6">适合流量适中的网站应用，或简单开发环境、代码存储库等。</span></p>
+                    <div class="tl initial">
+                        <span class="initial-title">推荐配置:</span>
+                        <span class="initial-item"><span>2核</span><span>cpu</span></span>
+                        <span class="initial-item"><span>2G</span><span>内存</span></span>
+                        <span class="initial-item"><span>20M</span><span>带宽</span></span>
+                        <span class="initial-item"><span>30G</span><span>存储</span></span>
+                        <a href="{:U('Index/cloudbuy')}"><button class="btn btn-default">立即购买</button></a>
+                    </div>
+                </div>
+                <div class="conscene-game p50" style="display:none;">
+                    <p class="tl" style="font-size: 16px;">适用对象：网上商城、团购网</p>
+                    <p class="tl" style="color: #888;line-height: 2em;">随着电子商务的不断发展，众多企业逐渐意识到电子商务的重要性。该配置适用于开发、测试、上线初期，后期可根据您的业务的实际增长进行增减，可灵活控制。
+                            <span style="color: #60aff6">计算能力满足90%云计算使用者需求，适合企业运营活动、并行计算应用、普通数据处理服务等。</span></p>
+                    <div class="tl initial">
+                        <span class="initial-title">推荐配置:</span>
+                        <span class="initial-item"><span>4核</span><span>cpu</span></span>
+                        <span class="initial-item"><span>4G</span><span>内存</span></span>
+                        <span class="initial-item"><span>50M</span><span>带宽</span></span>
+                        <span class="initial-item"><span>50G</span><span>存储</span></span>
+                        <a href="{:U('Index/cloudbuy')}"><button class="btn btn-default">立即购买</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="w1200 pt25 pb25 bborder">
+        <h3 class="main-h3 pt20 pb20">推荐产品</h3>
+
+    </div> -->
+    <!-- <div class="cloud-main-item">
+        <div class="w1200 pt25 pb25">
+            <h3 class="main-h3 pt20 pb20">机房展示</h3>
+        </div>
+    </div> -->
+</div>
+<script>
+$(function(){
+    $('.main-ulscene li:eq(0)').click(function(){
+        $('.active').removeClass('active');
+        $(this).addClass('active');
+        $('.conscene-game').fadeOut();
+        $('.conscene-initial').fadeIn();
+    });
+    $('.main-ulscene li:eq(1)').click(function(){
+        $('.active').removeClass('active');
+        $(this).addClass('active');
+        $('.conscene-game').fadeIn();
+        $('.conscene-initial').fadeOut();
+    });
+})
+</script>
+<include file="Public/footer" title="footer" />

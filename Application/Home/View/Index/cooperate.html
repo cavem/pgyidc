@@ -1,0 +1,90 @@
+<include file="Public/header" title="pgyidc" />
+<style>
+    .show-more{border:1px solid #fff;color:#fff;display: inline-block;}
+
+    .cooper{background-color: #f2f2f2;}
+    .cooper h3{margin:0;padding: 25px;}
+    .jscooper-contain{height: 270px;}   
+    .jscooper-contain-item{width: 200px;height: 200px;display: inline-block;margin:25px 10px;box-shadow: 0 0 10px 0 #dedfe4;background-color: #fff;border-radius: 6px 6px 0 0;}
+    .jscooper-contain-item img{width: 150px;height: 60px;margin-top: 50px;}
+    @media screen and (max-width: 1200px) {
+        .jscooper-contain-item{width:170px;}
+    }
+    .Box {position: relative;padding:25px 0;}
+    .Box .content {width: 1200px;margin: 0 auto;}
+    .Box h2 {text-align: center;margin-bottom: 35px;padding-top: 250px;}
+    .Box .Box_con {position: relative;}
+    .Box .Box_con .btnl {position: absolute;}
+    .Box .Box_con .btn {display: block;width: 41px;height: 41px;position: absolute;top: 80px;cursor: pointer;}
+    .Box .Box_con .btnl {background: url(__ASSETS__/images/jtl02.png) no-repeat center;left: 0;z-index: 999;}
+    .Box .Box_con .btnr {background: url(__ASSETS__/images/jtr02.png) no-repeat center;right: 0;z-index: 999;}
+    .Box .Box_con .btnl:hover {background: url(__ASSETS__/images/jtl03.png) no-repeat center;}
+    .Box .Box_con .btnr:hover {background: url(__ASSETS__/images/jtr03.png) no-repeat center;}
+    .Box .Box_con .conbox {position: relative;overflow: hidden;}
+    .Box .Box_con .conbox ul {position: relative;list-style: none;}
+    .Box .Box_con .conbox ul li {float:left;width: 285px;height: 200px;margin-left: 20px;overflow: hidden;background-color: #fff;}
+    .Box .Box_con .conbox ul li:first-child {margin-left: 0;}
+    .Box .Box_con .conbox ul li img {display: block;width: 150px;height: 60px;transition: all 0.5s;margin:55px auto;}
+    .Box .Box_con .conbox ul li:hover img {transform: scale(1.1);}
+    
+    .Box .BoxSwitch {margin-top: 30px;text-align: center;}
+    .Box .BoxSwitch span {display: inline-block;*display: inline;*zoom: 1;vertical-align: middle;width: 30px;height: 3px;background: #ccc;margin: 0 5px;cursor: pointer;}
+    .Box .BoxSwitch span.cur {background: red;}
+</style>
+
+<div class="banner">
+    <div class="banner-contain w1200 pr">
+        <div class="bc-left"><span class="circle1"></span><span class="circle2"></span><img src="__ASSETS__/images/cooperation.png"></div>
+        <div class="bc-right tl pa" style="left:200px;top:20px;">
+            <h2 class="m0 wow fadeInUp">合作伙伴</h2>
+            <p class="mt20 wow fadeInUp"></p>
+            <a href="http://crm2.qq.com/page/portalpage/wpa.php?uin=800002004&aty=0&a=0&curl=&ty=1" target="blank"><div class="show-more m0 mt30 wow fadeInUp">合作洽谈</div></a>
+        </div>
+    </div>
+</div>
+<div class="cooper">
+    <div class="Box">
+        <div class="content">
+            <h3>合作伙伴</h3>
+            <div class="Box_con clearfix">
+                <span class="btnl btn" id="btnl"></span>
+                <span class="btnr btn" id="btnr"></span>
+                <div class="conbox" id="BoxUl">
+                    <ul>
+                        <li class="cur"><img src="__ASSETS__/images/huaweilogo.jpg" alt="" /></li>
+                        <li class="cur"><img src="__ASSETS__/images/201407050931252656.gif" alt="" /></li>
+                        <li class="cur"><img src="__ASSETS__/images/201407050931548437.gif" alt="" /></li>
+                        <li class="cur"><img src="__ASSETS__/images/201408170319339753.png" alt="" /></li>
+                        <li class="cur"><img src="__ASSETS__/images/201408170320333035.png" alt="" /></li>
+                        <li class="cur"><img src="__ASSETS__/images/201407050931126406.gif" alt="" /></li>
+                    </ul>
+                </div>
+                <span class="cur"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <div class="Box">
+        <div class="content">
+            <h3>客户案例</h3>
+            <div class="Box_con clearfix">
+                <div class="conbox" id="">
+                    <ul>
+                        <li class="cur"><img src="__ASSETS__/images/360.jpg" alt="" /></li>
+                        <li class="cur"><img src="__ASSETS__/images/baidu.jpg" alt="" /></li>
+                        <li class="cur"><img src="__ASSETS__/images/wangsu.jpg" alt="" /></li>
+                        <li class="cur"><img src="__ASSETS__/images/lanxun.jpg" alt="" /></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/footer" title="footer" />
+<script type="text/javascript" src="__ASSETS__/js/Lunbo.js"></script>
+<script type="text/javascript">
+    //滚动元素id，左切换按钮，右切换按钮，切换元素个数id,滚动方式，切换方向，是否自动滚动，滚动距离，滚动时间，滚动间隔，显示个数
+    LbMove('BoxUl','btnl','btnr','BoxSwitch',true,'left',true,305,1000,5000,4);
+</script>

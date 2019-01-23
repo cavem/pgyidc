@@ -1,0 +1,391 @@
+<include file="Public/header" title="pgyidc" />
+<style>
+ol,ul,dl{margin-bottom: 0;}
+.item{background-repeat:no-repeat;background-size:1920px 550px;background-position: top;}
+.item-contain{animation-delay: 0.5s;position:absolute;left:20px;top:100px;text-align: left;}
+.item-contain h1{color:#fff;font-size: 50px;}
+.item-contain p{color: #fff;font-size: 25px;margin-top: 25px;}
+h4{margin:0;}
+.show-detail {width: 150px;height: 45px;line-height: 44px;float:left;margin: 35px auto 40px 0px;;text-align: center;font-size: 16px;color: #fff;border: 1px solid #fff;border-radius:5px;cursor: pointer;}
+.show-detail:hover{border:1px solid #60aff6;background-color: #60aff6;}
+.iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+.iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+.BMapLabel{max-width: fit-content !important;}
+.BMap_Marker div{overflow: initial !important};
+</style>
+<!--全屏滚动-->
+<div id="myCarousel" class="carousel slide">
+    <!-- 轮播（Carousel）指标 -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>   
+
+    <!-- 轮播（Carousel）项目 -->
+    <div class="carousel-inner">
+        <div class="item active" style="background-image:url(__ASSETS__/images/banner_bg1.jpg);">
+            <div style="position:relative;height:550px;width:70%;margin:0 auto;">
+                <div class="item-contain wow fadeInLeft">
+                    <h1>常州电信 百兆独享</h1>
+                    <p>L5630x2 16G 120G   测试IP：43.248.177.1<br/>新年价：<span style="color:#ffe605;font-weight:bold;">880</span>元/月</p>
+                    <a href="{:U('Index/newserver')}"><div class="show-detail">查看详情</div></a>
+                </div>
+            </div>
+        </div>
+        <div class="item" style="background-image:url(__ASSETS__/images/banner_bg2.jpg);">
+            <div class="w1200" style="position:relative;height:550px;width:70%;margin:0 auto;">
+                <div class="item-contain wow fadeInLeft">
+                    <h1>开年大吉 升级大宽带</h1>
+                    <p>【加量不加价】<br/><span style="text-decoration:line-through;opacity:.5;">标配300G高防/40M &nbsp;&nbsp;3000元/月&nbsp;</span><br/>标配300G高防/<span style="color:#ffe605;font-weight:bold;">100</span>M 3000元/月</p>
+                    <a href="{:U('Index/newserver')}"><div class="show-detail">查看详情</div></a>
+                </div>
+            </div>
+        </div>
+        <div class="item" style="background-image:url(__ASSETS__/images/banner_bg3.jpg);">
+            <div class="w1200" style="position:relative;height:550px;width:70%;margin:0 auto;">
+                <div class="item-contain wow fadeInLeft">
+                    <h1>云堤 — 中国电信网络安全</h1>
+                    <p>电信云堤阻断国外后150G防御<br/>联通移动阻断国外后40G防御<br/>惊爆价：<span style="color:#ffe605;font-weight:bold;">1050</span>元/月</p>
+                    <a href="{:U('Index/newserver')}"><div class="show-detail">查看详情</div></a>
+                </div>
+            </div>
+        </div>
+        <div class="item" style="background-image:url(__ASSETS__/images/banner_bg4.jpg);">
+            <div class="w1200" style="position:relative;height:550px;width:70%;margin:0 auto;">
+                <div class="item-contain wow fadeInLeft">
+                    <h1>香港云服务器 全面上新</h1>
+                    <p>高品质企业级云主机，免备案，畅通无阻</p>
+                    <a href="http://yun.pgyidc.com"><div class="show-detail">查看详情</div></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 轮播（Carousel）导航 -->
+    <!-- <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>
+    <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a> -->
+</div>
+
+<!--end 全屏滚动-->
+<!--主打产品-->
+<div class="free_composing pt50 pb50">
+    <div class="free_composing_content w1200">
+        <h3 class="content-group-title wow fadeInUp">我们的产品</h3>
+        <!-- <div style="width:100%; margin:0 auto;"><img src="__ASSETS__/images/product_line.png"></div> -->
+        <div class="mt50" style="width:100%;height:300px; margin:0 auto;">
+            <div id="wrap">
+                <ul>
+                    <li>
+                        <a href="" class="a1">
+                            <img class="wow fadeInUp" src="__ASSETS__/images/index_cloud.png">
+                            <div class="divA wow fadeInUp">
+                                <p class="p1">云主机</p>
+                                <p class="p2">2核/1G三线BGP单机80G防御 <span style="color:#ffe605;font-weight:bold;">300</span>元/月</br>简单方便实现对资源的部署，包括：IDC数据中心、服务器集群、业务平台...</p>
+                            </div>
+                        </a>
+                        <a href="{:U('Index/cloudbuy')}" class="a2">
+                            <p class="p4">云主机</p>
+                            <p class="p5 tc"><b>2核/1G三线BGP单机80G防御 <span style="color:#ffe605;font-weight:bold;">300</span>元/月</b></br>简单方便实现对资源的部署，包括：IDC数据中心、服务器集群、业务平台...</p>
+                            <p class="p7">立即购买</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="a1">
+                            <img class="wow fadeInUp" src="__ASSETS__/images/index_rent.png">
+                            <div class="divA wow fadeInUp">
+                                <p class="p1">服务器租用</p>
+                                <p class="p2">L5630*2/16G/120GSSD三线BGP100G防御<span style="color:#ffe605;font-weight:bold;">1200</span>元/月</br>标准机房环境，提供365天全天候运营服</p>
+                            </div>
+                        </a>
+                        <a href="{:U('Index/serverbuy')}" class="a2">
+                                <p class="p4">服务器租用</p>
+                                <p class="p5"><b>L5630*2/16G/120GSSD三线BGP100G防御<span style="color:#ffe605;font-weight:bold;">1200</span>元/月</b></br>标准机房环境，提供365天全天候运营服</p>
+                                <p class="p7">立即购买</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="a1">
+                            <img class="wow fadeInUp" src="__ASSETS__/images/index_manage.png">
+                            <div class="divA wow fadeInUp">
+                                <p class="p1">服务器托管</p>
+                                <p class="p2">1U单机防御100G/20M<span style="color:#ffe605;font-weight:bold;">550</span>元/月</br>华东地区第一家带防BGP，国家甲级机房，超级数据港。 专门技术人员7X24小时维护</p>
+                            </div>
+                        </a>
+                        <a href="{:U('Index/serverbuy')}" class="a2">
+                                <p class="p4">服务器托管</p>
+                                <p class="p5"><b>1U单机防御100G/20M<span style="color:#ffe605;font-weight:bold;">550</span>元/月</b></br>华东地区第一家带防BGP，国家甲级机房，超级数据港。 专门技术人员7X24小时维护</p>
+                                <p class="p7">立即购买</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="a1">
+                            <img class="wow fadeInUp" src="__ASSETS__/images/index_defense.png">
+                            <div class="divA wow fadeInUp" style="bottom: 0px;">
+                                <p class="p1">自助防御平台</p>
+                                <p class="p2">自助防御</p>
+                            </div>
+                        </a>
+                        <a href="http://user.pgyidc.com" target="_blank" class="a2" style="left: -474px;">
+                            <p class="p4" style="left: -474px;">自助防御平台</p>
+                            <p class="p5" style="left: -474px;"><b>立即登录自助防御系统,实时监控服务器运行情况</b></p>
+                            <p class="p7" style="bottom: -50px;">立即前往</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <a href="{:U('Index/sqidc')}"><div class="show-more">查看全部</div></a>
+    </div>
+</div>
+<!--我们的服务-->
+<div class="free_composing pt50 pb50" style="background-color:#f9f9f9;">
+    <div class="free_composing_content w1200">
+        <h3 class="content-group-title wow fadeInUp">我们的服务</h3>
+        <!-- <div style="width:100%; margin:0 auto;"><img src="__ASSETS__/images/product_line.png"></div> -->
+        <div class="mt50" style="width:100%; margin:0 auto;">
+            <div class="inner_wrap_big mt30 mb70">    
+                <div class="inner_wrap">
+                    <div class="inner_one">
+                        <div class="inner_one_li">
+                            <div class="inner_one_top wow fadeInUp">
+                                <div class="inner_one_top_img"><img src="__ASSETS__/images/icon_01.png"></div>
+                                <div class="inner_one_top_h2"><h2>自动开通</h2></div>
+                            </div>
+                            <div class="inner_one_bottom wow fadeInUp"><p>我们产品实现在线付款后实时开通，无需等待人工审核。</p></div>
+                            
+                        </div>
+                        
+                        <div class="inner_one_li">
+                            <div class="inner_one_top wow fadeInUp">
+                                <div class="inner_one_top_img"><img src="__ASSETS__/images/update.png"></div>
+                                <div class="inner_one_top_h2"><h2>弹性升级</h2></div>
+                            </div>
+                            <div class="inner_one_bottom wow fadeInUp"><p>根据用户使用需求可随时进行云主机升级。</p></div>
+                            
+                        </div>
+                        
+                        <div class="inner_one_lii">
+                            <div class="inner_one_top wow fadeInUp">
+                                <div class="inner_one_top_img"><img src="__ASSETS__/images/free.png"></div>
+                                <div class="inner_one_top_h2"><h2>免费试用</h2></div>
+                            </div>
+                            <div class="inner_one_bottom wow fadeInUp"><p>0元免费试用，先试用再购买，确保购买都是满意的产品。</p></div>
+                            
+                        </div><div class="clear"></div>
+                    </div>
+                    <div class="inner_middle">
+                        
+                    </div>
+                    
+                    <div class="inner_one">
+                        <div class="inner_one_li">
+                            <div class="inner_one_top wow fadeInUp">
+                                <div class="inner_one_top_img"><img src="__ASSETS__/images/24h.png"></div>
+                                <div class="inner_one_top_h2"><h2>技术响应</br>与技术支持</h2></div>
+                            </div>
+                            <div class="inner_one_bottom wow fadeInUp"><p>提供7x24技术支持，电话、工单支持，10分钟快速响应，我们7x24深度监控。</p></div>
+                            
+                        </div>
+                        
+                        <div class="inner_one_li">
+                            <div class="inner_one_top wow fadeInUp">
+                                <div class="inner_one_top_img"><img src="__ASSETS__/images/setup.png"></div>
+                                <div class="inner_one_top_h2"><h2>故障修复</h2></div>
+                            </div>
+                            <div class="inner_one_bottom wow fadeInUp"><p>Uptime、ICMP、TCP port、CPU、RAM、HD免费短信、邮件告警，运行情况尽在掌握;值班音频告警，故障时间急速反映。任何故障问题，都将能在5小时之内处理完毕，让您没有后顾之忧。</p></div>
+                            
+                        </div>
+                        
+                        <div class="inner_one_lii">
+                            <div class="inner_one_top wow fadeInUp">
+                                <div class="inner_one_top_img"><img src="__ASSETS__/images/manage.png"></div>
+                                <div class="inner_one_top_h2"><h2>自主管理</h2></div>
+                            </div>
+                            <div class="inner_one_bottom wow fadeInUp"><p>我们提供智云主机提供Web控制面板，用户可通过控制面板随时管理名下服务，实现自主管理。</p></div>
+                            
+                        </div><div class="clear"></div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <a href="http://crm2.qq.com/page/portalpage/wpa.php?uin=800002004&aty=0&a=0&curl=&ty=1" target="_blank"><div class="show-more">立即咨询</div></a>
+    </div>
+</div>        
+<!--新闻-->
+
+<div class="free_composing pt50 pb50">
+    <div class="free_composing_content w1200">
+        <h3 class="content-group-title wow fadeInUp">资讯</h3>
+        <!-- <div style="width:100%; margin:0 auto;"><img src="__ASSETS__/images/product_line.png"></div> -->
+        <div class="mt50" style="width:100%; margin:0 auto;height:360px;background:#12273a;padding:10px 20px;">
+            <dl class="fl listnews" style="border-right: 1px solid #ddd;">
+                <!-- <dt><img style="display:inline-block;width:25px;margin-top:-10px;" src="__ASSETS__/images/hotnews.png"><h4 style="color:red;display:inline-block">行业资讯</h4></dt>                    -->
+                <dd class="wow fadeInUp">
+                    <div id="focusImage" class="newslider">
+                        <ul class="contents">
+                            <li class="current">
+                                <div class="image"><a href="#"><img src="__ASSETS__/images/I180x143_1.jpg" width="400" height="282"></a></div>
+                                <div class="text">
+                                    <span class="title"><a href="#">蒲公英售后服务正式实行7*24小时制度</a></span>
+                                    <p>由于虚拟化技术和云计算的大行其道，刀片服务器似乎也顺应这一大潮成为用户更青睐的硬件选择。但是刀片服务器机柜的市场终究还在起步阶段，刀片服务器的出货量在整个服务器产品中的份额比重并不大。</p>
+                                </div>
+                            </li>
+                            <li class="">
+                                <div class="image"><a href="#"><img src="__ASSETS__/images/I180x143_2.jpg" width="400" height="282"></a></div>
+                                <div class="text">
+                                    <span class="title"><a href="#">服务器市场刀片当道 那它的优势在哪里？</a></span>
+                                    <p>从2017年5月2号之后，蒲公英网络有限公司客服售后时间正式实行7*24小时服务制度，节假日不休，365天全年在线服务，尽力满足各位客户的需求！各位上帝有什么事情尽情骚扰吧，售后QQ：800002004。</p>
+                                </div>
+                            </li>
+                            <li class="">
+                                <div class="image"><a href="#"><img src="__ASSETS__/images/I180x143_3.jpg" width="400" height="282"></a></div>
+                                <div class="text">
+                                    <span class="title"><a href="#">巨头联手打开市场新空间 边缘计算浮出水面</a></span>
+                                    <p>据报道：五年之后的无人驾驶汽车，你并不会希望云端的数据来踩刹车。</p>
+                                </div>
+                            </li>
+                        </ul>
+                        
+                        <div class="triggers">
+                            <a href="javascript:;" class="cur current" style="display: none;"><img src="__ASSETS__/images/I180x143_1.jpg" width="58" height="38"></a>
+                            <a href="javascript:;" class="" style="display: none;"><img src="__ASSETS__/images/I180x143_2.jpg" width="58" height="38"></a>
+                            <a href="javascript:;" class="" style="display: none;"><img src="__ASSETS__/images/I180x143_3.jpg" width="58" height="38"></a>
+                        </div>
+                    
+                        <div class="icon-dot">
+                            <a href="javascript:;" class="cur current"></a>
+                            <a href="javascript:;" class=""></a>
+                            <a href="javascript:;" class=""></a>
+                        </div>
+                        
+                        <span class="link-watch pre down" style="display: none;"></span>
+                        <span class="link-watch next down" style="display: none;"></span>
+                        
+                    </div>
+                </dd>                    
+            </dl>
+            <dl class="fl listnews">
+                <!-- <dt style="position:relative;"><h4>公司动态</h4><a style="position:absolute;right:0;top:15px;color:#60aff6;">查看更多>></a></dt>                    -->
+                <dd class="wow fadeInUp"><a target="_blank" href="news.html?nid=3&amp;id=302" title="【公司公告】年会通知">【公司公告】年会通知 </a></dd>                    
+                <dd class="wow fadeInUp"><a target="_blank" href="news.html?nid=3&amp;id=301" title="【公司公告】通知">【公司公告】通知 </a></dd>                   
+                <dd class="wow fadeInUp"><a target="_blank" href="news.html?nid=3&amp;id=298" title="【公司公告】蒲公英售后服务正式实行7*24小时制度">【公司公告】蒲公英售后服务正式实行7*24小时制度 </a></dd>                  
+                <dd class="wow fadeInUp"><a target="_blank" href="news.html?nid=3&amp;id=296" title="【公司公告】2017年3月17日升级通知">【公司公告】2017年3月17日升级通知 </a></dd>                  
+                <dd class="wow fadeInUp"><a target="_blank" href="news.html?nid=3&amp;id=287" title="【公司公告】103.239.244段服务器延时通知">【公司公告】103.239.244段服务器延时通知 </a></dd>                    
+                <dd class="wow fadeInUp"><a target="_blank" href="news.html?nid=3&amp;id=285" title="【公司公告】2017年春节放假通知">【公司公告】2017年春节放假通知 </a></dd>                    
+                <dd class="wow fadeInUp"><a target="_blank" href="news.html?nid=3&amp;id=283" title="【公司公告】2017年年会通知">【公司公告】2017年年会通知 </a></dd>
+            </dl>
+        </div>
+        <a href="{:U('Index/news')}"><div class="show-more">查看全部</div></a>
+    </div>
+</div>
+<!-- 机房         -->
+<div class="free_composing pt50" style="width: 100%;background-color: #f9f9f9;">
+    <div class="free_composing_content">
+        <h3 class="content-group-title wow fadeInUp">我们的机房</h3>
+        <div style="width:100%;height:550px;border:#ccc solid 1px;margin-top: 50px;" id="dituContent"></div>
+    </div>
+</div>
+<include file="Public/footer" title="footer" />
+<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&amp;ak=C13c98650aa84efc4279c4fd5ac4bac6"></script>
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMarker();//向地图中添加marker
+    }
+    
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(118.285899,33.966545);//定义一个中心点坐标
+        map.centerAndZoom(point,12);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+    
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        //map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+    
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+	map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+	var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+	map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	map.addControl(ctrl_sca);
+    }
+    
+    //标注点数组
+    var markerArr = [{title:"宿迁电信机房",content:"宿迁电信分公司长线分局",point:"118.337045|33.956197",isOpen:0,icon:{w:23,h:25,l:23,t:21,x:9,lb:12}}
+		 ,{title:"京东云华东数据中心",content:"京东云华东数据中心",point:"118.298153|34.069007",isOpen:0,icon:{w:23,h:25,l:23,t:21,x:9,lb:12}}
+		 ,{title:"中国移动机房",content:"中国移动宿城区分公司",point:"118.285154|33.966949",isOpen:0,icon:{w:23,h:25,l:23,t:21,x:9,lb:12}}
+		 ];
+    //创建marker
+    function addMarker(){
+        for(var i=0;i<markerArr.length;i++){
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0,p1);
+			var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point,{icon:iconImg});
+			var iw = createInfoWindow(i);
+			var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+			marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                        borderColor:"#808080",
+                        color:"#333",
+                        cursor:"pointer"
+            });
+			
+			(function(){
+				var index = i;
+				var _iw = createInfoWindow(i);
+				var _marker = marker;
+				_marker.addEventListener("click",function(){
+				    this.openInfoWindow(_iw);
+			    });
+			    _iw.addEventListener("open",function(){
+				    _marker.getLabel().hide();
+			    })
+			    _iw.addEventListener("close",function(){
+				    _marker.getLabel().show();
+			    })
+				label.addEventListener("click",function(){
+				    _marker.openInfoWindow(_iw);
+			    })
+				if(!!json.isOpen){
+					label.hide();
+					_marker.openInfoWindow(_iw);
+				}
+			})()
+        }
+    }
+    //创建InfoWindow
+    function createInfoWindow(i){
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+        return iw;
+    }
+    //创建一个Icon
+    function createIcon(json){
+        var icon = new BMap.Icon("__ASSETS__/images/zuobiao.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        return icon;
+    }
+    
+    initMap();//创建和初始化地图
+</script>
+
+ 

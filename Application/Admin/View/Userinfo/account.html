@@ -1,0 +1,119 @@
+<include file="Public/header" title="蒲公英自动化" />
+<link rel="stylesheet" type="text/css" href="__APC__/css/amazeui.min.css" />
+<link rel="stylesheet" type="text/css" href="__APC__/css/main.css" />
+
+  <div class="right-product right-full">
+        <div class="center-back right-back">
+        <div class="container-fluid">
+          <div class="info-center">
+                    <div class="page-header">
+                      <div class="pull-left">
+						<h4>账户管理</h4>      
+					</div>
+            </div>
+            <form action="{:U('Order/alipay')}" method="post" id="doc-vld-msg">
+              <div class="tr_rechbox">
+                <div class="tr_rechhead">
+                    <img src="__APC__/img/coin.png" alt="" style="width:20px;height: 20px"/>
+                    <span>当前余额：<span>￥{$balance}</span></span>
+                </div>
+                <div class="tr_rechoth am-form-group am-form-error"  style="clear:both;display: block;">
+                  <span>充值金额：</span>
+                  <input type="number" min="10" max="10000" value="100" name="money" class="othbox am-field-error am-active" data-validation-message="充值金额范围：10-10000元" pattern="^-?(?:\d+|\d{1,3}(?:,\d{3})+)?(?:\.\d+)?$" required="required">
+                  <font class="mytips">提示：充值金额范围：10-10000元</font> 
+                </div>
+                <div class="tr_rechcho am-form-group">
+                  <span>充值方式：</span>
+                  <label style="margin-right:30px;">
+                      <input type="radio" name="radio1" value="0" checked>&nbsp;<img src="__APC__/img/zfbpay.png">
+                  </label>
+                  <!-- <label>
+                      <input type="radio" name="radio1" value="1">&nbsp;<img src="__APC__/img/wechatpay.png">
+                    </label> -->
+                  
+                </div>
+              </div>
+              <div class="tr_paybox">
+                <input type="submit" value="确认支付" class="tr_pay am-btn" />
+                <span>温馨提示：如充值过程中遇到问题请拨打客服联系电话。</span>
+              </div>
+
+            </form>
+            <div class="clearfix"></div>
+             
+              
+            </div>
+
+
+            <div class="page-body tr_paybox">
+                    <!-- <div class="control-btn-wrap">
+                        <span class="btn-new"><i class="glyphicon glyphicon-plus"></i> 新建</span>
+                        <span class="btn-refresh" data-toggle="tooltip" title="刷新" onclick="window.location.reload();"><i class="glyphicon glyphicon-refresh"></i></span>
+                        <span class="btn-on" data-toggle="tooltip" title="开机"><i class="glyphicon glyphicon-play"></i></span>
+                        <span class="btn-off" data-toggle="tooltip" title="关机"><i class="glyphicon glyphicon-off"></i></span>
+                        <span class="btn-restart" data-toggle="tooltip" title="重启"><i class="glyphicon glyphicon-repeat"></i></span>
+                        <span class="btn-renew">续费</span>
+                    </div> -->
+                    <table class="table table-condensed" style="margin-top: 20px;">
+                        <thead>
+                            <tr style="background: #09c;color: #fff;">
+                                <th>ID</th>
+                                <th>订单编号</th>
+                                <th>金额</th>
+                                <th>操作时间</th>
+                                <th>操作类型</th>
+                                <th>消费类型</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <foreach name="record" item="v">
+                            <tr>
+                                <td class="id">{$v.id}</td>
+                                <td>{$v.ordernum}</td>
+                                <td>{$v.money}</td>
+                                <td>{$v.addtime|date="Y-m-d",###}</td>
+                                <td>{$v.typename}</td>
+                                <td>{$v['datatype']==0?'充值':'扣费'}</td>
+                            </tr>
+                            </foreach>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                              <td colspan="10">
+                                <div class="pull-right">
+                                    {$page}
+                                </div>
+                              </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+
+          </div>
+        </div> 
+ </div>
+<include file="Public/footer" title="" />
+<script type="text/javascript">
+
+  $(function() {
+    $('#doc-vld-msg').validator({
+      onValid: function(validity) {
+        $(validity.field).closest('.am-form-group').find('.am-alert').hide();
+      },
+      onInValid: function(validity) {
+        var $field = $(validity.field);
+        var $group = $field.closest('.am-form-group');
+        var $alert = $group.find('.am-alert');
+        // 使用自定义的提示信息 或 插件内置的提示信息
+        var msg = $field.data('validationMessage') || this.getValidationMessage(validity);
+
+        if(!$alert.length) {
+          $alert = $('<div class="am-alert am-alert-danger"></div>').hide().
+          appendTo($group);
+        }
+        $alert.html(msg).show();
+      }
+    });
+  });
+</script>

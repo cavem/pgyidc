@@ -1,0 +1,129 @@
+<include file="Public/header" title="蒲公英控制台" />
+<style>
+    .ml15{margin-left:15px;}
+    th{color: #FFF;font-weight: normal;}
+    td{color: #4b556a;}
+    .tr{text-align: right;}
+    .table-condensed>thead>tr>th,.table-condensed>tbody>tr>td{vertical-align: middle;padding: 10px;text-align: center;}
+    .page-body{width: 100%;background: #fff;padding: 20px;box-shadow: 0 0 5px 0 #dedfe4;border-radius: 4px;}
+</style>
+<div class="right-product right-full" style="background: #eef0f6;">
+    <div class="center-back right-back">
+        <div class="container-fluid">
+            <div class="info-center">
+                <div class="page-header">
+                    <div class="pull-left">
+                        <h4>防火墙相关设置 ＞ 金盾网页CC</h4>      
+                    </div>
+                </div>
+                <div class="page-body">
+                    <h4 style="font-weight: bold;margin: 0 auto 35px;">蒲公英网络金盾CC防御</h4>
+                    <span>IP：</span><input class="form-control" id="address" placeholder="请输入IP地址" style="width: 150px;display: inline-block;">
+                    <select class="form-control" id="modetype" style="width: 250px;display: inline-block;font-size: 12px;">
+                        <foreach name="ccparam" item="cc">
+                        <option value="{$cc.id}">{$cc.name}</option>
+                        </foreach>
+                    </select>
+                    <span>释放时间：</span>
+                    <input type="number" id="releasetime" class="form-control" min="0" value="0" style="display: inline-block;width: 70px;">天后
+                    <button class="btn btn-primary btn-sm" id="defense">提交</button>
+                    <p style="margin-top: 30px;">金盾网页CC： 分为三个级别：低、中、高，主要防护端口为TCP协议：80端口，防御严格程度依次增加。</p>
+                    <p style="color: red;">金盾游戏CC： 分为三个级别：低、中、高，主要防护端口为TCP协议：25565、7000至9000等游戏端口，防御严格程度依次增加。</p>
+                    <p style="color: red;">金盾游戏CC： 若加了防护在没有攻击的情况下，不影响正常业务</p>
+                    <p style="color: red;">金盾游戏CC：支持防护预设</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+<script>
+    $(function(){
+        $("#defense").click(function(){
+            var address=$("#address").val();
+            var mode=$("#modetype").val();
+            var releasetime=$("#releasetime").val();
+            if(address=="")
+            {
+                $("#address").css("background","#FFF3F3");
+                $("#address").focus();
+                return;
+            }
+            if(mode!=1&&releasetime==0)
+            {
+                $("#releasetime").css("background","#FFF3F3");
+                $("#releasetime").attr("value","");
+                $("#releasetime").focus();
+                return;
+            }
+            layer.load();
+            $.ajax({
+                 type: "POST",
+                 url: "/firewall/goldfighting",
+                 data:"address="+address+"&mode="+mode+"&releasetime="+releasetime,
+                 success: function(msg){
+                     if(msg==60)
+                     {
+                        layer.closeAll(); 
+                        layer.msg('防御启动成功', {icon: 1}); 
+                        window.location.href='/firewall/goldenshield';
+                        return;
+                     }
+                     else if(msg==61)
+                     {
+                        layer.closeAll(); 
+                        layer.msg('IP输入有误', {icon: 0});
+                        return;
+                     }
+                     else if(msg==62)
+                     {
+                        layer.closeAll(); 
+                        layer.msg('系统出错', {icon: 2});
+                        return;
+                     }
+                     else if(msg==63)
+                     {
+                        //token过期
+                        parent.location.reload();
+                        return;
+                     }
+                     else if(msg==64)
+                     {
+                        layer.closeAll(); 
+                        layer.msg('该IP被禁用，请联系管理员！', {icon: 4});
+                        return;
+                     }
+                     else if(msg==65)
+                     {
+                        layer.closeAll(); 
+                        layer.msg('IP不存在或不属于您的服务器', {icon: 0});
+                        return;
+                     }
+                     else
+                     {
+                        layer.closeAll();
+                        var c=60-parseInt(msg);
+                        timedCount(c);
+                        layer.msg('排队中...', {icon: 4});
+                        return;   
+                     }
+                 }
+            })
+        });
+    });
+
+    //倒计时
+    function timedCount(tm)
+    {
+        var c=tm; 
+        document.getElementById('getmsgcode').innerHTML="<font style='color:#FF0000'>"+c+"</font>秒后可操作";
+        c=c-1;
+        t=setTimeout("timedCount("+c+")",1000);
+        if(c==-1)
+        {
+             clearTimeout(t);
+             layer.closeAll();
+             $("#getmsgcode").css("display","none");
+        }
+    }
+</script>
+<include file="Public/footer" title="" />

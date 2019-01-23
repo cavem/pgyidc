@@ -1,0 +1,144 @@
+<include file="Public/header" title="蒲公英自动化" />
+<style>
+th{color: #FFF;font-weight: normal;}
+td{color: #4b556a;}
+.table-condensed>thead>tr>th,.table-condensed>tbody>tr>td{vertical-align: middle;padding: 10px;}
+.page-body{width: 100%;background: #fff;padding: 20px;box-shadow: 0 0 5px 0 #dedfe4;border-radius: 4px;}
+.form-control{display: inline-block;height: 34px;border-radius: 0;}
+.onthis{background-color: #09c !important;color: #fff;}
+.otherul li{float: left;text-align: center;position: relative;margin-left: -1px;min-width: 91px;height: 34px;background: #fff;border: 1px solid #e7e7e7;cursor: pointer;line-height: 34px;font-size: 13px;padding: 0 12px;}
+.otherul li:hover{background: #09c;color: #fff;}
+</style>
+<?php $type=array("-3"=>"超流量停机","-2"=>"超流量运行","-1"=>"欠费停机","0"=>"安装中","1"=>"锁定","2"=>"正常");?>
+<div class="right-product right-full" style="background: #eef0f6;">
+    <div class="center-back right-back">
+        <div class="container-fluid">
+            <div class="info-center">
+                <div class="page-header">
+                    <div class="pull-left">
+                        <h4>云主机线路1</h4>      
+                    </div>
+                </div>
+                
+                <div class="page-body">
+                    <a href="{:U('Home/Index/cloudbuy')}" target="blank"><button type="button" class="btn btn-info" style="float:left;">购买云主机</button></a>
+                    <if condition="$usertype eq 1">
+                        <a href="{:U('admincdmg')}"><button type="button" class="btn btn-default" style="float: left;margin-left: 10px;">进入后台管理</button></a>
+                    </if>
+                    <form action="{:U('Cloud/cloudmanage')}" method="post" style="float: right;">
+                        <div>
+                            <input type="text" name="keyword" value="{$keyword}" class="form-control" placeholder="请输入云主机编号" style="width: 150px;position: relative;top: 1px;">               
+                            <input type="submit" name="" class="btn btn-default" style="width:70px" value="搜索">
+                        </div>
+                    </form>
+                    
+                    <table class="table table-condensed" style="margin-top: 50px;">
+                        <thead>
+                            <tr style="background: #09c;color: #fff;">
+                                <th>编号</th>
+                                <th>服务项</th>
+                                <th>服务描述</th>
+                                <th>价格</th>
+                                <th>到期时间</th>
+                                <th>状态</th>
+                                <th>续费</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <foreach name="model" item="v">
+                            <tr>
+                                <td class="id">{$v.id}</td>
+                                <td>VPS{$v.vid}</td>
+                                <td>{$v.vcpu} CPUs, {$v.vram}M Ram, {$v.vdisk}G Disk, {$v.vip}, {$v.vos}</td>
+                                <td>{$v.disprice}</td>
+                                <td>20{$v.duetime|date="y-m-d",###}</td>
+                                <td><?=$type[$v['vstatus']]?></td>
+                                <td>{$v['autorenew']==0?'自动':'手动'}</td>
+                                <td style="text-align: right;"><a href="{:U('Cloud/manageup',array('vid'=>$v['vid']))}"><button class="btn btn-primary btn-sm">管理</button></a></td>
+                            </tr>
+                            </foreach>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                              <td colspan="8">
+                                <div class="pull-right">
+                                    {$page}
+                                </div>
+                              </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+<include file="Public/footer" title="" />
+<!-- <script>
+    $(function(){ 
+        $("[data-toggle='tooltip']").tooltip();
+        //单选
+        $('.check_span').click(function(){
+            $(this).toggleClass('check_span--checked');
+        });
+        //全选
+        $('.checkall .check_span').click(function(){
+            var spannum=0;var checkedspan=0;
+            $(this).toggleClass('check_span--checked');
+            $('.check_span').each(function(index,obj){
+                spannum++;
+            });
+            $('.check_span--checked').each(function(index,obj){
+                checkedspan++;
+            });
+            if(checkedspan<spannum){
+                $('.check_span').addClass('check_span--checked');
+            }else{
+                $('.check_span').removeClass('check_span--checked');
+            }
+        });
+
+        /**
+         *开机0
+         *关机1
+         *重启2
+         *续费3
+         */
+        var clickpost=function(order){
+            var jsonarr=[];
+            $('.checkonly .check_span--checked').each(function(index,obj){
+                var id=$(this).closest('tr').find('.id').text();
+                jsonarr.push({"id":id});
+            });
+            $.post("cloudmanage",{order:order,key:jsonarr},function(data,status){
+                layer.msg(data, {
+                    time: 2000, //20s后自动关闭
+                    //btn: ['确定','关闭']
+                });
+            });
+        }
+        var clickcheck=function(order){
+            if($('.check_span').hasClass('check_span--checked')){
+                clickpost(order);
+            }else{
+                layer.msg('请先选择机器！', {
+                    time: 2000, //20s后自动关闭
+                    //btn: ['确定','关闭']
+                });
+            }
+        }
+        $('.btn-on').click(function(){
+            clickcheck(0);            
+        });
+        $('.btn-off').click(function(){
+            clickcheck(1);
+        });
+        $('.btn-restart').click(function(){
+            clickcheck(2);
+        });
+        $('.btn-renew').click(function(){
+            clickcheck(3);
+        });
+    });
+</script> -->

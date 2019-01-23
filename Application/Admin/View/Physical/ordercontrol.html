@@ -1,0 +1,64 @@
+<include file="Public/header" title="蒲公英控制台" />
+<style>
+    th{color: #FFF;font-weight: normal;}
+    td{color: #4b556a;}
+    .table-condensed>thead>tr>th,.table-condensed>tbody>tr>td{vertical-align: middle;padding: 10px;}
+    .page-body{width: 100%;background: #fff;padding: 20px;box-shadow: 0 0 5px 0 #dedfe4;border-radius: 4px;}
+</style>
+    <div class="right-product right-full" style="background: #eef0f6;">
+        <div class="center-back right-back">
+            <div class="container-fluid">
+                <div class="info-center">
+                    <div class="page-header">
+                        <div class="pull-left">
+                            <h4>物理机管理 ＞ 我的订单</h4>      
+                        </div>
+                    </div>
+                    <div class="page-body">
+                        <table class="table table-condensed" style="margin-top: 20px;">
+                            <thead>
+                                <tr style="background: #09c;color: #fff;">
+                                    <th>ID</th>
+                                    <th>订单编号</th>
+                                    <th>客户名称</th>
+                                    <th>订单状态</th>
+                                    <th>产品类型</th>
+                                    <th>付款周期</th>
+                                    <th>下次付款日期</th>
+                                    <th>机房</th>
+                                    <th>付款方式</th>
+                                    <th>订单时间</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <foreach name="orderlst.list" item="v">
+                                <tr>
+                                    <td>{$v.nid}</td>
+                                    <td><a href="javascript:void(0);" onclick="orderinfo({$v.nid},{$v.id});">{$v.id}</a></td>
+                                    <td>{$v.cname}</td>
+                                    <td><?=($v['status']=="已生效"?"<i class='icon-circle iconsx'></i>&nbsp;":"<i class='icon-circle iconzx'></i>&nbsp;").$v['status']?></td>
+                                    <td>{$v.prodcat}</td>
+                                    <td><?=$v['paycycle']=="月付"?$v['paycycle']:"<font style='color:#FF0000'>".$v['paycycle']."</font>"?></td>
+                                    <td><?=date('Y-m-d',strtotime($v['order_end_at']))?></td>
+                                    <td>{$v.preroom}</td>
+                                    <td>{$v.paytype}</td>
+                                    <td><?=date('Y-m-d',strtotime($v['order_begin_at']))?></td>
+                                </tr>
+                                </foreach>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                  <td colspan="10">
+                                    <div class="pull-right">
+                                        {$page}
+                                    </div>
+                                  </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+<include file="Public/footer" title="" />

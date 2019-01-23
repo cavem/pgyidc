@@ -1,0 +1,159 @@
+<include file="Public/header" title="蒲公英自动化" />
+<style>
+   .checkbox-inline input[type=checkbox]{top: 7px;} 
+   label{text-align: left !important;}
+   .form-control{width: 150px;display: inline-block;}
+   .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{font-size: 14px;border-top: 2px solid #60aff6;}
+   .otherrow{border-bottom: 1px solid #ddd;padding: 20px 15px;}
+   .otherrow .pan{height: 40px;line-height: 40px;}
+   .otherrow h4{font-size: 18px;font-weight: bold;}
+   .otherrow .dot{display: block;position: relative;top: 12px;right: 10px;width: 6px;height: 6px;background-color: #60aff6;border-radius: 6px;}
+   .labelspan{display:inline-block;width: 75px;text-align: right;}
+</style>
+<script>
+    $(function(){
+        $('.save').click(function(){
+            var standard=$(this).closest('tr').find('.standard').text();
+            var price=$(this).closest('tr').find('.price').val();
+            $.post('/Admin/Officweb/savesd',{'standard':standard,'price':price},function(data,status){
+                if(data=="success"){
+                    layer.msg("保存成功！",{icon:1});
+                }else{
+                    layer.msg("保存失败！",{icon:2});
+                }
+            })
+        })
+        $('.delete').click(function(){
+            var standard=$(this).closest('tr').find('.standard').text();
+            $.post('/Admin/Officweb/deletesd',{'standard':standard},function(data,status){
+                if(data=="success"){
+                    layer.msg("删除成功！",{icon:1});
+                    window.location.reload();
+                }else{
+                    layer.msg("删除失败！",{icon:2});
+                }
+            })
+        })
+    })
+</script>
+  <div class="right-product right-full">
+        <div class="center-back right-back">
+        <div class="container-fluid">
+          <div class="info-center">
+            <div class="page-header">
+                <div class="pull-left">
+					<h4>云服务器</h4>      
+				</div>
+                <div class="pull-right">
+                    <button type="button" onclick="configlist()" class="btn btn-mystyle btn-sm">管理产品分组</button>
+                    <a href="{:U('Officweb/cloudinfo')}" class="btn btn-mystyle btn-sm">添加产品</a>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+                <ul id="myTab" class="nav nav-tabs" style="margin-top: 10px;">
+                    <li class="active"><a href="#standard" data-toggle="tab">规格定价</a></li>
+                    <li><a href="#other" data-toggle="tab">其它定价</a></li>
+                </ul>
+              <div class="table-margin">
+              <div class="">
+                <!-- /.panel-heading -->
+                <div class="panel-body" style="padding: 0;">
+                    <div id="myTabContent" class="tab-content">
+                        <!-- 规格定价 -->
+                        <div class="tab-pane fade in active" id="standard">
+                            <div style="position: relative;margin-bottom: 15px;">
+                                <form action="{:U('Officweb/jdcloudlist')}" method="post" style="display: inline-block;">
+                                    <div class="search-box row">
+                                        <input type="text" name="keyword" value="{$keyword}" class="form-control" placeholder="请输入关键字" style="margin-left: 15px;">               
+                                        <input type="submit" name="" class="btn btn-default" style="width:70px" value="搜索">
+                                    </div>
+                                </form>
+                                <form action="{:U('Officweb/addsd')}" method="POST"  style="position:absolute;top: 0;right: 15px;">
+                                    <div class="search-box row">
+                                        <select class="form-control" name="standardtype">
+                                            <option>通用 标准型</option>
+                                            <option>通用 共享型</option>
+                                            <option>计算优化 标准型</option>
+                                            <option>内存优化 标准型</option>
+                                            <option>高频计算 通用型</option>
+                                        </select>
+                                        <input type="text" name="standard" class="form-control" placeholder="规格">
+                                        <input type="text" name="vcpu" class="form-control" placeholder="cpu" style="width:60px;">核
+                                        <input type="text" name="ram" class="form-control" placeholder="内存" style="width:60px;">GB
+                                        <input type="text" name="price" class="form-control" placeholder="价格" style="width:60px;">元
+                                        <input type="submit" name="" class="btn btn-primary" value="添加">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="table-responsive">
+                                <table id="server_list_table" width="100%" border="0" cellspacing="0" cellpadding="0" class="main-table main-table-stripe">
+                                    <thead>
+                                        <tr> 
+                                            <th>规格类型</th>
+                                            <th>规格</th>
+                                            <th>VCPU</th>
+                                            <th>内存</th>
+                                            <th>价格</th>
+                                            <th>操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <volist name="standardlist" id="vo">
+                                            <tr>
+                                                <td>{$vo.standardtype}</td>
+                                                <td class="standard">{$vo.standard}</td>
+                                                <td>{$vo.vcpu}核</td>
+                                                <td>{$vo.ram}GB</td>
+                                                <td>￥<input type="text" class="form-control price" value="{$vo.price}" style="width: 80px;height: 18px;display: inline-block;"></td>
+                                                <td style="width: 150px;">
+                                                    <button class="btn btn-info btn-sm save"><i class="glyphicon glyphicon-floppy-save"></i> 保存</button>
+                                                    <button class="btn btn-danger btn-sm delete"><i class="glyphicon glyphicon-floppy-remove"></i> 删除</button>
+                                                </td>
+                                                </tr>
+                                        </volist>
+                                    </tbody>
+                                </table>
+                                {$page}
+                            </div>
+                        </div>
+                        <!-- 其它定价 -->
+                        <div class="tab-pane fade" id="other">
+                            <form action="{:U('Officweb/ssdprice')}" method="POST">
+                            <div class="otherrow">
+                                <h4><span class="dot"></span>硬盘</h4>
+                                <div class="pan"><span class="labelspan">高效云盘：</span><input name="highpan" type="text" value="{$jdcpricelist.highpan}" class="form-control"> 元/G</div>
+                                <div class="pan"><span class="labelspan">SSD云盘：</span><input name="ssdpan" type="text" value="{$jdcpricelist.ssdpan}" class="form-control"> 元/G</div>
+                            </div>
+                            <div class="otherrow">
+                                <h4><span class="dot"></span>带宽</h4>
+                                <div class="pan"><span class="labelspan">BGP：</span><input name="bgp" type="text" value="{$jdcpricelist.bgp}" class="form-control"> 元/M</div>
+                                <div class="pan"><span class="labelspan">非BGP：</span><input name="notbgp" type="text" value="{$jdcpricelist.notbgp}" class="form-control"> 元/M</div>
+                            </div>
+                            <div class="otherrow" style="border-bottom: 0px;">
+                                <input type="submit" value="提交修改" class="btn btn-primary savessd">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+             </div>
+            </div>
+          </div>
+        </div> 
+ </div>
+<include file="Public/footer" title="" />
+<script type="text/javascript">
+function configlist()
+{
+  layer.closeAll(); 
+    layer.open({
+      type: 2,
+      title: '云主机产品分组管理',
+      shade: 0.6,
+      shadeClose: true,
+      maxmin: true, //开启最大化最小化按钮
+      area: ['600px', '400px'],
+      content: "/Admin/Officweb/configlist"
+    });
+}
+</script>

@@ -1,0 +1,73 @@
+<include file="Public/header" title="蒲公英自动化" />
+  <div class="right-product right-full">
+        <div class="center-back right-back">
+        <div class="container-fluid">
+          <div class="info-center">
+                    <div class="page-header">
+                      <div class="pull-left">
+						<h4>云服务器</h4>      
+					</div>
+            <div class="pull-right">
+                <button type="button" class="btn btn-mystyle btn-sm">搜索</button>
+                 <button type="button" class="btn btn-mystyle btn-sm">返回</button>
+            </div>
+            </div>
+            <form action="{:U('Officweb/cloudlist')}" method="post">
+            <div class="search-box row">
+               <div class="col-md-8">
+                
+                </div>
+                <!-- <div class="col-md-4">
+                 <div class="btn-group pull-right" role="group" aria-label="...">
+                  <a type="button" onclick="quoteadd();" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span> 新增</a>
+                </div>
+                </div> -->
+            </div>
+            </form>
+            <div class="clearfix"></div>
+              <ul class="nav nav-tabs" role="tablist">  
+                <li role="presentation" <?=empty($fid)?"class='active'":""?>><a href="{:U('Officweb/cloudlist',array('fid'=>0))}" role="tab" >BGP云主机</a></li>  
+                <li role="presentation" <?=$fid==1?"class='active'":""?>><a href="{:U('Officweb/cloudlist',array('fid'=>1))}" role="tab" >单线云主机</a></li>
+                <li role="presentation" <?=$fid==2?"class='active'":""?>><a href="{:U('Officweb/cloudlist',array('fid'=>2))}" role="tab" >高防云主机</a></li> 
+              </ul>  
+              <div class="table-margin">
+              <div class="">
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <table id="server_list_table" width="100%" border="0" cellspacing="0" cellpadding="0" class="main-table main-table-stripe">
+                            <thead>
+                                <tr> 
+                                    <th>ID</th>
+                                    <th>标题</th>
+                                    <th>显示状态</th>
+                                    <th>允许购买</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <foreach name="model" item="v">
+                                 <tr>
+                                    <td>{$v.cid}</td>
+                                    <td>{$v.title}</td>
+                                    <td>显示</td>
+                                    <td>是</td>
+                                    <td style="white-space:nowrap;">
+                                      <a href="{:U('Officweb/cloudinfo',array('cid'=>$v['cid'],'fid'=>$fid))}"><span class="glyphicon glyphicon-pencil"></span> 编辑</a>
+                                      <!-- <a type="button" onclick="return confirm('确定删除?');" href="{:U('Officweb/quotedel',array('id'=>$v['quotid']))}" class="btn btn-default"><span class="glyphicon glyphicon-trash"></span> 删除</a> -->
+                                    </td>
+                                 </tr>
+                                 </foreach>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.table-responsive -->
+                </div>
+                <!-- /.panel-body -->
+              </div>
+             </div>
+            </div>
+          </div>
+        </div> 
+ </div>
+<include file="Public/footer" title="" />

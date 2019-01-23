@@ -1,0 +1,22 @@
+<include file="Public/header" title="pgyidc" />
+<style>
+.conlist{padding: 50px 0;}
+.news-title {display: block;width: 100%;border-bottom: 1px solid #eee;color: #60aff6;font-size: 20px;padding-bottom: 10px;margin-bottom: 30px;line-height: 30px;}
+.news-title .title {width: 80%;float: left;}
+.news-title .news-time {float: right;width: 100px;height: 30px;margin-right: 0;color: #838384;font-size: 16px;line-height: 34px;text-align: right;overflow: hidden;}
+.desc {display: block;line-height: 28px;padding: 0 20px;font-size: 14px;color: #666;margin-bottom: 60px;padding-bottom: 100px;border-bottom: 1px solid #eee;background-color: #fff;}
+</style>
+<div class="newscontain">
+    <div class="w1200 conlist tl">
+        <div class="news-title clearfix">
+            <span class="title">
+                {$newslist.title}
+            </span>
+            <span class="news-time">20{$newslist.data|date="y-m-d",###}</span>
+        </div>
+        <div class="desc">
+            {$newslist.content}
+        </div>
+    </div>
+</div>
+<include file="Public/footer" title="footer" />

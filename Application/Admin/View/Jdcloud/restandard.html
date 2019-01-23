@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<title>[title]</title>
+<link href="__APC__/bootstrap-3.3.5-dist/css/bootstrap.min.css" title="" rel="stylesheet" />
+<link title="" href="__APC__/css/style.css" rel="stylesheet" type="text/css"  />
+<link title="blue" href="__APC__/css/dermadefault.css" rel="stylesheet" type="text/css"/>
+<link title="green" href="__APC__/css/dermagreen.css" rel="stylesheet" type="text/css" disabled="disabled"/>
+<link title="orange" href="__APC__/css/dermaorange.css" rel="stylesheet" type="text/css" disabled="disabled"/>
+<link href="__APC__/css/templatecss.css" rel="stylesheet" title="" type="text/css" />
+<link href="__PUBLIC__/layui/css/layui.css" rel="stylesheet" title="" type="text/css" />
+<link href="__PUBLIC__/font-awesome/css/font-awesome.min.css" rel="stylesheet" title="" type="text/css" />
+<link href="__APC__/css/paging.css" rel="stylesheet" title="" type="text/css" />
+<script src="__APC__/script/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="__APC__/script/jquery.cookie.js" type="text/javascript"></script>
+<script src="__APC__/bootstrap-3.3.5-dist/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="__PUBLIC__/layer/layer.js" type="text/javascript"></script>
+<script src="__PUBLIC__/layui/layui.all.js" type="text/javascript"></script>
+<style>
+.main{padding: 25px 30px;}
+.onthis{background-color: #60aff6 !important;color: #fff;}
+.panelcon .list{position: relative;margin:10px auto;}
+.panelcon .list ul{height:30px;line-height:30px;display:inline-block;cursor: pointer;}
+.panelcon .list ul li{float: left;position: relative;margin-left: -1px;min-width: 46px;height: 30px;background: #fff;border: 1px solid #e7e7e7;cursor: pointer;line-height: 30px;font-size: 13px;padding: 0 12px;}
+.panelcon .list ul li:hover{background: #60aff6;color: #fff;}
+.btn-primary{background: #60aff6;border: 1px solid #60aff6;}
+.btn-primary:hover{background: #2e86d3;border: 1px solid #2e86d3;}
+</style>
+<script>
+$(function(){
+    var href=window.location.href;
+    var paramarr=href.split('?')[1];
+    var paramarr=paramarr.split('&');
+    var regionid=paramarr[0].split('=')[1];
+    var instanceid=paramarr[1].split('=')[1];
+    //获取规格
+    var getstandard=function(){
+        var keyword="";
+        var regionidid=$('.localul').find('.onthis').data('val');
+        $.post('/Home/Hdcloud/getstandard',{"keyword":keyword,"regionidid":regionidid},function(data,status){
+            data=JSON.parse(data);
+            var standards=data['msg']['result']['instanceTypes'];
+            console.log(standards);
+            if(standards!=null){
+                var currency_tr="",calculate_tr="",memory_tr="";
+                var pubobj={"g.n":"通用 标准型","g.s":"通用 共享型"};
+                for(var i=0;i<standards.length;i++){
+                    if(standards[i]['family']=="g.n"||standards[i]['family']=="g.s"){
+                        if(standards[i]['state'][0]['inStock']==false){
+                            currency_tr+='<tr class=""><td class=""><label><input type="radio" name="instancetype" disabled value="'+standards[i]['instanceType']+'">'+' '+pubobj[standards[i]['family']]+'<span class="label label-default">售罄</span></label></td><td class="">'+standards[i]['instanceType']+'</td> <td class="">'+standards[i]['cpu']+'核</td> <td class="">'+standards[i]['memoryMB']/1024+'GB</td></tr>'
+                        }else{
+                            currency_tr+='<tr class=""><td class=""><label><input type="radio" name="instancetype" value="'+standards[i]['instanceType']+'">'+' '+pubobj[standards[i]['family']]+'</label></td><td class="">'+standards[i]['instanceType']+'</td> <td class="">'+standards[i]['cpu']+'核</td> <td class="">'+standards[i]['memoryMB']/1024+'GB</td></tr>'
+                        }
+                        
+                    }else if(standards[i]['family']=="c.n"){
+                        if(standards[i]['state'][0]['inStock']==false){
+                            calculate_tr+='<tr class=""><td class=""><label><input type="radio" name="instancetype" disabled value="'+standards[i]['instanceType']+'"> 计算优化 标准型<span class="label label-default">售罄</span></label></td><td class="">'+standards[i]['instanceType']+'</td> <td class="">'+standards[i]['cpu']+'核</td> <td class="">'+standards[i]['memoryMB']/1024+'GB</td></tr>'
+                        }else{
+                            calculate_tr+='<tr class=""><td class=""><label><input type="radio" name="instancetype" value="'+standards[i]['instanceType']+'"> 计算优化 标准型</label></td><td class="">'+standards[i]['instanceType']+'</td> <td class="">'+standards[i]['cpu']+'核</td> <td class="">'+standards[i]['memoryMB']/1024+'GB</td></tr>'
+                        }
+                        
+                    }else if(standards[i]['family']=="m.n"){
+                        if(standards[i]['state'][0]['inStock']==false){
+                            memory_tr+='<tr class=""><td class=""><label><input type="radio" name="instancetype" disabled value="'+standards[i]['instanceType']+'"> 内存优化 标准型<span class="label label-default">售罄</span></label></td><td class="">'+standards[i]['instanceType']+'</td> <td class="">'+standards[i]['cpu']+'核</td> <td class="">'+standards[i]['memoryMB']/1024+'GB</td></tr>'
+                        }else{
+                            memory_tr+='<tr class=""><td class=""><label><input type="radio" name="instancetype" value="'+standards[i]['instanceType']+'"> 内存优化 标准型</label></td><td class="">'+standards[i]['instanceType']+'</td> <td class="">'+standards[i]['cpu']+'核</td> <td class="">'+standards[i]['memoryMB']/1024+'GB</td></tr>'
+                        }
+                        
+                    }
+                }
+            }
+            $('.currency').html(currency_tr);
+            $('.calculate').html(calculate_tr);
+            $('.memory').html(memory_tr);
+            $('.spadding-td').hide();
+            $('.currency').children('tr').find('td').eq(0).find('input').attr("checked",true);
+            var stardtype=$('.currency').children('tr').eq(0).children('td').eq(0).text();
+            var standard=$('.currency').children('tr').eq(0).children('td').eq(1).text();
+            var cpunum=$('.currency').children('tr').eq(0).children('td').eq(2).text();
+            var ram=$('.currency').children('tr').eq(0).children('td').eq(3).text();
+            $('.standardsp').text(standard+"("+cpunum+ram+","+stardtype+")");
+            $("input[name='instancetype']").click(function(){
+                var stardtype=$(this).closest('tr').children('td').eq(0).text();
+                var standard=$(this).closest('tr').children('td').eq(1).text();
+                var cpunum=$(this).closest('tr').children('td').eq(2).text();
+                var ram=$(this).closest('tr').children('td').eq(3).text();
+                $('.standardsp').text(standard+"("+cpunum+ram+","+stardtype+")");
+            })
+        })
+    }
+    var onthis=function(cthis){
+        cthis.closest('.stdul').find('li').removeClass('onthis');
+        cthis.addClass('onthis');
+    }
+    $('.stdul li').click(function(){
+        onthis($(this));
+    })
+    getstandard();
+    //立即调配
+    $('.restand').click(function(){
+        layer.msg('请稍等', {icon: 16,shade: 0.01});
+        var instancetype=$("input[name='instancetype']:checked").val();
+        $.post("restand",{"instanceid":instanceid,"instancetype":instancetype,"regionid":regionid},function(data,status){
+            layer.closeAll(); 
+            if(data=="0"){
+                layer.msg('配置调整成功', {icon: 1});
+            }else{
+                layer.msg(data, {icon: 2});
+            }
+        })
+    })
+})
+//规格选择
+function chstandard(param){
+    switch(param){
+        case 0:$('.currency').show();$('.calculate,.memory').hide();break;
+        case 1:$('.calculate').show();$('.currency,.memory').hide();break;
+        case 2:$('.memory').show();$('.currency,.calculate').hide();break;
+    }
+}
+</script>
+</head>
+<body>
+<div class="main">
+<div class="panelcon">
+    <div class="list">
+        <span class="list-sp" style="position: relative;top: -10px;">分类：</span>
+        <ul class="stdul">
+            <li class="choose-currency onthis" onclick="chstandard(0)">通用</li>
+            <li class="choose-calculate" onclick="chstandard(1)">计算优化</li>
+            <li class="choose-memory" onclick="chstandard(2)">内存优化</li>
+        </ul>
+    </div>
+    <div class="scrollDIV  ml130" style="height: 200px;overflow-y:scroll;">
+        <table class="table table-bordered tb-standard">
+            <colgroup><col width="20%"> <col width="20%"> <col width="20%"> <col width="20%"></colgroup>
+            <thead>
+                <tr style="background-color: #f7f7f7;">
+                    <th>规格类型</th>
+                    <th>规格</th>
+                    <th>vCPU</th>
+                    <th>内存</th>
+                </tr>
+            </thead>
+            <tbody class="currency">
+                
+            </tbody>
+            <tbody class="calculate" style="display: none;">
+                
+            </tbody>
+            <tbody class="memory" style="display: none;">
+                
+            </tbody>
+        </table>
+    </div>
+    <div class="config" style="background: #f4f4f4;padding: 10px 5px;">
+        <p>已选配置:</p>
+        <p><span style="color:#666;">规格：</span><span class="standardsp"></span></p>
+        <p><span style="color:#666;">计费类型：</span><span class="chargetype">按每月</span></p>
+        <p><span style="color:#666;">调整后费用：</span><span class="price" style="color: #ff9600;font-size: 24px;">￥0.00</span>/每月</p>
+        <button class="btn btn-primary restand" style="width: 200px;">立即调配</button>
+    </div>
+</div>
+</div>
+</body>
+</html>

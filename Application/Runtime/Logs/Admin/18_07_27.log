@@ -1,0 +1,774 @@
+[ 2018-07-27T11:07:32+08:00 ] 127.0.0.1 /Admin/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000526s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000820s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000878s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054735s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.054847s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001213s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001313s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001696s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001799s ]
+
+[ 2018-07-27T11:07:33+08:00 ] 127.0.0.1 /Admin/User/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000438s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000646s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000705s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001540s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001678s ]
+
+[ 2018-07-27T11:07:33+08:00 ] 127.0.0.1 /Admin/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000900s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001443s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006460s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006550s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000455s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000503s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000717s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000765s ]
+
+[ 2018-07-27T11:07:33+08:00 ] 127.0.0.1 /Admin/User/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000415s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000610s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000670s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000776s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000846s ]
+
+[ 2018-07-27T11:09:44+08:00 ] 127.0.0.1 /Admin/User/loginin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000578s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000744s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000795s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0554s ]
+SQL: SELECT `UserID` FROM `users` WHERE (  `UserName` = 'xiaocai' OR `LinkMail` = 'xiaocai' ) AND ( UserPsw ='39538ed9af2f892dcc904ee38926f867' ) LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `users` WHERE (  `UserName` = 'xiaocai' OR `LinkMail` = 'xiaocai' ) AND ( UserPsw ='39538ed9af2f892dcc904ee38926f867' ) LIMIT 1   [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0158s ]
+NOTIC: [8] Undefined index: validate D:\myenv\apache\htdocs\pgyidc\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\myenv\apache\htdocs\pgyidc\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `users` SET `LastTime`='1532660984',`WebGuid`='12BB95AC8-C269-917D-7E93-54BDC0CD7ED3',`EffectiveTime`='2018-07-28 11:09:44' WHERE ( UserID= 1 ) [ RunTime:0.0306s ]
+
+[ 2018-07-27T11:09:45+08:00 ] 127.0.0.1 /Admin/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000481s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000700s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000764s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\myenv\apache\htdocs\pgyidc\Application\Admin\Controller\BaseController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `paylog` [ RunTime:0.0334s ]
+SQL: SELECT SUM(money) as my FROM `paylog` WHERE ( userid=1 and datatype=0 )  [ RunTime:0.0030s ]
+SQL: SELECT SUM(money) as my FROM `paylog` WHERE ( userid=1 and datatype=1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0154s ]
+SQL: SELECT * FROM `users` WHERE ( UserID=1 ) LIMIT 1   [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000343s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000461s ]
+NOTIC: [8] Undefined variable: cloud D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 207 行.
+NOTIC: [8] Undefined variable: physical D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 219 行.
+NOTIC: [8] Undefined variable: firewall D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 239 行.
+NOTIC: [8] Undefined variable: blockabroadip D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 256 行.
+NOTIC: [8] Undefined variable: guanwang D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 268 行.
+NOTIC: [8] Undefined variable: product D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 283 行.
+NOTIC: [8] Undefined variable: usercenter D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 301 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.070410s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.070519s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000773s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000834s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001126s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001230s ]
+
+[ 2018-07-27T11:09:54+08:00 ] 127.0.0.1 /Admin/officweb/jdcloudlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000544s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000706s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000767s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\myenv\apache\htdocs\pgyidc\Application\Admin\Controller\BaseController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0253s ]
+SQL: SELECT `UserID`,`EffectiveTime` FROM `users` WHERE ( UserName ='xiaocai' AND WebGuid  ='13BA3E931-7462-F4AB-1908-52D11C0FA01B' ) LIMIT 1   [ RunTime:0.0030s ]
+
+[ 2018-07-27T11:09:54+08:00 ] 127.0.0.1 /Admin/officweb/jdcloudlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000616s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000711s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000776s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\myenv\apache\htdocs\pgyidc\Application\Admin\Controller\BaseController.class.php 第 7 行.
+
+[ 2018-07-27T11:09:54+08:00 ] 127.0.0.1 /admin/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000562s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000746s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000814s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000121s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007013s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007081s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000484s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000536s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000775s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000828s ]
+
+[ 2018-07-27T11:09:54+08:00 ] 127.0.0.1 /Admin/User/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000428s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000598s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000651s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000794s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000859s ]
+
+[ 2018-07-27T11:10:01+08:00 ] 127.0.0.1 /admin/User/loginin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000436s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000641s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000697s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0161s ]
+SQL: SELECT `UserID` FROM `users` WHERE (  `UserName` = 'xiaocai' OR `LinkMail` = 'xiaocai' ) AND ( UserPsw ='39538ed9af2f892dcc904ee38926f867' ) LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `users` WHERE (  `UserName` = 'xiaocai' OR `LinkMail` = 'xiaocai' ) AND ( UserPsw ='39538ed9af2f892dcc904ee38926f867' ) LIMIT 1   [ RunTime:0.0016s ]
+
+[ 2018-07-27T11:10:02+08:00 ] 127.0.0.1 /admin/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000967s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000810s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000892s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\myenv\apache\htdocs\pgyidc\Application\Admin\Controller\BaseController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `paylog` [ RunTime:0.0151s ]
+SQL: SELECT SUM(money) as my FROM `paylog` WHERE ( userid=1 and datatype=0 )  [ RunTime:0.0026s ]
+SQL: SELECT SUM(money) as my FROM `paylog` WHERE ( userid=1 and datatype=1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `users` WHERE ( UserID=1 ) LIMIT 1   [ RunTime:0.0016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000188s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000259s ]
+NOTIC: [8] Undefined variable: cloud D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 207 行.
+NOTIC: [8] Undefined variable: physical D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 219 行.
+NOTIC: [8] Undefined variable: firewall D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 239 行.
+NOTIC: [8] Undefined variable: blockabroadip D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 256 行.
+NOTIC: [8] Undefined variable: guanwang D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 268 行.
+NOTIC: [8] Undefined variable: product D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 283 行.
+NOTIC: [8] Undefined variable: usercenter D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 301 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020854s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020918s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000541s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000595s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000812s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000878s ]
+
+[ 2018-07-27T11:10:07+08:00 ] 127.0.0.1 /Admin/officweb/jdcloudlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000454s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000650s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000707s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\myenv\apache\htdocs\pgyidc\Application\Admin\Controller\BaseController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0269s ]
+SQL: SELECT `UserID`,`EffectiveTime` FROM `users` WHERE ( UserName ='xiaocai' AND WebGuid  ='12BB95AC8-C269-917D-7E93-54BDC0CD7ED3' ) LIMIT 1   [ RunTime:0.0031s ]
+SQL: SHOW COLUMNS FROM `jdcstandard` [ RunTime:0.0122s ]
+SQL: SELECT * FROM `jdcstandard`  [ RunTime:0.0015s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdcstandard` WHERE `standardtype` LIKE '%%' OR `standard` LIKE '%%' LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jdcstandard` WHERE `standardtype` LIKE '%%' OR `standard` LIKE '%%' ORDER BY id DESC LIMIT 0,15   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jdcprice` [ RunTime:0.0083s ]
+SQL: SELECT * FROM `jdcprice`  [ RunTime:0.0017s ]
+NOTIC: [8] Undefined variable: fid D:\myenv\apache\htdocs\pgyidc\Application\Admin\Controller\OfficwebController.class.php 第 312 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000179s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000243s ]
+NOTIC: [8] Undefined variable: cloud D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 207 行.
+NOTIC: [8] Undefined variable: physical D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 219 行.
+NOTIC: [8] Undefined variable: firewall D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 239 行.
+NOTIC: [8] Undefined variable: blockabroadip D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 256 行.
+NOTIC: [8] Undefined variable: guanwang D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 268 行.
+NOTIC: [8] Undefined variable: usercenter D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 301 行.
+NOTIC: [8] Undefined variable: keyword D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 387 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031460s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031520s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000447s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000492s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000677s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000740s ]
+
+[ 2018-07-27T11:10:29+08:00 ] 127.0.0.1 /Admin/officweb/jdcloudlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000902s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001444s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001570s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\myenv\apache\htdocs\pgyidc\Application\Admin\Controller\BaseController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0155s ]
+SQL: SELECT `UserID`,`EffectiveTime` FROM `users` WHERE ( UserName ='xiaocai' AND WebGuid  ='12BB95AC8-C269-917D-7E93-54BDC0CD7ED3' ) LIMIT 1   [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `jdcstandard` [ RunTime:0.0099s ]
+SQL: SELECT * FROM `jdcstandard`  [ RunTime:0.0018s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdcstandard` WHERE `standardtype` LIKE '%%' OR `standard` LIKE '%%' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jdcstandard` WHERE `standardtype` LIKE '%%' OR `standard` LIKE '%%' ORDER BY id DESC LIMIT 0,15   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jdcprice` [ RunTime:0.0089s ]
+SQL: SELECT * FROM `jdcprice`  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined variable: fid D:\myenv\apache\htdocs\pgyidc\Application\Admin\Controller\OfficwebController.class.php 第 312 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000156s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000208s ]
+NOTIC: [8] Undefined variable: cloud D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 207 行.
+NOTIC: [8] Undefined variable: physical D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 219 行.
+NOTIC: [8] Undefined variable: firewall D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 239 行.
+NOTIC: [8] Undefined variable: blockabroadip D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 256 行.
+NOTIC: [8] Undefined variable: guanwang D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 268 行.
+NOTIC: [8] Undefined variable: usercenter D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 301 行.
+NOTIC: [8] Undefined variable: keyword D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 387 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018975s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019034s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000454s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000514s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000776s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000855s ]
+
+[ 2018-07-27T11:24:42+08:00 ] 127.0.0.1 /Admin/Officweb/ssdprice.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000532s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000735s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000803s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\myenv\apache\htdocs\pgyidc\Application\Admin\Controller\BaseController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `jdcprice` [ RunTime:0.0077s ]
+SQL: UPDATE `jdcprice` SET `highpan`='15',`ssdpan`='10',`bgp`='23',`notbgp`='2' WHERE ( id=1 ) [ RunTime:0.0311s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043082s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043156s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000543s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000616s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001482s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001569s ]
+
+[ 2018-07-27T11:24:44+08:00 ] 127.0.0.1 /Admin/officweb/jdcloudlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000418s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000595s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000648s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\myenv\apache\htdocs\pgyidc\Application\Admin\Controller\BaseController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0076s ]
+SQL: SELECT `UserID`,`EffectiveTime` FROM `users` WHERE ( UserName ='xiaocai' AND WebGuid  ='12BB95AC8-C269-917D-7E93-54BDC0CD7ED3' ) LIMIT 1   [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `jdcstandard` [ RunTime:0.0073s ]
+SQL: SELECT * FROM `jdcstandard`  [ RunTime:0.0017s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdcstandard` WHERE `standardtype` LIKE '%%' OR `standard` LIKE '%%' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jdcstandard` WHERE `standardtype` LIKE '%%' OR `standard` LIKE '%%' ORDER BY id DESC LIMIT 0,15   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jdcprice` [ RunTime:0.0072s ]
+SQL: SELECT * FROM `jdcprice`  [ RunTime:0.0014s ]
+NOTIC: [8] Undefined variable: fid D:\myenv\apache\htdocs\pgyidc\Application\Admin\Controller\OfficwebController.class.php 第 312 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000159s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000216s ]
+NOTIC: [8] Undefined variable: cloud D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 207 行.
+NOTIC: [8] Undefined variable: physical D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 219 行.
+NOTIC: [8] Undefined variable: firewall D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 239 行.
+NOTIC: [8] Undefined variable: blockabroadip D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 256 行.
+NOTIC: [8] Undefined variable: guanwang D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 268 行.
+NOTIC: [8] Undefined variable: usercenter D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 301 行.
+NOTIC: [8] Undefined variable: keyword D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 387 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019008s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019074s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000601s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000648s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000697s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000753s ]
+
+[ 2018-07-27T11:36:25+08:00 ] 127.0.0.1 /Admin/Officweb/ssdprice.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000502s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000761s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000819s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\myenv\apache\htdocs\pgyidc\Application\Admin\Controller\BaseController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `jdcprice` [ RunTime:0.0155s ]
+SQL: UPDATE `jdcprice` SET `highpan`='0',`ssdpan`='0',`bgp`='23',`notbgp`='2' WHERE ( id=1 ) [ RunTime:0.0338s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000195s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013396s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013521s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001175s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001275s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001689s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001797s ]
+
+[ 2018-07-27T11:36:28+08:00 ] 127.0.0.1 /Admin/officweb/jdcloudlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000583s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000956s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001032s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\myenv\apache\htdocs\pgyidc\Application\Admin\Controller\BaseController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0083s ]
+SQL: SELECT `UserID`,`EffectiveTime` FROM `users` WHERE ( UserName ='xiaocai' AND WebGuid  ='12BB95AC8-C269-917D-7E93-54BDC0CD7ED3' ) LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `jdcstandard` [ RunTime:0.0073s ]
+SQL: SELECT * FROM `jdcstandard`  [ RunTime:0.0015s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdcstandard` WHERE `standardtype` LIKE '%%' OR `standard` LIKE '%%' LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jdcstandard` WHERE `standardtype` LIKE '%%' OR `standard` LIKE '%%' ORDER BY id DESC LIMIT 0,15   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jdcprice` [ RunTime:0.0074s ]
+SQL: SELECT * FROM `jdcprice`  [ RunTime:0.0012s ]
+NOTIC: [8] Undefined variable: fid D:\myenv\apache\htdocs\pgyidc\Application\Admin\Controller\OfficwebController.class.php 第 312 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000161s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000222s ]
+NOTIC: [8] Undefined variable: cloud D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 207 行.
+NOTIC: [8] Undefined variable: physical D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 219 行.
+NOTIC: [8] Undefined variable: firewall D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 239 行.
+NOTIC: [8] Undefined variable: blockabroadip D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 256 行.
+NOTIC: [8] Undefined variable: guanwang D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 268 行.
+NOTIC: [8] Undefined variable: usercenter D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 301 行.
+NOTIC: [8] Undefined variable: keyword D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 387 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018683s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018739s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000478s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000524s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000720s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000784s ]
+
+[ 2018-07-27T14:11:10+08:00 ] 127.0.0.1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000514s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000781s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000843s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\myenv\apache\htdocs\pgyidc\Application\Admin\Controller\BaseController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `paylog` [ RunTime:0.0183s ]
+SQL: SELECT SUM(money) as my FROM `paylog` WHERE ( userid=1 and datatype=0 )  [ RunTime:0.0030s ]
+SQL: SELECT SUM(money) as my FROM `paylog` WHERE ( userid=1 and datatype=1 )  [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0168s ]
+SQL: SELECT * FROM `users` WHERE ( UserID=1 ) LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000292s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000407s ]
+NOTIC: [8] Undefined variable: cloud D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 208 行.
+NOTIC: [8] Undefined variable: physical D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 220 行.
+NOTIC: [8] Undefined variable: firewall D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 240 行.
+NOTIC: [8] Undefined variable: blockabroadip D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 257 行.
+NOTIC: [8] Undefined variable: guanwang D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 269 行.
+NOTIC: [8] Undefined variable: product D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 284 行.
+NOTIC: [8] Undefined variable: usercenter D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 302 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021948s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022022s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000775s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000830s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001131s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001230s ]
+
+[ 2018-07-27T14:11:12+08:00 ] 127.0.0.1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000487s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000632s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000686s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\myenv\apache\htdocs\pgyidc\Application\Admin\Controller\BaseController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `paylog` [ RunTime:0.0088s ]
+SQL: SELECT SUM(money) as my FROM `paylog` WHERE ( userid=1 and datatype=0 )  [ RunTime:0.0020s ]
+SQL: SELECT SUM(money) as my FROM `paylog` WHERE ( userid=1 and datatype=1 )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0101s ]
+SQL: SELECT * FROM `users` WHERE ( UserID=1 ) LIMIT 1   [ RunTime:0.0019s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000157s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000229s ]
+NOTIC: [8] Undefined variable: cloud D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 208 行.
+NOTIC: [8] Undefined variable: physical D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 220 行.
+NOTIC: [8] Undefined variable: firewall D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 240 行.
+NOTIC: [8] Undefined variable: blockabroadip D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 257 行.
+NOTIC: [8] Undefined variable: guanwang D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 269 行.
+NOTIC: [8] Undefined variable: product D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 284 行.
+NOTIC: [8] Undefined variable: usercenter D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 302 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018616s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018676s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000560s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000603s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001278s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001392s ]
+
+[ 2018-07-27T14:11:15+08:00 ] 127.0.0.1 /Admin/officweb/jdcloudlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000493s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000686s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000752s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\myenv\apache\htdocs\pgyidc\Application\Admin\Controller\BaseController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0172s ]
+SQL: SELECT `UserID`,`EffectiveTime` FROM `users` WHERE ( UserName ='xiaocai' AND WebGuid  ='12BB95AC8-C269-917D-7E93-54BDC0CD7ED3' ) LIMIT 1   [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `jdcstandard` [ RunTime:0.0164s ]
+SQL: SELECT * FROM `jdcstandard`  [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdcstandard` WHERE `standardtype` LIKE '%%' OR `standard` LIKE '%%' LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jdcstandard` WHERE `standardtype` LIKE '%%' OR `standard` LIKE '%%' ORDER BY id DESC LIMIT 0,15   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jdcprice` [ RunTime:0.0101s ]
+SQL: SELECT * FROM `jdcprice`  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: fid D:\myenv\apache\htdocs\pgyidc\Application\Admin\Controller\OfficwebController.class.php 第 312 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000176s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000256s ]
+NOTIC: [8] Undefined variable: cloud D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 208 行.
+NOTIC: [8] Undefined variable: physical D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 220 行.
+NOTIC: [8] Undefined variable: firewall D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 240 行.
+NOTIC: [8] Undefined variable: blockabroadip D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 257 行.
+NOTIC: [8] Undefined variable: guanwang D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 269 行.
+NOTIC: [8] Undefined variable: usercenter D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 302 行.
+NOTIC: [8] Undefined variable: keyword D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 388 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023427s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023527s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000971s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001034s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000986s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001057s ]
+
+[ 2018-07-27T14:11:45+08:00 ] 127.0.0.1 /Admin/officweb/jdcloudlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000714s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001203s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001310s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\myenv\apache\htdocs\pgyidc\Application\Admin\Controller\BaseController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0170s ]
+SQL: SELECT `UserID`,`EffectiveTime` FROM `users` WHERE ( UserName ='xiaocai' AND WebGuid  ='12BB95AC8-C269-917D-7E93-54BDC0CD7ED3' ) LIMIT 1   [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `jdcstandard` [ RunTime:0.0101s ]
+SQL: SELECT * FROM `jdcstandard`  [ RunTime:0.0022s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdcstandard` WHERE `standardtype` LIKE '%%' OR `standard` LIKE '%%' LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `jdcstandard` WHERE `standardtype` LIKE '%%' OR `standard` LIKE '%%' ORDER BY id DESC LIMIT 0,15   [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `jdcprice` [ RunTime:0.0104s ]
+SQL: SELECT * FROM `jdcprice`  [ RunTime:0.0015s ]
+NOTIC: [8] Undefined variable: fid D:\myenv\apache\htdocs\pgyidc\Application\Admin\Controller\OfficwebController.class.php 第 312 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000166s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000221s ]
+NOTIC: [8] Undefined variable: cloud D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 208 行.
+NOTIC: [8] Undefined variable: physical D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 220 行.
+NOTIC: [8] Undefined variable: firewall D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 240 行.
+NOTIC: [8] Undefined variable: blockabroadip D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 257 行.
+NOTIC: [8] Undefined variable: guanwang D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 269 行.
+NOTIC: [8] Undefined variable: usercenter D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 302 行.
+NOTIC: [8] Undefined variable: keyword D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 388 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019751s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019809s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000610s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000655s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000895s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000961s ]
+
+[ 2018-07-27T14:11:47+08:00 ] 127.0.0.1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000502s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000850s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000911s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\myenv\apache\htdocs\pgyidc\Application\Admin\Controller\BaseController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `paylog` [ RunTime:0.0103s ]
+SQL: SELECT SUM(money) as my FROM `paylog` WHERE ( userid=1 and datatype=0 )  [ RunTime:0.0015s ]
+SQL: SELECT SUM(money) as my FROM `paylog` WHERE ( userid=1 and datatype=1 )  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0096s ]
+SQL: SELECT * FROM `users` WHERE ( UserID=1 ) LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000155s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000213s ]
+NOTIC: [8] Undefined variable: cloud D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 208 行.
+NOTIC: [8] Undefined variable: physical D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 220 行.
+NOTIC: [8] Undefined variable: firewall D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 240 行.
+NOTIC: [8] Undefined variable: blockabroadip D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 257 行.
+NOTIC: [8] Undefined variable: guanwang D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 269 行.
+NOTIC: [8] Undefined variable: product D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 284 行.
+NOTIC: [8] Undefined variable: usercenter D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 302 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019632s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019694s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000666s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000712s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000905s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000959s ]
+
+[ 2018-07-27T14:12:16+08:00 ] 127.0.0.1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000648s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001173s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001251s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\myenv\apache\htdocs\pgyidc\Application\Admin\Controller\BaseController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `paylog` [ RunTime:0.0161s ]
+SQL: SELECT SUM(money) as my FROM `paylog` WHERE ( userid=1 and datatype=0 )  [ RunTime:0.0027s ]
+SQL: SELECT SUM(money) as my FROM `paylog` WHERE ( userid=1 and datatype=1 )  [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0136s ]
+SQL: SELECT * FROM `users` WHERE ( UserID=1 ) LIMIT 1   [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000165s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000224s ]
+NOTIC: [8] Undefined variable: cloud D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 208 行.
+NOTIC: [8] Undefined variable: physical D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 220 行.
+NOTIC: [8] Undefined variable: firewall D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 240 行.
+NOTIC: [8] Undefined variable: blockabroadip D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 257 行.
+NOTIC: [8] Undefined variable: guanwang D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 269 行.
+NOTIC: [8] Undefined variable: product D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 284 行.
+NOTIC: [8] Undefined variable: usercenter D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 302 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019155s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019217s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000661s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000707s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001091s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001173s ]
+
+[ 2018-07-27T14:12:46+08:00 ] 127.0.0.1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000628s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001182s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001269s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\myenv\apache\htdocs\pgyidc\Application\Admin\Controller\BaseController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `paylog` [ RunTime:0.0109s ]
+SQL: SELECT SUM(money) as my FROM `paylog` WHERE ( userid=1 and datatype=0 )  [ RunTime:0.0018s ]
+SQL: SELECT SUM(money) as my FROM `paylog` WHERE ( userid=1 and datatype=1 )  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0101s ]
+SQL: SELECT * FROM `users` WHERE ( UserID=1 ) LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000157s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000218s ]
+NOTIC: [8] Undefined variable: cloud D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 208 行.
+NOTIC: [8] Undefined variable: physical D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 220 行.
+NOTIC: [8] Undefined variable: firewall D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 240 行.
+NOTIC: [8] Undefined variable: blockabroadip D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 257 行.
+NOTIC: [8] Undefined variable: guanwang D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 269 行.
+NOTIC: [8] Undefined variable: product D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 284 行.
+NOTIC: [8] Undefined variable: usercenter D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 302 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020095s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020159s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000637s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000681s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000903s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000964s ]
+
+[ 2018-07-27T14:12:48+08:00 ] 127.0.0.1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000631s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001110s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\myenv\apache\htdocs\pgyidc\Application\Admin\Controller\BaseController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `paylog` [ RunTime:0.0153s ]
+SQL: SELECT SUM(money) as my FROM `paylog` WHERE ( userid=1 and datatype=0 )  [ RunTime:0.0026s ]
+SQL: SELECT SUM(money) as my FROM `paylog` WHERE ( userid=1 and datatype=1 )  [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0153s ]
+SQL: SELECT * FROM `users` WHERE ( UserID=1 ) LIMIT 1   [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000195s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000269s ]
+NOTIC: [8] Undefined variable: cloud D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 208 行.
+NOTIC: [8] Undefined variable: physical D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 220 行.
+NOTIC: [8] Undefined variable: firewall D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 240 行.
+NOTIC: [8] Undefined variable: blockabroadip D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 257 行.
+NOTIC: [8] Undefined variable: guanwang D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 269 行.
+NOTIC: [8] Undefined variable: product D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 284 行.
+NOTIC: [8] Undefined variable: usercenter D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 302 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027394s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027490s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000867s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000926s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001225s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001334s ]
+
+[ 2018-07-27T14:12:58+08:00 ] 127.0.0.1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001106s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\myenv\apache\htdocs\pgyidc\Application\Admin\Controller\BaseController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `paylog` [ RunTime:0.0083s ]
+SQL: SELECT SUM(money) as my FROM `paylog` WHERE ( userid=1 and datatype=0 )  [ RunTime:0.0013s ]
+SQL: SELECT SUM(money) as my FROM `paylog` WHERE ( userid=1 and datatype=1 )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0074s ]
+SQL: SELECT * FROM `users` WHERE ( UserID=1 ) LIMIT 1   [ RunTime:0.0015s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000282s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000381s ]
+NOTIC: [8] Undefined variable: cloud D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 208 行.
+NOTIC: [8] Undefined variable: physical D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 220 行.
+NOTIC: [8] Undefined variable: firewall D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 240 行.
+NOTIC: [8] Undefined variable: blockabroadip D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 257 行.
+NOTIC: [8] Undefined variable: guanwang D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 269 行.
+NOTIC: [8] Undefined variable: product D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 284 行.
+NOTIC: [8] Undefined variable: usercenter D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 302 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020856s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020913s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000629s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000672s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000880s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000943s ]
+
+[ 2018-07-27T14:13:02+08:00 ] 127.0.0.1 /Admin/officweb/jdcloudlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000459s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000823s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000877s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\myenv\apache\htdocs\pgyidc\Application\Admin\Controller\BaseController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0077s ]
+SQL: SELECT `UserID`,`EffectiveTime` FROM `users` WHERE ( UserName ='xiaocai' AND WebGuid  ='12BB95AC8-C269-917D-7E93-54BDC0CD7ED3' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `jdcstandard` [ RunTime:0.0072s ]
+SQL: SELECT * FROM `jdcstandard`  [ RunTime:0.0015s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jdcstandard` WHERE `standardtype` LIKE '%%' OR `standard` LIKE '%%' LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jdcstandard` WHERE `standardtype` LIKE '%%' OR `standard` LIKE '%%' ORDER BY id DESC LIMIT 0,15   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jdcprice` [ RunTime:0.0075s ]
+SQL: SELECT * FROM `jdcprice`  [ RunTime:0.0012s ]
+NOTIC: [8] Undefined variable: fid D:\myenv\apache\htdocs\pgyidc\Application\Admin\Controller\OfficwebController.class.php 第 312 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000158s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000216s ]
+NOTIC: [8] Undefined variable: cloud D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 208 行.
+NOTIC: [8] Undefined variable: physical D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 220 行.
+NOTIC: [8] Undefined variable: firewall D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 240 行.
+NOTIC: [8] Undefined variable: blockabroadip D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 257 行.
+NOTIC: [8] Undefined variable: guanwang D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 269 行.
+NOTIC: [8] Undefined variable: usercenter D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 302 行.
+NOTIC: [8] Undefined variable: keyword D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\24688f774a7f6f9f9509b6bef05c55c8.php 第 388 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019305s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019361s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000688s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000732s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001408s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001518s ]
+
+[ 2018-07-27T14:13:06+08:00 ] 127.0.0.1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000539s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000924s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000988s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\myenv\apache\htdocs\pgyidc\Application\Admin\Controller\BaseController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `paylog` [ RunTime:0.0170s ]
+SQL: SELECT SUM(money) as my FROM `paylog` WHERE ( userid=1 and datatype=0 )  [ RunTime:0.0032s ]
+SQL: SELECT SUM(money) as my FROM `paylog` WHERE ( userid=1 and datatype=1 )  [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0089s ]
+SQL: SELECT * FROM `users` WHERE ( UserID=1 ) LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000170s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000225s ]
+NOTIC: [8] Undefined variable: cloud D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 208 行.
+NOTIC: [8] Undefined variable: physical D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 220 行.
+NOTIC: [8] Undefined variable: firewall D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 240 行.
+NOTIC: [8] Undefined variable: blockabroadip D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 257 行.
+NOTIC: [8] Undefined variable: guanwang D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 269 行.
+NOTIC: [8] Undefined variable: product D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 284 行.
+NOTIC: [8] Undefined variable: usercenter D:\myenv\apache\htdocs\pgyidc\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 302 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019211s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019267s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000656s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000702s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001120s ]
+

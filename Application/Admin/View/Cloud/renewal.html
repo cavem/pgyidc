@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<title>[title]</title>
+<link href="__APC__/bootstrap-3.3.5-dist/css/bootstrap.min.css" title="" rel="stylesheet" />
+<link title="" href="__APC__/css/style.css" rel="stylesheet" type="text/css"  />
+<link title="blue" href="__APC__/css/dermadefault.css" rel="stylesheet" type="text/css"/>
+<link title="green" href="__APC__/css/dermagreen.css" rel="stylesheet" type="text/css" disabled="disabled"/>
+<link title="orange" href="__APC__/css/dermaorange.css" rel="stylesheet" type="text/css" disabled="disabled"/>
+<link href="__APC__/css/templatecss.css" rel="stylesheet" title="" type="text/css" />
+<link title="" href="__APC__/css/jquery.range.css" rel="stylesheet" type="text/css"  />
+<link href="http://www.jq22.com/jquery/font-awesome.4.6.0.css" rel="stylesheet">
+<script src="__APC__/script/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="__APC__/script/jquery.cookie.js" type="text/javascript"></script>
+<script src="__APC__/bootstrap-3.3.5-dist/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="__PUBLIC__/layer/layer.js" type="text/javascript"></script>
+<script src="__APC__/script/jquery.price.js" type="text/javascript"></script>
+<script src="__APC__/script/jquery.range.js" type="text/javascript"></script>
+</head>
+<style>
+p{margin: 0;}
+.btn{padding: 4px 8px;font-size: 12px;}
+.renewal{width:400px;margin: 0 auto;padding: 10px;}
+.form-control{width: 150px;height:30px;display: inline-block;line-height: 30px;}
+</style>
+<body>
+    <div class="renewal">
+        <label for="name">请选择续费周期：</label>
+        <div class="radio" style="<?=empty($info['oneday'])?'display: none':''?>">
+            <label>
+                <input type="radio" name="feecircle" value="{$info.oneday}" data_type="0" <?=$price[1]=='天'?'checked':''?>> <b>{$info.oneday}.00</b> /天
+            </label>
+        </div>
+        <div class="radio" style="<?=empty($info['month'])?'display: none':''?>">
+            <label>
+                <input type="radio" name="feecircle" value="{$info.month}" data_type="1" <?=$price[1]=='月'?'checked':''?>> <b>{$info.month}.00</b> /月<label style="<?=empty($info['oneday'])?'display: none':''?>">(4.0折)</label>
+            </label>
+        </div>
+        <div class="radio" style="<?=empty($info['ji'])?'display: none':''?>">
+            <label>
+                <input type="radio" name="feecircle" value="{$info.ji}" data_type="2" <?=$price[1]=='季'?'checked':''?>> <b>{$info.ji}.00</b> /季(9.0折)
+            </label>
+        </div>
+        <div class="radio" style="<?=empty($info['bannian'])?'display: none':''?>">
+            <label>
+                <input type="radio" name="feecircle" value="{$info.bannian}" data_type="3" <?=$price[1]=='半年'?'checked':''?>> <b>{$info.bannian}.00</b> /半年(8.0折)
+            </label>
+        </div>
+        <div class="radio" style="<?=empty($info['nian'])?'display: none':''?>">
+            <label>
+                <input type="radio" name="feecircle" value="{$info.nian}" data_type="4" <?=$price[1]=='年'?'checked':''?>> <b>{$info.nian}.00</b> /年(7.0折)
+            </label>
+        </div>
+        <p style="margin-top: 20px;">账户余额：<b>{$balance}</b> RMB</p>
+        <p>续费价格：<b class="renprice">{$price[0]}.00</b> RMB</p>
+        <div style="margin-top: 20px;">优惠码：<input type="text" class="form-control"> <button class="btn btn-primary">使用</button> <button class="btn btn-primary">不使用</button></div>
+        <div style="border-top: 1px dotted #60aff6;text-align: right;width:100%;padding:10px 0;position: absolute;bottom: 0;right: 0px;">
+            <button class="btn btn-primary confirm" style="background-color: #2f8ad8;">确认续费</button> <button class="btn btn-default upclose">取消</button>&nbsp;
+        </div>
+        <input type="hidden" id="vpsid" value="{$vpsid}">
+    </div>
+</body>
+</html>

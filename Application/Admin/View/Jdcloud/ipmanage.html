@@ -1,0 +1,156 @@
+<include file="Public/header" title="蒲公英自动化" />
+<style>
+th{color: #FFF;font-weight: normal;}
+td{color: #4b556a;}
+.table-condensed>thead>tr>th,.table-condensed>tbody>tr>td{vertical-align: middle;padding: 10px;}
+.table{margin-bottom: 0px;}
+.page-body{width: 100%;background: #fff;padding: 20px;box-shadow: 0 0 5px 0 #dedfe4;border-radius: 4px;}
+.form-control{display: inline-block;height: 34px;border-radius: 0;}
+.onthis{background-color: #09c !important;color: #fff;}
+.otherul li{float: left;text-align: center;position: relative;margin-left: -1px;min-width: 91px;height: 34px;background: #fff;border: 1px solid #e7e7e7;cursor: pointer;line-height: 34px;font-size: 13px;padding: 0 12px;}
+.otherul li:hover{background: #09c;color: #fff;}
+.option a,.option span{color: #60aff6;cursor: pointer;}
+.fold-drop{position: absolute;min-width: 100px;background: #fff;border: 1px solid #e7e7e7;display: none;z-index: 99;}
+.fold-drop li a {display: block;padding: 0 5px;line-height: 30px;text-align: left;color: #404241;text-decoration-line: none;}
+.fold-drop li a:hover{color: #fff;background: #60aff6;}
+.disableda{color: #999 !important;cursor:not-allowed !important;}
+.disableda:hover{color: #999 !important;cursor:not-allowed !important;background: #fff !important;}
+</style>
+<script>
+$(function(){
+    var mulayer=function(title,url,width,height){
+        layer.closeAll(); 
+        layer.open({
+            type: 2,
+            title: title,
+            shade: 0.6,
+            shadeClose: true,
+            maxmin: true, //开启最大化最小化按钮
+            area: [width, height],
+            content: url
+        });
+    }
+    $('.otherul li').click(function(){
+        $('tbody').html('<tr><td colspan="10" align="center" style="border: 0px;background: rgba(255, 255, 255,0.9);position:relative;width:100%;z-index: 999;"><img src="__APC__/img/loading.gif" height="22px;"> 加载中...</td></tr>');
+    })
+    //解绑
+    $('.relieve_bd').click(function(){
+        layer.confirm("确认将公网IP ：43.240.1.2从云主机node-sdk-test解绑?", {
+            btn: ['确定','取消']
+        }, function(){
+            layer.msg('请稍等',{icon: 16,shade: 0.01,time:20000});
+            $.post('/Admin/Jdcloud/deleteinstance','instanceid='+instanceid+"&regionid={$regionid}",function(data,status){
+                layer.closeAll();
+                if(data=="0"){
+                    layer.msg('解绑成功',{icon:1,time:1500});
+                }else{
+                    layer.msg(data,{icon:2});
+                }
+            });
+        }, function(){
+            layer.closeAll(); 
+        });
+    })
+    //修改带宽
+    $('.revise_bd').click(function(){
+        mulayer('修改带宽','/Admin/Jdcloud/revisebd','700px','280px');
+    })
+    //删除
+    $('.remove_bd').click(function(){
+        layer.confirm("确认删除该公网IP?", {
+            btn: ['确定','取消']
+        }, function(){
+            layer.msg('请稍等',{icon: 16,shade: 0.01,time:20000});
+            $.post('/Admin/Jdcloud/deleteinstance','instanceid='+instanceid+"&regionid={$regionid}",function(data,status){
+                layer.closeAll();
+                if(data=="0"){
+                    layer.msg('解绑成功',{icon:1,time:1500});
+                }else{
+                    layer.msg(data,{icon:2});
+                }
+            });
+        }, function(){
+            layer.closeAll(); 
+        });
+    })
+})
+</script>
+<div class="right-product right-full" style="background: #eef0f6;">
+    <div class="center-back right-back">
+        <div class="container-fluid">
+            <div class="info-center">
+                <div class="page-header">
+                    <div class="pull-left">
+                        <h4>公网ip</h4>      
+                    </div>
+                </div>
+                
+                <div class="page-body">
+                    <ul class="otherul">
+                        <a href="{:U('Jdcloud/ipmanage',array('regionid'=>'cn-north-1'))}"><li <if condition="$regionid eq 'cn-north-1'">class="onthis"</if>>华北-北京</li></a>
+                        <a href="{:U('Jdcloud/ipmanage',array('regionid'=>'cn-south-1'))}"><li <if condition="$regionid eq 'cn-south-1'">class="onthis"</if>>华南-广州</li></a>
+                        <a href="{:U('Jdcloud/ipmanage',array('regionid'=>'cn-east-1'))}"><li <if condition="$regionid eq 'cn-east-1'">class="onthis"</if>>华东-宿迁</li></a>
+                        <a href="{:U('Jdcloud/ipmanage',array('regionid'=>'cn-east-2'))}"><li <if condition="$regionid eq 'cn-east-2'">class="onthis"</if>>华东-上海</li></a>
+                    </ul>
+                    <a href="{:U('')}"><button type="button" class="btn btn-info" style="float:left;margin-left: 25px;">申请</button></a>
+                    <form action="{:U('')}" method="post" style="float: right;">
+                        <div>
+                            <input type="text" name="keyword" value="{$keyword}" class="form-control" placeholder="请输入公网IP地址" style="width: 150px;position: relative;top: 1px;">               
+                            <input type="submit" name="" class="btn btn-default" style="width:70px" value="搜索">
+                        </div>
+                    </form>
+                    
+                    <table class="table table-condensed" style="margin-top: 50px;">
+                        <thead>
+                            <tr style="background: #09c;color: #fff;">
+                                <th>公网IP ID/地址</th>
+                                <th>线路</th>
+                                <th>可用区</th>
+                                <th>状态</th>
+                                <th>关联网卡</th>
+                                <th>实例类型</th>
+                                <th>实例名称</th>
+                                <th>带宽上限</th>
+                                <th>计费信息</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <if condition="$iplist[0] eq ''">
+                                <tr><td colspan="10" align="center">无公网IP数据</td></tr>
+                            </if>
+                            <volist name="iplist" id="vo">
+                            <tr>
+                                <td><span class="ipid">{$vo.elasticIpId}</span></br><span class="ip" style="color: #60aff6;">{$vo.elasticIpAddress}</span></td>
+                                <td>{$vo.provider}</td>
+                                <td>全可用区</td>
+                                <td></td>
+                                <td>{$vo.networkInterfaceId}</td>
+                                <td>云主机</td>
+                                <td>{$vo.instanceName}</td>
+                                <td>{$vo.bandwidthMbps} Mbps</td>
+                                <td>{$vo.charge.chargeStartTime}</td>
+                                <td class="option">
+                                    <a href="javascript:;" class="relieve_bd">解绑资源</a> 
+                                    <a href="javascript:;" class="revise_bd">修改带宽</a> 
+                                    <a href="javascript:;" class="remove_bd">删除</a>
+                                </td>
+                            </tr>
+                            </volist>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="10">
+                                <div class="pull-right">
+                                    {$page}
+                                </div>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+<include file="Public/footer" title="" />

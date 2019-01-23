@@ -1,0 +1,84 @@
+<include file="Public/header" title="蒲公英控制台" />
+<style>
+    .ml15{margin-left:15px;}
+    th{color: #FFF;font-weight: normal;}
+    td{color: #4b556a;}
+    .table-condensed>thead>tr>th,.table-condensed>tbody>tr>td{vertical-align: middle;padding: 10px;text-align: center;}
+    .page-body{width: 100%;background: #fff;padding: 20px;box-shadow: 0 0 5px 0 #dedfe4;border-radius: 4px;}
+</style>
+<div class="right-product right-full" style="background: #eef0f6;">
+    <div class="center-back right-back">
+        <div class="container-fluid">
+            <div class="info-center">
+                <div class="page-header">
+                    <div class="pull-left">
+                        <h4>物理机管理 ＞ 我的服务器</h4>      
+                    </div>
+                </div>
+                <div class="page-body">
+                    <form name="mform" action="{:U('servercontrol')}" method="post">
+                    <div class="search-header">
+                        <span>产品类型：</span>
+                        <select class="form-control" name="productkind" onchange="this.form.submit();" style="width: 120px;display: inline-block">
+                            <option value="">所有类型</option>
+                            <foreach name="pkdata" item="pk">
+                                <option <?=$productkind==$pk?'selected':''?> value="<?=$pk?>"><?=$pk?></option>
+                            </foreach>
+                        </select>
+                        <span class="ml15">设备类型：</span>
+                        <select class="form-control" name="devicetype" onchange="this.form.submit();" style="width: 120px;display: inline-block">
+                            <option value="">所有类型</option>
+                            <option <?=$devicetype=="服务器"?'selected':''?> value="服务器">服务器</option>
+                            <option <?=$devicetype=="交换机"?'selected':''?> value="交换机">交换机</option>
+                            <option <?=$devicetype=="防火墙"?'selected':''?> value="防火墙">防火墙</option>
+                        </select>
+                        <input type="text" name="keyword" value="<?=$keyword?>" class="form-control" placeholder="请输入要查询的IP" style="width: 200px;display: inline-block;">
+                        <button id="find" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i> 搜索</button>
+                    </div>
+                    </form>
+                    <div class="server-body">
+                        <table class="table table-condensed" style="margin-top: 20px;width:680px;">
+                            <thead>
+                                <tr style="background: #09c;color: #fff;">
+                                    <th width="340px;">IP地址</th>
+                                    <th width="340px;">带宽限制</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <foreach name="serverdata" item="server">
+                                <tr>
+                                    <td>
+                                        <?php foreach ($server['ipaddr'] as $ip):$i++?>
+                                        <a href="javascript:void(0);"><?=$ip?></a><br />
+                                        <?php endforeach;?>
+                                    </td>
+                                    <td><?=$server['bandlimit']?></td>
+                                </tr>
+                                </foreach>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                  <td colspan="10">
+                                    <div class="pull-right">
+                                        {$page}
+                                    </div>
+                                  </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+<script type="text/javascript">
+    $('document').ready(function(){
+        $("#find").click(function(){
+            document.mform.action="{:U('servercontrol')}";
+            document.mform.target="";
+            document.mform.submit();
+        })
+    })
+</script>
+<include file="Public/footer" title="" />

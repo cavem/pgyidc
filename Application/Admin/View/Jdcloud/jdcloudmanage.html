@@ -1,0 +1,249 @@
+<include file="Public/header" title="蒲公英自动化" />
+<style>
+th{color: #FFF;font-weight: normal;}
+td{color: #4b556a;}
+.table-condensed>thead>tr>th,.table-condensed>tbody>tr>td{vertical-align: middle;padding: 10px;}
+.table{margin-bottom: 0px;}
+.page-body{width: 100%;background: #fff;padding: 20px;box-shadow: 0 0 5px 0 #dedfe4;border-radius: 4px;}
+.form-control{display: inline-block;height: 34px;border-radius: 0;}
+.onthis{background-color: #09c !important;color: #fff;}
+.otherul li{float: left;text-align: center;position: relative;margin-left: -1px;min-width: 91px;height: 34px;background: #fff;border: 1px solid #e7e7e7;cursor: pointer;line-height: 34px;font-size: 13px;padding: 0 12px;}
+.otherul li:hover{background: #09c;color: #fff;}
+.option a,.option span{color: #60aff6;cursor: pointer;}
+.fold-drop{position: absolute;min-width: 100px;background: #fff;border: 1px solid #e7e7e7;display: none;z-index: 99;}
+.fold-drop li a {display: block;padding: 0 5px;line-height: 30px;text-align: left;color: #404241;text-decoration-line: none;}
+.fold-drop li a:hover{color: #fff;background: #60aff6;}
+.disableda{color: #999 !important;cursor:not-allowed !important;}
+.disableda:hover{color: #999 !important;cursor:not-allowed !important;background: #fff !important;}
+.icon-status{display:inline-block;border-radius:5px;height:10px;width:10px;background: #c71585;animation:move ease-in-out .6s infinite alternate;}
+@keyframes move{
+    0%{
+        -moz-transform:scale(1.2);
+        -webkit-transform:scale(1.2);opacity:1
+    }
+    to{
+        -moz-transform:scale(.7);
+        -webkit-transform:scale(.7);
+        opacity:.1
+    }
+}
+</style>
+<script>
+$(function(){
+    $('.moreoption').hover(
+        function(){
+            $(this).find('.fold-drop').show();
+        },
+        function(){
+            $(this).find('.fold-drop').hide();
+        }
+    )
+    var mulayer=function(title,url,width,height){
+        layer.closeAll(); 
+        layer.open({
+            type: 2,
+            title: title,
+            shade: 0.6,
+            shadeClose: true,
+            maxmin: true, //开启最大化最小化按钮
+            area: [width, height],
+            content: url
+        });
+    }
+    $('.otherul li').click(function(){
+        $('tbody').html('<tr><td colspan="9" align="center" style="border: 0px;background: rgba(255, 255, 255,0.9);position:relative;width:100%;z-index: 999;"><img src="__APC__/img/loading.gif" height="22px;"> 加载中...</td></tr>');
+    })
+    $('.resetpsw').click(function(){
+        var vid=$(this).attr("data");
+        mulayer('重置密码',"/Admin/Jdcloud/resetpsw?vid="+vid,'600px','300px');
+    })
+    $('.resetos').click(function(){
+        var instanceid=$(this).closest('tr').find('.instanceid').text();
+        mulayer('重置系统','/Admin/Jdcloud/resetos?regionid={$regionid}&instanceid='+instanceid,'700px','550px');
+    })
+    $('.restandard').click(function(){
+        var instanceid=$(this).closest('tr').find('.instanceid').text();
+        mulayer('调整配置','/Admin/Jdcloud/restandard?regionid={$regionid}&instanceid='+instanceid,'800px','550px');
+    })
+    $('.renew').click(function(){
+        var instanceid=$(this).closest('tr').find('.instanceid').text();
+        mulayer('续费','/Admin/Jdcloud/renew?regionid={$regionid}&instanceid='+instanceid,'1100px','550px');
+    })
+})
+
+function start(obj){
+    var a=$(obj);
+    var cloudno=a.attr("data");
+    a.parent('td').siblings("#status").html('<span class="icon-status"></span> <span style="color: #c71585;">启动中...</span>');
+    $.ajax({
+         type: "POST",
+         url: "/Admin/Jdcloud/start",
+         data:"cloudno="+cloudno,
+         success: function(msg){
+            if (msg!="") 
+            {
+                a.parent('td').siblings("#status").html("<span style='color: #3ec7ab;'>运行</span>");
+                a.text("停止");
+                a.removeAttr("onclick");
+                a.attr("onclick","stop(this);");
+                window.location.reload();
+                return false;
+            }
+           
+         }
+    })
+}
+function stop(obj){
+    var a=$(obj);
+    var cloudno=a.attr("data");
+    a.parent('td').siblings("#status").html('<span class="icon-status"></span> <span style="color: #c71585;">停止中...</span>');
+    $.ajax({
+         type: "POST",
+         url: "/Admin/Jdcloud/stop",
+         data:"cloudno="+cloudno,
+         success: function(msg){
+            if (msg!="") 
+            {
+                a.parent('td').siblings("#status").html("<span style='color: #dcbb44;'>停止</span>");
+                a.text("启动");
+                a.removeAttr("onclick");
+                a.attr("onclick","start(this);");
+                window.location.reload();
+                return false;
+            }
+            
+         }
+    })
+}
+function restart(obj){
+    var a=$(obj);
+    var cloudno=a.attr("data");
+    a.parent('td').siblings("#status").html('<span class="icon-status"></span> <span style="color: #c71585;">重启中...</span>');
+    $.ajax({
+         type: "POST",
+         url: "/Admin/Jdcloud/restart",
+         data:"cloudno="+cloudno,
+         success: function(msg){
+            if (msg!="") 
+            {
+                a.parent('td').siblings("#status").html("<span style='color: #3ec7ab;'>运行</span>");
+                window.location.reload();
+                return false;
+            }
+            
+         }
+    })
+}
+</script>
+<div class="right-product right-full" style="background: #eef0f6;">
+    <div class="center-back right-back">
+        <div class="container-fluid">
+            <div class="info-center">
+                <div class="page-header">
+                    <div class="pull-left">
+                        <h4>云主机线路2</h4>      
+                    </div>
+                </div>
+                
+                <div class="page-body">
+                    <ul class="otherul">
+                        <!-- <a href="{:U('Jdcloud/jdcloudmanage',array('regionid'=>'cn-north-1'))}"><li <if condition="$regionid eq 'cn-north-1'">class="onthis"</if>>华北-北京</li></a>
+                        <a href="{:U('Jdcloud/jdcloudmanage',array('regionid'=>'cn-south-1'))}"><li <if condition="$regionid eq 'cn-south-1'">class="onthis"</if>>华南-广州</li></a> -->
+                        <a href="{:U('Jdcloud/jdcloudmanage',array('regionid'=>'cn-east-1'))}"><li <if condition="$regionid eq 'cn-east-1'">class="onthis"</if>>华东-宿迁</li></a>
+                        <!-- <a href="{:U('Jdcloud/jdcloudmanage',array('regionid'=>'cn-east-2'))}"><li <if condition="$regionid eq 'cn-east-2'">class="onthis"</if>>华东-上海</li></a> -->
+                    </ul>
+                    <a href="{:U('Home/Hdcloud/jdcloudbuy')}" target="blank"><button type="button" class="btn btn-info" style="float:left;margin-left: 25px;">购买云主机</button></a>
+                    <if condition="$Think.session.loginuser.usertype eq 1">
+                        <a href="{:U('Jdcloud/jdadmincdmg',array('regionid'=>$regionid))}">
+                            <button type="button" class="btn btn-default" style="float: left;margin-left: 10px;">进入后台管理</button>
+                        </a>
+                    </if>
+                    <form action="{:U('Cloud/cloudmanage')}" method="post" style="float: right;">
+                        <div>
+                            <input type="text" name="keyword" value="{$keyword}" class="form-control" placeholder="请输入云主机编号" style="width: 150px;position: relative;top: 1px;">               
+                            <input type="submit" name="" class="btn btn-default" style="width:70px" value="搜索">
+                        </div>
+                    </form>
+                    
+                    <table class="table table-condensed" style="margin-top: 50px;">
+                        <thead>
+                            <tr style="background: #09c;color: #fff;">
+                                <th>ID/名称</th>
+                                <th>可用区</th>
+                                <th>IP地址</th>
+                                <th>状态</th>
+                                <th>规格类型</th>
+                                <th>配置</th>
+                                <th>计费信息</th>
+                                <th>到期时间</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <if condition="$cloudlist eq ''">
+                                <tr><td colspan="9" align="center">暂无云主机数据</td></tr>
+                            </if>
+                            <volist name="cloudlist" id="vo">
+                            <tr>
+                                <td class="id"><span class="instanceid">{$vo.instanceId}</span></br><span style="color:#60aff6;">{$vo.instanceName}</span></td>
+                                <td>
+                                    <switch name="vo.az">
+                                        <case value="cn-east-1a|cn-east-2a|cn-north-1a|cn-south-1a">可用区A</case>
+                                        <case value="cn-east-1b|cn-east-2b|cn-north-1b|cn-south-1b">可用区B</case>
+                                    </switch>
+                                </td>
+                                <td>
+                                    {$vo.elasticIpAddress}
+                                </td>
+                                <td id="status">
+                                    <switch name="vo.status">
+                                        <case value="running"><span style="color: #3ec7ab;">运行</span></case>
+                                        <case value="stopped"><span style="color: #dcbb44;">停止</span></case>
+                                    </switch>
+                                </td>
+                                <td>{$vo.instanceType}</td>
+                                <td></td>
+                                <td>{$vo.launchTime}创建</td>
+                                <td>20{$vo.duetime|date="y-m-d",###} 到期</td>
+                                <td class="option">
+                                    <switch name="vo.status">
+                                        <case value="running"><a onclick="stop(this)" data="{$vo.instanceId}">停止</a></case> 
+                                        <case value="stopped"><a onclick="start(this)" data="{$vo.instanceId}">启动</a></case>
+                                    </switch>
+                                    <a onclick="restart(this)" data="{$vo.instanceId}">重启</a>
+                                    <span class="moreoption" style="display: inline-block;">更多 <i class="fa fa-sort-desc" style="position: relative;top: -1px;"></i>
+                                        <ul class="fold-drop">
+                                            <li class="">
+                                                <a href="javascript:;" <if condition="$vo.status neq 'running'">class="resetos"<else />class="disableda" title="仅停止状态云主机支持重置系统"</if>>重置系统</a>
+                                            </li> 
+                                            <li class="">
+                                                <a href="javascript:;" class="resetpsw" data="{$vo.instanceId}">重置密码</a>
+                                            </li> 
+                                            <li class="">
+                                                <a href="javascript:;" <if condition="$vo.status neq 'running'">class="restandard"<else />class="disableda" title="仅停止状态云主机支持调整配置"</if>>调整配置</a>
+                                            </li> 
+                                            <li class="">
+                                                <a href="javascript:;" class="renew">续费</a>
+                                            </li> 
+                                        </ul>
+                                    </span>
+                                </td>
+                            </tr>
+                            </volist>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                              <td colspan="9">
+                                <div class="pull-right">
+                                    {$page}
+                                </div>
+                              </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+<include file="Public/footer" title="" />
